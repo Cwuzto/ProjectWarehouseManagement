@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using WarehouseManagement.DataAccess;
 
-namespace WarehouseManagement.Bussiness
+namespace WarehouseManagement.Business
 {
     public class NhanVienBUS
     {
