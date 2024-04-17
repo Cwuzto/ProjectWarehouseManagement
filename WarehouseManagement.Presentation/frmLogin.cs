@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using static System.Net.Mime.MediaTypeNames;
+using WarehouseManagement.Bussiness;
 
 namespace WarehouseManagement.Presentation
 {
@@ -16,6 +18,9 @@ namespace WarehouseManagement.Presentation
         public frmLogin()
         {
             InitializeComponent();
+            txtUsername.Clear();
+            txtPassword.Clear();
+            txtUsername.Focus();
         }
 
         private bool validateData()
@@ -27,25 +32,34 @@ namespace WarehouseManagement.Presentation
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            const string user = "123";
-            const string password = "1";
+            string tenDangNhap = txtUsername.Text;
+            string matKhau = txtPassword.Text;
 
             if (!validateData())
             {
                 return;
             }
 
-            if (user.Equals(txtUsername.Text) &&
-                password.Equals(txtPassword.Text))
-            {
-                this.Close();
+            string query = "Select * from NhanVien where UserName = '" + tenDangNhap + "' and Password = '" + matKhau + "'";
 
+            Modify modify = new Modify();
+
+            if (modify.TaiKhoans(query).Count != 0)
+            {
+                MessageBox.Show("Login Successful!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmQuanLy frmQuanLy = new frmQuanLy();
+                frmQuanLy.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Sai Username hoặc Password!",
                                 "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
