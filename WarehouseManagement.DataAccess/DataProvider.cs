@@ -10,7 +10,12 @@ namespace WarehouseManagement.DataAccess.Data
 {
     public class DataProvider
     {
-        private string connectionString = "Data Source=LAPTOP-F40SAHCS\\MSSSERVER;Initial Catalog=QLKHOQUANCF;Integrated Security=True";
+        private static string connectionString = "Data Source=LAPTOP-F40SAHCS\\MSSSERVER;Initial Catalog=QLKHOQUANCF;Integrated Security=True";
+
+        public static SqlConnection GetSqlConnection()
+        {
+            return new SqlConnection(connectionString);
+        }
 
         private DataProvider()
         {

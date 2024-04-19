@@ -39,5 +39,6 @@ namespace WarehouseManagement.Business
         {
             return nv.DeleteNhanVien(manv);
         }
+
     }
 }
