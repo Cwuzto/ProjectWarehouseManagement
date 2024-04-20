@@ -40,8 +40,7 @@ namespace WarehouseManagement.Presentation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenPresentation(new Cap_nhat());
-            label1.Text = button1.Text;
+           
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -52,8 +51,7 @@ namespace WarehouseManagement.Presentation
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenPresentation(new Xác_nhận());
-            label1.Text = button3.Text;
+          
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -64,5 +62,11 @@ namespace WarehouseManagement.Presentation
             }
             label1.Text = "HOME";
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

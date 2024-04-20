@@ -31,21 +31,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_Left = new System.Windows.Forms.Panel();
-            this.panel_Top = new System.Windows.Forms.Panel();
-            this.panel_Body = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_Top = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel_Body = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_Left.SuspendLayout();
-            this.panel_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel_Top.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +72,7 @@
             // panel_Left
             // 
             this.panel_Left.BackColor = System.Drawing.Color.Navy;
+            this.panel_Left.Controls.Add(this.button7);
             this.panel_Left.Controls.Add(this.button6);
             this.panel_Left.Controls.Add(this.button5);
             this.panel_Left.Controls.Add(this.button4);
@@ -84,61 +86,38 @@
             this.panel_Left.Size = new System.Drawing.Size(149, 450);
             this.panel_Left.TabIndex = 1;
             // 
-            // panel_Top
+            // button6
             // 
-            this.panel_Top.BackColor = System.Drawing.Color.Navy;
-            this.panel_Top.Controls.Add(this.label1);
-            this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Top.Location = new System.Drawing.Point(149, 0);
-            this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(651, 100);
-            this.panel_Top.TabIndex = 1;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(0, 335);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(149, 42);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "YCDH";
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // panel_Body
+            // button5
             // 
-            this.panel_Body.BackColor = System.Drawing.SystemColors.Highlight;
-            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Body.Location = new System.Drawing.Point(149, 100);
-            this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(651, 350);
-            this.panel_Body.TabIndex = 2;
-            this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(0, 293);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(149, 42);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Tạo bảng";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // button4
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::WarehouseManagement.Presentation.Properties.Resources.user;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 125);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 125);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 42);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Cập nhật \r\n";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 167);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 42);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Xem DSYCNH";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(0, 251);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(149, 42);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Xem DSHTK";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -152,38 +131,51 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // button2
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 251);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 42);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Xem DSHTK";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(0, 167);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 42);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Xem DSYCNH";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button5
+            // button1
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 293);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(149, 42);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Tạo bảng";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 125);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 42);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Cập nhật \r\n";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button6
+            // pictureBox1
             // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(0, 335);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(149, 42);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "YCDH";
-            this.button6.UseVisualStyleBackColor = true;
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::WarehouseManagement.Presentation.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // panel_Top
+            // 
+            this.panel_Top.BackColor = System.Drawing.Color.Navy;
+            this.panel_Top.Controls.Add(this.label1);
+            this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Top.Location = new System.Drawing.Point(149, 0);
+            this.panel_Top.Name = "panel_Top";
+            this.panel_Top.Size = new System.Drawing.Size(651, 100);
+            this.panel_Top.TabIndex = 1;
             // 
             // label1
             // 
@@ -195,6 +187,28 @@
             this.label1.Size = new System.Drawing.Size(61, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "HOME";
+            // 
+            // panel_Body
+            // 
+            this.panel_Body.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Body.Location = new System.Drawing.Point(149, 100);
+            this.panel_Body.Name = "panel_Body";
+            this.panel_Body.Size = new System.Drawing.Size(651, 350);
+            this.panel_Body.TabIndex = 2;
+            this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(0, 377);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(149, 42);
+            this.button7.TabIndex = 6;
+            this.button7.Text = "Thoát";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Nhân_Viên_Kho
             // 
@@ -210,9 +224,9 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_Left.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_Top.ResumeLayout(false);
             this.panel_Top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,5 +246,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button7;
     }
 }

@@ -60,12 +60,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cap nhat.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cap nhat.Designer.cs">
-      <DependentUpon>Cap nhat.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDonDatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,15 +117,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLKHOQUANCFDataSet.Designer.cs" />
-    <Compile Include="Xác nhận.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Xác nhận.Designer.cs">
-      <DependentUpon>Xác nhận.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Cap nhat.resx">
-      <DependentUpon>Cap nhat.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDonDatHang.resx">
       <DependentUpon>frmDonDatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,9 +154,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Xác nhận.resx">
-      <DependentUpon>Xác nhận.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
