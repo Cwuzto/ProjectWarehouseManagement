@@ -45,6 +45,7 @@
     <Compile Include="DonDatHangBUS.cs" />
     <Compile Include="DSYCDatHagBUS.cs" />
     <Compile Include="DSYCNhapHgBUS.cs" />
+    <Compile Include="hanghoaBUS.cs" />
     <Compile Include="LoaiNVBUS.cs" />
     <Compile Include="Modify.cs" />
     <Compile Include="NhanVienBUS.cs" />
