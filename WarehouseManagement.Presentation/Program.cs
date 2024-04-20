@@ -16,7 +16,7 @@ namespace WarehouseManagement.Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmhanghoa());
+            Application.Run(new frmLogin());
         }
     }
 }
