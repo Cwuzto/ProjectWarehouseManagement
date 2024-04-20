@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.cbLoaiNV = new System.Windows.Forms.ComboBox();
+            this.loaiNVBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLKHOQUANCFDataSet = new WarehouseManagement.Presentation.QLKHOQUANCFDataSet();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -57,12 +59,31 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtNewValue = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.qLKHOQUANCFDataSet = new WarehouseManagement.Presentation.QLKHOQUANCFDataSet();
-            this.loaiNVBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.loaiNVTableAdapter = new WarehouseManagement.Presentation.QLKHOQUANCFDataSetTableAdapters.LoaiNVTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLKHOQUANCFDataSet)).BeginInit();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider9 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnRandom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.loaiNVBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLKHOQUANCFDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
             this.SuspendLayout();
             // 
             // cbLoaiNV
@@ -72,17 +93,27 @@
             this.cbLoaiNV.DisplayMember = "TenLoaiNV";
             this.cbLoaiNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiNV.FormattingEnabled = true;
-            this.cbLoaiNV.Location = new System.Drawing.Point(799, 100);
+            this.cbLoaiNV.Location = new System.Drawing.Point(900, 104);
             this.cbLoaiNV.Name = "cbLoaiNV";
             this.cbLoaiNV.Size = new System.Drawing.Size(274, 28);
             this.cbLoaiNV.TabIndex = 35;
             this.cbLoaiNV.ValueMember = "TenLoaiNV";
             // 
+            // loaiNVBindingSource
+            // 
+            this.loaiNVBindingSource.DataMember = "LoaiNV";
+            this.loaiNVBindingSource.DataSource = this.qLKHOQUANCFDataSet;
+            // 
+            // qLKHOQUANCFDataSet
+            // 
+            this.qLKHOQUANCFDataSet.DataSetName = "QLKHOQUANCFDataSet";
+            this.qLKHOQUANCFDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(648, 53);
+            this.label9.Location = new System.Drawing.Point(749, 57);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(128, 22);
             this.label9.TabIndex = 33;
@@ -92,7 +123,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(648, 104);
+            this.label8.Location = new System.Drawing.Point(749, 108);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(138, 22);
             this.label8.TabIndex = 32;
@@ -102,7 +133,7 @@
             // 
             this.txtUser.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUser.Location = new System.Drawing.Point(799, 152);
+            this.txtUser.Location = new System.Drawing.Point(900, 156);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(274, 27);
             this.txtUser.TabIndex = 31;
@@ -111,7 +142,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(648, 153);
+            this.label7.Location = new System.Drawing.Point(749, 157);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 22);
             this.label7.TabIndex = 30;
@@ -121,16 +152,16 @@
             // 
             this.txtPass.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPass.Location = new System.Drawing.Point(799, 210);
+            this.txtPass.Location = new System.Drawing.Point(900, 214);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(274, 27);
+            this.txtPass.Size = new System.Drawing.Size(122, 27);
             this.txtPass.TabIndex = 29;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(648, 213);
+            this.label6.Location = new System.Drawing.Point(749, 217);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 22);
             this.label6.TabIndex = 28;
@@ -288,7 +319,7 @@
             // 
             this.txtMaNV.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtMaNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNV.Location = new System.Drawing.Point(799, 53);
+            this.txtMaNV.Location = new System.Drawing.Point(900, 57);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(274, 27);
             this.txtMaNV.TabIndex = 43;
@@ -298,7 +329,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(558, 262);
+            this.label2.Location = new System.Drawing.Point(659, 261);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 22);
             this.label2.TabIndex = 44;
@@ -308,7 +339,7 @@
             // 
             this.txtOldValue.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtOldValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOldValue.Location = new System.Drawing.Point(624, 262);
+            this.txtOldValue.Location = new System.Drawing.Point(725, 261);
             this.txtOldValue.Name = "txtOldValue";
             this.txtOldValue.Size = new System.Drawing.Size(152, 27);
             this.txtOldValue.TabIndex = 45;
@@ -319,7 +350,7 @@
             this.txtMaNV_temp.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV_temp.Location = new System.Drawing.Point(372, 262);
             this.txtMaNV_temp.Name = "txtMaNV_temp";
-            this.txtMaNV_temp.Size = new System.Drawing.Size(168, 27);
+            this.txtMaNV_temp.Size = new System.Drawing.Size(236, 27);
             this.txtMaNV_temp.TabIndex = 47;
             // 
             // label11
@@ -337,7 +368,7 @@
             // 
             this.txtNewValue.BackColor = System.Drawing.SystemColors.MenuBar;
             this.txtNewValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewValue.Location = new System.Drawing.Point(921, 257);
+            this.txtNewValue.Location = new System.Drawing.Point(1022, 262);
             this.txtNewValue.Name = "txtNewValue";
             this.txtNewValue.Size = new System.Drawing.Size(152, 27);
             this.txtNewValue.TabIndex = 49;
@@ -347,32 +378,75 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(823, 262);
+            this.label12.Location = new System.Drawing.Point(924, 267);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 22);
             this.label12.TabIndex = 48;
             this.label12.Text = "Thành:";
             // 
-            // qLKHOQUANCFDataSet
-            // 
-            this.qLKHOQUANCFDataSet.DataSetName = "QLKHOQUANCFDataSet";
-            this.qLKHOQUANCFDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // loaiNVBindingSource
-            // 
-            this.loaiNVBindingSource.DataMember = "LoaiNV";
-            this.loaiNVBindingSource.DataSource = this.qLKHOQUANCFDataSet;
-            // 
             // loaiNVTableAdapter
             // 
             this.loaiNVTableAdapter.ClearBeforeFill = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // errorProvider5
+            // 
+            this.errorProvider5.ContainerControl = this;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
+            // 
+            // errorProvider7
+            // 
+            this.errorProvider7.ContainerControl = this;
+            // 
+            // errorProvider8
+            // 
+            this.errorProvider8.ContainerControl = this;
+            // 
+            // errorProvider9
+            // 
+            this.errorProvider9.ContainerControl = this;
+            // 
+            // errorProvider10
+            // 
+            this.errorProvider10.ContainerControl = this;
+            // 
+            // btnRandom
+            // 
+            this.btnRandom.BackColor = System.Drawing.SystemColors.MenuBar;
+            this.btnRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRandom.Location = new System.Drawing.Point(1046, 189);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(128, 64);
+            this.btnRandom.TabIndex = 50;
+            this.btnRandom.Text = "Random Pass";
+            this.btnRandom.UseVisualStyleBackColor = false;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
             // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1258, 578);
+            this.ClientSize = new System.Drawing.Size(1354, 578);
+            this.Controls.Add(this.btnRandom);
             this.Controls.Add(this.txtNewValue);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.txtMaNV_temp);
@@ -404,9 +478,19 @@
             this.Name = "frmNhanVien";
             this.Text = "frmNhanVien";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLKHOQUANCFDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.loaiNVBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLKHOQUANCFDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,5 +529,16 @@
         private QLKHOQUANCFDataSet qLKHOQUANCFDataSet;
         private System.Windows.Forms.BindingSource loaiNVBindingSource;
         private QLKHOQUANCFDataSetTableAdapters.LoaiNVTableAdapter loaiNVTableAdapter;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ErrorProvider errorProvider7;
+        private System.Windows.Forms.ErrorProvider errorProvider8;
+        private System.Windows.Forms.ErrorProvider errorProvider9;
+        private System.Windows.Forms.ErrorProvider errorProvider10;
+        private System.Windows.Forms.Button btnRandom;
     }
 }

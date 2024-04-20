@@ -31,7 +31,17 @@ namespace WarehouseManagement.Presentation
             NhanVienBUS nvBUS = new NhanVienBUS();
             dgvDSNV.DataSource = nvBUS.LayDSNhanVien();
         }
-
+        private bool validateData()
+        {
+            errorProvider1.SetError(txtHo, (txtHo.Text == "") ? "Hãy nhập Họ": "");
+            errorProvider2.SetError(txtTen, (txtTen.Text == "") ? "Hãy nhập Tên(Lót)": "");
+            errorProvider3.SetError(txtSDT, (txtSDT.Text == "") ? "Hãy nhập số điện thoại": "");
+            errorProvider4.SetError(txtDiaChi, (txtDiaChi.Text == "") ? "Hãy nhập đia chỉ": "");
+            errorProvider5.SetError(txtMaNV, (txtMaNV.Text == "") ? "Hãy nhập mã nhân viên": "");
+            errorProvider6.SetError(txtUser, (txtUser.Text == "") ? "Hãy nhập username" : "");
+            errorProvider7.SetError(txtPass, (txtPass.Text == "") ? "Hãy nhập password": "");
+            return (txtHo.Text != "" && txtTen.Text != ""&& txtSDT.Text!=""&& txtPass.Text!=""&& txtMaNV.Text!=""&& txtDiaChi.Text!="");
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
             int gt;
@@ -39,6 +49,11 @@ namespace WarehouseManagement.Presentation
                 gt = 1;
             else
                 gt = 0;
+            if (!validateData())
+            {
+                MessageBox.Show("Không thể thêm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (cbLoaiNV.SelectedItem != null)
             {
                 string loaiNV = cbLoaiNV.SelectedValue.ToString();
@@ -50,21 +65,25 @@ namespace WarehouseManagement.Presentation
                     return;
                 }
             }
-
-            MessageBox.Show("Không thể thêm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(nvBUS.UpdateNV(tenCot,txtOldValue.Text, txtNewValue.Text, txtMaNV_temp.Text))
+            if (txtMaNV_temp.Text==""&& txtOldValue.Text == ""&& txtNewValue.Text == "")
+            {
+                errorProvider8.SetError(txtMaNV_temp, (txtMaNV_temp.Text == "") ? "Hãy chọn một nhân viên" : "");
+                errorProvider9.SetError(txtOldValue, (txtOldValue.Text == "") ? "Hãy chọn thông tin muốn sửa" : "");
+                errorProvider10.SetError(txtNewValue, (txtNewValue.Text == "") ? "Hãy nhập thông tin sửa" : "");
+                MessageBox.Show("Không thể sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (nvBUS.UpdateNV(tenCot,txtOldValue.Text, txtNewValue.Text, txtMaNV_temp.Text))
             {
                 
                 MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load_data();
                 return;
             }
-
-                MessageBox.Show("Không thể sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
         string tenCot;
@@ -83,14 +102,34 @@ namespace WarehouseManagement.Presentation
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            if (txtMaNV_temp.Text == "")
+            {
+                errorProvider8.SetError(txtMaNV_temp, (txtMaNV_temp.Text == "") ? "Hãy chọn một nhân viên" : "");
+                MessageBox.Show("Không thể xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (nvBUS.DeleteNV(txtMaNV_temp.Text))
             {
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load_data();
                 return;
             }
+        }
 
-            MessageBox.Show("Không thể xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            int passwordLength = 8;
+            string allowedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            StringBuilder password = new StringBuilder();
+            Random random = new Random();
+            for (int i = 0; i < passwordLength; i++)
+            {
+
+                int randomIndex = random.Next(0, allowedChars.Length);
+                char randomChar = allowedChars[randomIndex];
+                password.Append(randomChar);
+            }
+            txtPass.Text = password.ToString();
         }
     }
 }
