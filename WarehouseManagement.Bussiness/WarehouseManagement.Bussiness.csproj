@@ -50,6 +50,7 @@
     <Compile Include="NhanVienBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoan.cs" />
+    <Compile Include="yeucaudathangBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WarehouseManagement.DataAccess\WarehouseManagement.DataAccess.csproj">

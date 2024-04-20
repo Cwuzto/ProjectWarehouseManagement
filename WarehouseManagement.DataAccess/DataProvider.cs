@@ -10,7 +10,7 @@ namespace WarehouseManagement.DataAccess.Data
 {
     public class DataProvider
     {
-        private static string connectionString = "Data Source=CuBo\\SQLEXPRESS;Initial Catalog=QLKHOQUANCF;Integrated Security=True";
+        private static string connectionString = "Data Source=MINU\\SQLEXPRESS;Initial Catalog=QLKHOQUANCF;Integrated Security=True";
 
         public static SqlConnection GetSqlConnection()
         {
@@ -97,34 +97,38 @@ namespace WarehouseManagement.DataAccess.Data
 
         public object ExecuteScalar(string query, object[] parameter = null)
         {
-            object data = 0;
+               object data = 0;
 
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
+               using (SqlConnection connection = new SqlConnection(connectionString))
+               {
+                   connection.Open();
 
-                SqlCommand command = new SqlCommand(query, connection);
+                   SqlCommand command = new SqlCommand(query, connection);
 
-                if (parameter != null)
-                {
-                    string[] listPara = query.Split(' ');
-                    int i = 0;
-                    foreach (string item in listPara)
-                    {
-                        if (item.Contains('@'))
-                        {
-                            command.Parameters.AddWithValue(item, parameter[i]);
-                            i++;
-                        }
-                    }
-                }
+                   if (parameter != null)
+                   {
+                       string[] listPara = query.Split(' ');
+                       int i = 0;
+                       foreach (string item in listPara)
+                       {
+                           if (item.Contains('@'))
+                           {
+                               command.Parameters.AddWithValue(item, parameter[i]);
+                               i++;
+                           }
+                       }
+                   }
 
-                data = command.ExecuteScalar();
+                   data = command.ExecuteScalar();
 
-                connection.Close();
-            }
+                   connection.Close();
+               }
 
-            return data;
+               return data;
+           }
+            
+              
+
+
         }
     }
-}

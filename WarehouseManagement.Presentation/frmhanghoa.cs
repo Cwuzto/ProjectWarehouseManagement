@@ -26,46 +26,31 @@ namespace WarehouseManagement.Presentation
                 hanghoaBUS HH= new hanghoaBUS();
                 dgvdshanghoa.DataSource = HH.Laydshanghoa();
             }
-
-
-
-
           
         private void button1_Click(object sender, EventArgs e)
         {
             load_data();
 
         }
-        /*  private void btntim_Click(object sender, EventArgs e)
-  {
-      if (cbbtimkiem.SelectedItem != null && !string.IsNullOrEmpty(txttim.Text))
-      {
-          string loaiTimKiem = cbbtimkiem.SelectedItem.ToString();
-          string keyword = txttim.Text;
 
-          if (loaiTimKiem == "Mã loại")
-              loaiTimKiem = "MaLoai"; // Assuming "Mã loại" is the display name in the ComboBox
+        private void label1_Click(object sender, EventArgs e)
+        {
+            frmNVbanhang otherForm = new frmNVbanhang();
+            
 
-          DataTable tb = ((DataTable)dgvdshanghoa.DataSource);
-          if (tb != null)
-          {
-              tb.DefaultView.RowFilter = $"{loaiTimKiem} = '{keyword}'";
-              dgvdshanghoa.DataSource = tb.DefaultView.ToTable();
-          }
-          else
-          {
-              MessageBox.Show("Data source is null.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-          }
-      }
-      else
-      {
-          MessageBox.Show("Vui lòng nhập đầy đủ thông tin!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-      }
-  }*/
-
-
-
-
+            otherForm.Show();this.Close();
+        }
+private void btnxemang_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtmaloai.Text))
+            {
+                dgvdshanghoa.DataSource = hhBUS.timhang(txtmaloai.Text);
+            }
+            else
+            {
+                MessageBox.Show("chua nhap ma loai.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
     }
 

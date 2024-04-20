@@ -16,5 +16,9 @@ namespace WarehouseManagement.Bussiness
         {
             return HH.Laydshanghoa();
         }
+        public DataTable timhang(string data)
+        {
+            return HH.timhanghoa(data);
+        }
     }
 }

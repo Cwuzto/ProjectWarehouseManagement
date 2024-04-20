@@ -16,7 +16,15 @@ namespace WarehouseManagement.DataAccess
         {
             var query = "SELECT * FROM [HangHoa]";
             hh = DataProvider.Instance.ExecuteQuery(query);
+
         }
+        public DataTable timhanghoa(string MaHH)
+        { 
+                string query = "SELECT * FROM [HangHoa] WHERE MaHH LIKE @Keyword";
+                object[] parameter = {MaHH};
+                return DataProvider.Instance.ExecuteQuery(query, parameter);
+            }
+        
         public DataTable Laydshanghoa()
         {
             return hh;
