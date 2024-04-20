@@ -28,20 +28,36 @@ namespace WarehouseManagement.Presentation
             LoaiNVBUS loaiNVBUS = new LoaiNVBUS();
             dgvDSLoaiNV.DataSource = loaiNVBUS.LayDSLoaiNV();
         }
-
+        private bool validateData()
+        {
+            errorProvider1.SetError(txtLoaiNV, (txtLoaiNV.Text == "") ? "Hãy nhập mã loại nhân viên" : "");
+            errorProvider2.SetError(txtTenLoai, (txtTenLoai.Text == "") ? "Hãy nhập tên loại nhân viên" : "");
+            return (txtLoaiNV.Text != "" && txtTenLoai.Text != "");
+        }
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (!validateData())
+            {
+                MessageBox.Show("Không thể thêm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (loaiNVBUS.ThemLoaiNV(txtLoaiNV.Text,txtTenLoai.Text))
             {
                 load_data();
                 MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            MessageBox.Show("Không thể thêm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if (txtLoaiNV.Text == "" && txtTenLoai.Text == "" )
+            {
+                errorProvider1.SetError(txtLoaiNV, (txtLoaiNV.Text == "") ? "Hãy chọn một loại nhân viên" : "");
+                errorProvider2.SetError(txtTenLoai, (txtTenLoai.Text == "") ? "Hãy chọn một loại nhân viên" : "");
+                MessageBox.Show("Không thể sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (loaiNVBUS.Update(oldMaLoai,txtLoaiNV.Text,txtTenLoai.Text))
             {
 
@@ -49,8 +65,6 @@ namespace WarehouseManagement.Presentation
                 load_data();
                 return;
             }
-
-            MessageBox.Show("Không thể sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         string oldMaLoai;
         private void dgvDSLoaiNV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -66,14 +80,18 @@ namespace WarehouseManagement.Presentation
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            if (txtLoaiNV.Text == "" )
+            {
+                errorProvider1.SetError(txtLoaiNV, (txtLoaiNV.Text == "") ? "Hãy chọn một loại nhân viên" : "");
+                MessageBox.Show("Không thể xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             if (loaiNVBUS.DeleteLoaiNV(txtLoaiNV.Text))
             {
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load_data();
                 return;
             }
-
-            MessageBox.Show("Không thể xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
