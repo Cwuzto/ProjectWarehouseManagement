@@ -14,8 +14,7 @@ namespace WarehouseManagement.Presentation
 {
     public partial class frmDonDatHang : Form
     {
-        DataTable table = new DataTable("table");
-        int index;
+        
         DonDatHangBUS dhBUS = new DonDatHangBUS();
 
         public frmDonDatHang()

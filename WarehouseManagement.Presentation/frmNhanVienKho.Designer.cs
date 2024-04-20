@@ -1,6 +1,6 @@
 ﻿namespace WarehouseManagement.Presentation
 {
-    partial class frmNhanVienKho
+    partial class Nhân_Viên_Kho
     {
         /// <summary>
         /// Required designer variable.
@@ -28,137 +28,209 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
-            this.nhânViênKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cậpNhậtSốLượngHàngTrongKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemDánhSáchYêuCầuNhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xácNhậnYêuCầuNhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.xemDanhSáchHàngTrongKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tạoBảngBáoCáoKiểmKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.yêuCầuĐặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
-            this.menuStrip2.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_Left = new System.Windows.Forms.Panel();
+            this.panel_Top = new System.Windows.Forms.Panel();
+            this.panel_Body = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel_Left.SuspendLayout();
+            this.panel_Top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // popupMenu1
+            // panel1
             // 
-            this.popupMenu1.Name = "popupMenu1";
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(149, 450);
+            this.panel1.TabIndex = 0;
             // 
-            // menuStrip1
+            // panel2
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 33);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(972, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.panel_Left);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(149, 450);
+            this.panel2.TabIndex = 1;
             // 
-            // menuStrip2
+            // panel_Left
             // 
-            this.menuStrip2.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nhânViênKhoToolStripMenuItem});
-            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(972, 33);
-            this.menuStrip2.TabIndex = 1;
-            this.menuStrip2.Text = "menuStrip2";
+            this.panel_Left.BackColor = System.Drawing.Color.Navy;
+            this.panel_Left.Controls.Add(this.button6);
+            this.panel_Left.Controls.Add(this.button5);
+            this.panel_Left.Controls.Add(this.button4);
+            this.panel_Left.Controls.Add(this.button3);
+            this.panel_Left.Controls.Add(this.button2);
+            this.panel_Left.Controls.Add(this.button1);
+            this.panel_Left.Controls.Add(this.pictureBox1);
+            this.panel_Left.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_Left.Location = new System.Drawing.Point(0, 0);
+            this.panel_Left.Name = "panel_Left";
+            this.panel_Left.Size = new System.Drawing.Size(149, 450);
+            this.panel_Left.TabIndex = 1;
             // 
-            // nhânViênKhoToolStripMenuItem
+            // panel_Top
             // 
-            this.nhânViênKhoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cậpNhậtSốLượngHàngTrongKhoToolStripMenuItem,
-            this.xemDánhSáchYêuCầuNhậpHàngToolStripMenuItem,
-            this.xácNhậnYêuCầuNhậpHàngToolStripMenuItem,
-            this.xemDanhSáchHàngTrongKhoToolStripMenuItem,
-            this.tạoBảngBáoCáoKiểmKêToolStripMenuItem,
-            this.yêuCầuĐặtHàngToolStripMenuItem,
-            this.đăngXuấtToolStripMenuItem});
-            this.nhânViênKhoToolStripMenuItem.Name = "nhânViênKhoToolStripMenuItem";
-            this.nhânViênKhoToolStripMenuItem.Size = new System.Drawing.Size(142, 29);
-            this.nhânViênKhoToolStripMenuItem.Text = "Nhân viên kho";
-            this.nhânViênKhoToolStripMenuItem.Click += new System.EventHandler(this.nhânViênKhoToolStripMenuItem_Click);
+            this.panel_Top.BackColor = System.Drawing.Color.Navy;
+            this.panel_Top.Controls.Add(this.label1);
+            this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Top.Location = new System.Drawing.Point(149, 0);
+            this.panel_Top.Name = "panel_Top";
+            this.panel_Top.Size = new System.Drawing.Size(651, 100);
+            this.panel_Top.TabIndex = 1;
             // 
-            // cậpNhậtSốLượngHàngTrongKhoToolStripMenuItem
+            // panel_Body
             // 
-            this.cậpNhậtSốLượngHàngTrongKhoToolStripMenuItem.Name = "cậpNhậtSốLượngHàngTrongKhoToolStripMenuItem";
-            this.cậpNhậtSốLượngHàngTrongKhoToolStripMenuItem.Size = new System.Drawing.Size(390, 34);
-            this.cậpNhậtSốLượngHàngTrongKhoToolStripMenuItem.Text = "Cập nhật số lượng hàng trong kho";
-            this.cậpNhậtSốLượngHàngTrongKhoToolStripMenuItem.Click += new System.EventHandler(this.cậpNhậtSốLượngHàngTrongKhoToolStripMenuItem_Click);
+            this.panel_Body.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_Body.Location = new System.Drawing.Point(149, 100);
+            this.panel_Body.Name = "panel_Body";
+            this.panel_Body.Size = new System.Drawing.Size(651, 350);
+            this.panel_Body.TabIndex = 2;
+            this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
             // 
-            // xemDánhSáchYêuCầuNhậpHàngToolStripMenuItem
+            // pictureBox1
             // 
-            this.xemDánhSáchYêuCầuNhậpHàngToolStripMenuItem.Name = "xemDánhSáchYêuCầuNhậpHàngToolStripMenuItem";
-            this.xemDánhSáchYêuCầuNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(390, 34);
-            this.xemDánhSáchYêuCầuNhậpHàngToolStripMenuItem.Text = "Xem dánh sách yêu cầu nhập hàng";
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox1.Image = global::WarehouseManagement.Presentation.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(149, 125);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // xácNhậnYêuCầuNhậpHàngToolStripMenuItem
+            // button1
             // 
-            this.xácNhậnYêuCầuNhậpHàngToolStripMenuItem.Name = "xácNhậnYêuCầuNhậpHàngToolStripMenuItem";
-            this.xácNhậnYêuCầuNhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(390, 34);
-            this.xácNhậnYêuCầuNhậpHàngToolStripMenuItem.Text = "Xác nhận yêu cầu nhập hàng";
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 125);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(149, 42);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Cập nhật \r\n";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // xemDanhSáchHàngTrongKhoToolStripMenuItem
+            // button2
             // 
-            this.xemDanhSáchHàngTrongKhoToolStripMenuItem.Name = "xemDanhSáchHàngTrongKhoToolStripMenuItem";
-            this.xemDanhSáchHàngTrongKhoToolStripMenuItem.Size = new System.Drawing.Size(390, 34);
-            this.xemDanhSáchHàngTrongKhoToolStripMenuItem.Text = "Xem danh sách hàng trong kho";
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(0, 167);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(149, 42);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Xem DSYCNH";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // tạoBảngBáoCáoKiểmKêToolStripMenuItem
+            // button3
             // 
-            this.tạoBảngBáoCáoKiểmKêToolStripMenuItem.Name = "tạoBảngBáoCáoKiểmKêToolStripMenuItem";
-            this.tạoBảngBáoCáoKiểmKêToolStripMenuItem.Size = new System.Drawing.Size(390, 34);
-            this.tạoBảngBáoCáoKiểmKêToolStripMenuItem.Text = "Tạo bảng báo cáo kiểm kê";
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(0, 209);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(149, 42);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Xác nhận";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // yêuCầuĐặtHàngToolStripMenuItem
+            // button4
             // 
-            this.yêuCầuĐặtHàngToolStripMenuItem.Name = "yêuCầuĐặtHàngToolStripMenuItem";
-            this.yêuCầuĐặtHàngToolStripMenuItem.Size = new System.Drawing.Size(390, 34);
-            this.yêuCầuĐặtHàngToolStripMenuItem.Text = "Yêu cầu đặt hàng";
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(0, 251);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(149, 42);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Xem DSHTK";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // đăngXuấtToolStripMenuItem
+            // button5
             // 
-            this.đăngXuấtToolStripMenuItem.Name = "đăngXuấtToolStripMenuItem";
-            this.đăngXuấtToolStripMenuItem.Size = new System.Drawing.Size(390, 34);
-            this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(0, 293);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(149, 42);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Tạo bảng";
+            this.button5.UseVisualStyleBackColor = true;
             // 
-            // frmNhanVienKho
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(0, 335);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(149, 42);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "YCDH";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(52, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "HOME";
+            // 
+            // Nhân_Viên_Kho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 450);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.menuStrip2);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmNhanVienKho";
-            this.Text = "frmNhanVienKho";
-            this.Load += new System.EventHandler(this.frmNhanVienKho_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
-            this.menuStrip2.ResumeLayout(false);
-            this.menuStrip2.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.panel_Body);
+            this.Controls.Add(this.panel_Top);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Nhân_Viên_Kho";
+            this.Text = "Nhân Viên Kho";
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel_Left.ResumeLayout(false);
+            this.panel_Top.ResumeLayout(false);
+            this.panel_Top.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DevExpress.XtraBars.PopupMenu popupMenu1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.MenuStrip menuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem nhânViênKhoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cậpNhậtSốLượngHàngTrongKhoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemDánhSáchYêuCầuNhậpHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xácNhậnYêuCầuNhậpHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem xemDanhSáchHàngTrongKhoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tạoBảngBáoCáoKiểmKêToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem yêuCầuĐặtHàngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_Left;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel_Top;
+        private System.Windows.Forms.Panel panel_Body;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label1;
     }
 }

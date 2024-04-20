@@ -29,8 +29,6 @@ namespace WarehouseManagement.DataAccess
             if (count!= 0) { return true; }
             return false;
 
-
-
         }
         public bool MaDonHangTonTai(string maDH)
         {
