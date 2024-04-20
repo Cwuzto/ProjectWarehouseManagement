@@ -14,7 +14,7 @@ namespace WarehouseManagement.Presentation
 {
     public partial class frmDonDatHang : Form
     {
-        
+
         DonDatHangBUS dhBUS = new DonDatHangBUS();
 
         public frmDonDatHang()
@@ -25,51 +25,51 @@ namespace WarehouseManagement.Presentation
 
         private void simpleButton1_Click(object sender, EventArgs e)
         {
-            load_data();    
+
         }
 
         private void load_data()
         {
-            DonDatHangBUS  dhBUS = new DonDatHangBUS();
+            DonDatHangBUS dhBUS = new DonDatHangBUS();
             dgvDDH.DataSource = dhBUS.LayDSDonDatHang();
         }
         private void btnThem_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnCapnhat_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            
+
             this.Close();
         }
         private void frmDonDatHang_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dgvDDH_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void btnThem_Click_1(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtMaDon.Text)&& !string.IsNullOrEmpty(txtMaNhanVien.Text))
+            if (!string.IsNullOrEmpty(txtMaDon.Text) && !string.IsNullOrEmpty(txtMaNhanVien.Text))
             {
                 DateTime ngaydat = dateTimeNgayDat.Value;
 
-                if (dhBUS.JKDDH(txtMaDon.Text,ngaydat,txtTinhTrang.Text, txtMaNhanVien.Text))
+                if (dhBUS.JKDDH(txtMaDon.Text, ngaydat, txtTinhTrang.Text, txtMaNhanVien.Text))
                 {
 
                     load_data();
@@ -99,9 +99,9 @@ namespace WarehouseManagement.Presentation
 
         private void btnCapnhat_Click_1(object sender, EventArgs e)
         {
-           if(!string.IsNullOrEmpty(txtMaDon.Text) && !string.IsNullOrEmpty(txtTinhTrang.Text))
+            if (!string.IsNullOrEmpty(txtMaDon.Text) && !string.IsNullOrEmpty(txtTinhTrang.Text))
             {
-                if (dhBUS.UpdateDonDatHang(txtMaDon.Text,txtTinhTrang.Text, MaDonCu, TinhTrangCu))
+                if (dhBUS.UpdateDonDatHang(txtMaDon.Text, txtTinhTrang.Text, MaDonCu, TinhTrangCu))
                 {
 
                     load_data();
@@ -127,12 +127,19 @@ namespace WarehouseManagement.Presentation
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 DataGridViewRow row = dgvDDH.Rows[e.RowIndex];
-               txtMaDon.Text = row.Cells["MaDH"].Value.ToString();
+                txtMaDon.Text = row.Cells["MaDH"].Value.ToString();
                 MaDonCu = txtMaDon.Text;
 
-                txtTinhTrang.Text= row.Cells["TrangThai"].Value.ToString();
+                txtTinhTrang.Text = row.Cells["TrangThai"].Value.ToString();
                 TinhTrangCu = txtTinhTrang.Text;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            load_data();
+        }
+
+        
     }
 }
