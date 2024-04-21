@@ -23,15 +23,10 @@ namespace WarehouseManagement.Presentation
 
         private void load_data()
         {
-            dgvxemyc.DataSource = ycnhBUS.laydsyc();
+            yeucaunhaphangBUS ycdhDL = new yeucaunhaphangBUS();   
+            dgvxemyc.DataSource = ycdhDL.laydsyc();
 
         }
-
-
-
-
-
-
 
         private void btnxem_Click(object sender, EventArgs e)
         {
@@ -45,7 +40,7 @@ namespace WarehouseManagement.Presentation
               {
               DateTime ngayycdh = ngayyc.Value;
 
-              if (ycnhBUS.ycdhhoa(ngayycdh, txtmahanghoa.Text, txtmanhanvien.Text,txttrangthai.Text ))
+              if (ycnhBUS.ycdhhoa(ngayycdh,txtmanhanvien.Text, txtmahanghoa.Text ,txttrangthai.Text ))
 
 
                   {
@@ -64,6 +59,20 @@ namespace WarehouseManagement.Presentation
 
 
             }
+        }
+
+        private void frmyeucaudathang_Load(object sender, EventArgs e)
+        {
+          
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            frmNVbanhang otherForm = new frmNVbanhang();
+
+
+            otherForm.Show(); this.Close();
         }
     }
 }

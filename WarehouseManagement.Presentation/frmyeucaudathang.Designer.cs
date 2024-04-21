@@ -39,6 +39,8 @@
             this.btngui = new System.Windows.Forms.Button();
             this.ngayyc = new System.Windows.Forms.DateTimePicker();
             this.txttrangthai = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvxemyc)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +48,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(40, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(166, 29);
@@ -56,7 +59,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(420, 67);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(463, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 29);
             this.label2.TabIndex = 1;
@@ -66,7 +70,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(420, 105);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(463, 98);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(131, 29);
             this.label3.TabIndex = 2;
@@ -76,6 +81,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(40, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 29);
@@ -85,7 +91,7 @@
             // txtmanhanvien
             // 
             this.txtmanhanvien.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmanhanvien.Location = new System.Drawing.Point(203, 60);
+            this.txtmanhanvien.Location = new System.Drawing.Point(228, 62);
             this.txtmanhanvien.Name = "txtmanhanvien";
             this.txtmanhanvien.Size = new System.Drawing.Size(165, 34);
             this.txtmanhanvien.TabIndex = 5;
@@ -93,7 +99,7 @@
             // txtmahanghoa
             // 
             this.txtmahanghoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtmahanghoa.Location = new System.Drawing.Point(203, 105);
+            this.txtmahanghoa.Location = new System.Drawing.Point(228, 107);
             this.txtmahanghoa.Name = "txtmahanghoa";
             this.txtmahanghoa.Size = new System.Drawing.Size(165, 34);
             this.txtmahanghoa.TabIndex = 8;
@@ -110,30 +116,33 @@
             // 
             // btnxem
             // 
+            this.btnxem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnxem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxem.Location = new System.Drawing.Point(23, 195);
+            this.btnxem.Location = new System.Drawing.Point(23, 189);
             this.btnxem.Name = "btnxem";
-            this.btnxem.Size = new System.Drawing.Size(217, 38);
+            this.btnxem.Size = new System.Drawing.Size(226, 44);
             this.btnxem.TabIndex = 10;
             this.btnxem.Text = "xem danh sách yêu cầu";
-            this.btnxem.UseVisualStyleBackColor = true;
+            this.btnxem.UseVisualStyleBackColor = false;
             this.btnxem.Click += new System.EventHandler(this.btnxem_Click);
             // 
             // btngui
             // 
+            this.btngui.BackColor = System.Drawing.Color.Blue;
             this.btngui.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngui.Location = new System.Drawing.Point(929, 160);
+            this.btngui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btngui.Location = new System.Drawing.Point(944, 151);
             this.btngui.Name = "btngui";
-            this.btngui.Size = new System.Drawing.Size(97, 61);
+            this.btngui.Size = new System.Drawing.Size(146, 52);
             this.btngui.TabIndex = 11;
-            this.btngui.Text = "gửi ";
-            this.btngui.UseVisualStyleBackColor = true;
+            this.btngui.Text = "Gửi yêu cầu";
+            this.btngui.UseVisualStyleBackColor = false;
             this.btngui.Click += new System.EventHandler(this.btngui_Click_1);
             // 
             // ngayyc
             // 
             this.ngayyc.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ngayyc.Location = new System.Drawing.Point(605, 60);
+            this.ngayyc.Location = new System.Drawing.Point(669, 53);
             this.ngayyc.Name = "ngayyc";
             this.ngayyc.Size = new System.Drawing.Size(421, 34);
             this.ngayyc.TabIndex = 12;
@@ -141,16 +150,39 @@
             // txttrangthai
             // 
             this.txttrangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttrangthai.Location = new System.Drawing.Point(605, 100);
+            this.txttrangthai.Location = new System.Drawing.Point(669, 93);
             this.txttrangthai.Name = "txttrangthai";
             this.txttrangthai.Size = new System.Drawing.Size(421, 34);
             this.txttrangthai.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(175, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 16);
+            this.label5.TabIndex = 14;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.IndianRed;
+            this.label7.Location = new System.Drawing.Point(-6, -4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 69);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "↺";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // frmyeucaudathang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1072, 523);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(1211, 523);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txttrangthai);
             this.Controls.Add(this.ngayyc);
             this.Controls.Add(this.btngui);
@@ -164,6 +196,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmyeucaudathang";
             this.Text = "frmyeucaudathang";
+            this.Load += new System.EventHandler(this.frmyeucaudathang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvxemyc)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -183,5 +216,7 @@
         private System.Windows.Forms.Button btngui;
         private System.Windows.Forms.DateTimePicker ngayyc;
         private System.Windows.Forms.TextBox txttrangthai;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
     }
 }

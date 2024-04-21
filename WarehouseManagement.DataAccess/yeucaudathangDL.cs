@@ -13,7 +13,7 @@ namespace WarehouseManagement.DataAccess
         DataTable yc;
          public yeucaunhaphangDL()
         {
-            string query = "SELECT * FROM [YeuCauDatHang] ";
+            string query = "SELECT * FROM [YeuCauNhapHang] ";
             yc = DataProvider.Instance.ExecuteQuery(query);
 
         }
@@ -22,8 +22,8 @@ namespace WarehouseManagement.DataAccess
             
 
             int count = 0;
-            var query = "INSERT INTO YeuCauNhapHang( NgayYC,MaNV, MaHH) VALUES ( @ngayyc,@manv, @mahh)";
-            object[] parameters = { NgayYC, MaNV, MaHH };
+            var query = "INSERT INTO YeuCauNhapHang( NgayYC,MaNV, MaHH, TrangThai) VALUES ( @ngayyc , @manv , @mahh , @trangthai )";
+            object[] parameters = { NgayYC, MaNV, MaHH , TrangThai };
             count = DataProvider.Instance.ExecuteNonQuery(query, parameters);
             if (count != 0)
             { return true; }
@@ -38,13 +38,13 @@ namespace WarehouseManagement.DataAccess
         public bool ycnhaphang(DateTime NgayYC,string MaNV, string MaHH)
         {
 //[MaNV], [MaHH], [NgayYC]
-            string query = "SELECT  C FROM YeuCauDatHang WHERE MaNV = @manv AND NgayYc = @ngayyc AND MaHH = @mahh";
+            string query = "SELECT  count(*) FROM YeuCauDatHang WHERE MaNV = @manv AND NgayYc = @ngayyc AND MaHH = @mahh ";
 ;
-            object[] parameters = { NgayYC, MaNV, MaHH };
+            object[] parameters = {  MaNV, NgayYC , MaHH };
             int count = (int)DataProvider.Instance.ExecuteScalar(query, parameters);
            if (count > 0)
             return true; 
-            return false;
+           return false;
                 
             }
         

@@ -22,5 +22,11 @@ namespace WarehouseManagement.Presentation
             frmhanghoa otherForm = new frmhanghoa();
             otherForm.Show(); 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmyeucaudathang otherForm = new frmyeucaudathang();
+            otherForm.Show();
+        }
     }
 }
