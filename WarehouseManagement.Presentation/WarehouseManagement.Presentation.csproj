@@ -131,7 +131,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QLKHOQUANCFDataSet.Designer.cs" />
     <EmbeddedResource Include="frmDonDatHang.resx">
       <DependentUpon>frmDonDatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,13 +188,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLKHOQUANCFDataSet.xsc">
-      <DependentUpon>QLKHOQUANCFDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLKHOQUANCFDataSet.xsd" />
-    <None Include="QLKHOQUANCFDataSet.xss">
-      <DependentUpon>QLKHOQUANCFDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Resources\mountains.png" />
   </ItemGroup>
   <ItemGroup>

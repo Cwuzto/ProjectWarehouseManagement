@@ -22,9 +22,10 @@ namespace WarehouseManagement.Presentation
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLKHOQUANCFDataSet.LoaiNV' table. You can move, or remove it, as needed.
-            this.loaiNVTableAdapter.Fill(this.qLKHOQUANCFDataSet.LoaiNV);
             dgvDSNV.DataSource = nvBUS.LayDSNhanVien();
+            cbLoaiNV.DataSource=nvBUS.GetDSLoaiNV();
+            cbLoaiNV.DisplayMember = "TenLoaiNV";
+            cbLoaiNV.ValueMember = "MaLoaiNV";
         }
         private void load_data()
         {
@@ -61,6 +62,13 @@ namespace WarehouseManagement.Presentation
                 if (nvBUS.AddEmployee(txtHo.Text, txtTen.Text, txtSDT.Text, txtDiaChi.Text, txtPass.Text, txtUser.Text, txtMaNV.Text, gt, loaiNV))
                 {
                     load_data();
+                    txtHo.Clear();
+                    txtTen.Clear();
+                    txtSDT.Clear();
+                    txtUser.Clear();
+                    txtPass.Clear();
+                    txtMaNV.Clear();
+                    txtDiaChi.Clear();
                     MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
@@ -82,6 +90,9 @@ namespace WarehouseManagement.Presentation
                 
                 MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load_data();
+                txtMaNV_temp.Clear();
+                txtOldValue.Clear();
+                txtNewValue.Clear();
                 return;
             }
 
@@ -112,6 +123,8 @@ namespace WarehouseManagement.Presentation
             {
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load_data();
+                txtMaNV_temp.Clear();
+                txtOldValue.Clear();
                 return;
             }
         }

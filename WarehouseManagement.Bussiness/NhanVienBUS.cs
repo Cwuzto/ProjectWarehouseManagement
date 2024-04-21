@@ -17,12 +17,16 @@ namespace WarehouseManagement.Business
         {
             return nv.GetAllNhanVien();
         }
+        public DataTable GetDSLoaiNV()
+        {
+            return nv.LayDSLoaiNV();
+        }
         public bool AddEmployee(string ho, string ten, string sdt, string diachi, string pass, string user, string manv, int gt, string loainv)
         {
-            var maloai = nv.LayMaLoaiTuTenLoaiNV(loainv);
+            
             if (!nv.MaNVTonTai(manv))
             {
-                if (nv.AddNhanVien(ho, ten, sdt, diachi, pass, user, manv, gt, maloai) > 0)
+                if (nv.AddNhanVien(ho, ten, sdt, diachi, pass, user, manv, gt, loainv) > 0)
                     return true;
             }
             MessageBox.Show("Mã nhân viên đã tồn tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);

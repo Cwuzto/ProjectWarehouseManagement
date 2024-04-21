@@ -33,11 +33,10 @@ namespace WarehouseManagement.DataAccess
 
             return count;
         }
-        public string LayMaLoaiTuTenLoaiNV(string tenLoaiNV)
+        public DataTable LayDSLoaiNV()
         {
-            string query = "SELECT MaLoaiNV FROM LoaiNV WHERE TenLoaiNV = @TenLoai ";
-            object[] parameters = { tenLoaiNV };
-            return (string)DataProvider.Instance.ExecuteScalar(query, parameters);
+            string query = "SELECT * FROM LoaiNV ";
+            return DataProvider.Instance.ExecuteQuery(query);
         }
         public bool MaNVTonTai(string maNV)
         {
