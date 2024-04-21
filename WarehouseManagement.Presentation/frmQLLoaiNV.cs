@@ -44,6 +44,8 @@ namespace WarehouseManagement.Presentation
             if (loaiNVBUS.ThemLoaiNV(txtLoaiNV.Text,txtTenLoai.Text))
             {
                 load_data();
+                txtLoaiNV.Clear();
+                txtTenLoai.Clear();
                 MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -63,6 +65,8 @@ namespace WarehouseManagement.Presentation
 
                 MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load_data();
+                txtLoaiNV.Clear();
+                txtTenLoai.Clear();
                 return;
             }
         }
@@ -90,6 +94,8 @@ namespace WarehouseManagement.Presentation
             {
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load_data();
+                txtLoaiNV.Clear();
+                txtTenLoai.Clear();
                 return;
             }
         }

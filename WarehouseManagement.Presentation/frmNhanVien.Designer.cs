@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.cbLoaiNV = new System.Windows.Forms.ComboBox();
             this.loaiNVBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLKHOQUANCFDataSet = new WarehouseManagement.Presentation.QLKHOQUANCFDataSet();
+            //this.qLKHOQUANCFDataSet = new WarehouseManagement.Presentation.QLKHOQUANCFDataSet();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -59,7 +59,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtNewValue = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.loaiNVTableAdapter = new WarehouseManagement.Presentation.QLKHOQUANCFDataSetTableAdapters.LoaiNVTableAdapter();
+            //this.loaiNVTableAdapter = new WarehouseManagement.Presentation.QLKHOQUANCFDataSetTableAdapters.LoaiNVTableAdapter();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -72,7 +72,7 @@
             this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnRandom = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.loaiNVBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLKHOQUANCFDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.qLKHOQUANCFDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -89,25 +89,22 @@
             // cbLoaiNV
             // 
             this.cbLoaiNV.BackColor = System.Drawing.SystemColors.MenuBar;
-            this.cbLoaiNV.DataSource = this.loaiNVBindingSource;
-            this.cbLoaiNV.DisplayMember = "TenLoaiNV";
             this.cbLoaiNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiNV.FormattingEnabled = true;
             this.cbLoaiNV.Location = new System.Drawing.Point(900, 104);
             this.cbLoaiNV.Name = "cbLoaiNV";
             this.cbLoaiNV.Size = new System.Drawing.Size(274, 28);
             this.cbLoaiNV.TabIndex = 35;
-            this.cbLoaiNV.ValueMember = "TenLoaiNV";
             // 
             // loaiNVBindingSource
             // 
             this.loaiNVBindingSource.DataMember = "LoaiNV";
-            this.loaiNVBindingSource.DataSource = this.qLKHOQUANCFDataSet;
+            //this.loaiNVBindingSource.DataSource = this.qLKHOQUANCFDataSet;
             // 
             // qLKHOQUANCFDataSet
             // 
-            this.qLKHOQUANCFDataSet.DataSetName = "QLKHOQUANCFDataSet";
-            this.qLKHOQUANCFDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //this.qLKHOQUANCFDataSet.DataSetName = "QLKHOQUANCFDataSet";
+            //this.qLKHOQUANCFDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label9
             // 
@@ -386,7 +383,7 @@
             // 
             // loaiNVTableAdapter
             // 
-            this.loaiNVTableAdapter.ClearBeforeFill = true;
+            //this.loaiNVTableAdapter.ClearBeforeFill = true;
             // 
             // errorProvider1
             // 
@@ -479,7 +476,7 @@
             this.Text = "frmNhanVien";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.loaiNVBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLKHOQUANCFDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.qLKHOQUANCFDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
@@ -526,9 +523,9 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtNewValue;
         private System.Windows.Forms.Label label12;
-        private QLKHOQUANCFDataSet qLKHOQUANCFDataSet;
+        //private QLKHOQUANCFDataSet qLKHOQUANCFDataSet;
         private System.Windows.Forms.BindingSource loaiNVBindingSource;
-        private QLKHOQUANCFDataSetTableAdapters.LoaiNVTableAdapter loaiNVTableAdapter;
+        //private QLKHOQUANCFDataSetTableAdapters.LoaiNVTableAdapter loaiNVTableAdapter;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.ErrorProvider errorProvider3;
