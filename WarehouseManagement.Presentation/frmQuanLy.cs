@@ -80,5 +80,14 @@ namespace WarehouseManagement.Presentation
             frmDonDat.WindowState = FormWindowState.Maximized;
             frmDonDat.Show();
         }
+
+        private void menuitemHgXuatKho_Click(object sender, EventArgs e)
+        {
+            frmDSHangXuatKho frmHgXuat = new frmDSHangXuatKho();
+
+            frmHgXuat.MdiParent = this;
+            frmHgXuat.WindowState = FormWindowState.Maximized;
+            frmHgXuat.Show();
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WarehouseManagement.Presentation
 {
-    partial class frmDSYCDatHang
+    partial class frmDSHangXuatKho
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDSYCDatHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDSHangXuatKho));
             this.btnAll = new System.Windows.Forms.Button();
             this.cbLoaiTimKiem = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvDSYC = new System.Windows.Forms.DataGridView();
-            this.DuyetYC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.HuyYC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnSearch = new System.Windows.Forms.Button();
+            this.dgvHgXuatKho = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.dtpSearch = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSYC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHgXuatKho)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAll
             // 
             this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAll.Location = new System.Drawing.Point(807, 134);
+            this.btnAll.Location = new System.Drawing.Point(667, 134);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(67, 177);
             this.btnAll.TabIndex = 14;
@@ -58,13 +56,12 @@
             this.cbLoaiTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiTimKiem.FormattingEnabled = true;
             this.cbLoaiTimKiem.Items.AddRange(new object[] {
-            "Ngày yêu cầu",
+            "Ngày xuất",
             "Mã nhân viên",
-            "Mã hàng hóa",
-            "Trạng thái"});
+            "Mã hàng hóa"});
             this.cbLoaiTimKiem.Location = new System.Drawing.Point(212, 31);
             this.cbLoaiTimKiem.Name = "cbLoaiTimKiem";
-            this.cbLoaiTimKiem.Size = new System.Drawing.Size(571, 30);
+            this.cbLoaiTimKiem.Size = new System.Drawing.Size(436, 30);
             this.cbLoaiTimKiem.TabIndex = 13;
             this.cbLoaiTimKiem.SelectedIndexChanged += new System.EventHandler(this.cbLoaiTimKiem_SelectedIndexChanged);
             // 
@@ -78,51 +75,22 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Tìm theo:";
             // 
-            // dgvDSYC
+            // dgvHgXuatKho
             // 
-            this.dgvDSYC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSYC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.DuyetYC,
-            this.HuyYC});
-            this.dgvDSYC.Location = new System.Drawing.Point(77, 134);
-            this.dgvDSYC.Name = "dgvDSYC";
-            this.dgvDSYC.RowHeadersWidth = 51;
-            this.dgvDSYC.RowTemplate.Height = 24;
-            this.dgvDSYC.Size = new System.Drawing.Size(706, 286);
-            this.dgvDSYC.TabIndex = 11;
-            this.dgvDSYC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSYC_CellContentClick);
-            // 
-            // DuyetYC
-            // 
-            this.DuyetYC.HeaderText = "Duyệt Yêu Cầu";
-            this.DuyetYC.MinimumWidth = 6;
-            this.DuyetYC.Name = "DuyetYC";
-            this.DuyetYC.Width = 110;
-            // 
-            // HuyYC
-            // 
-            this.HuyYC.HeaderText = "Hủy Yêu Cầu";
-            this.HuyYC.MinimumWidth = 6;
-            this.HuyYC.Name = "HuyYC";
-            this.HuyYC.Width = 110;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(679, 74);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(109, 38);
-            this.btnSearch.TabIndex = 10;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.dgvHgXuatKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHgXuatKho.Location = new System.Drawing.Point(77, 134);
+            this.dgvHgXuatKho.Name = "dgvHgXuatKho";
+            this.dgvHgXuatKho.RowHeadersWidth = 51;
+            this.dgvHgXuatKho.RowTemplate.Height = 24;
+            this.dgvHgXuatKho.Size = new System.Drawing.Size(571, 286);
+            this.dgvHgXuatKho.TabIndex = 11;
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(212, 78);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(468, 30);
+            this.txtSearch.Size = new System.Drawing.Size(333, 30);
             this.txtSearch.TabIndex = 9;
             // 
             // label1
@@ -135,32 +103,43 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Tìm kiếm:";
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.Location = new System.Drawing.Point(546, 74);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(109, 38);
+            this.btnSearch.TabIndex = 10;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // dtpSearch
             // 
             this.dtpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpSearch.Location = new System.Drawing.Point(212, 78);
             this.dtpSearch.Name = "dtpSearch";
-            this.dtpSearch.Size = new System.Drawing.Size(468, 30);
-            this.dtpSearch.TabIndex = 16;
+            this.dtpSearch.Size = new System.Drawing.Size(333, 30);
+            this.dtpSearch.TabIndex = 15;
             // 
-            // frmDSYCDatHang
+            // frmDSHangXuatKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1021, 450);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dtpSearch);
             this.Controls.Add(this.btnAll);
             this.Controls.Add(this.cbLoaiTimKiem);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvDSYC);
+            this.Controls.Add(this.dgvHgXuatKho);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
-            this.Name = "frmDSYCDatHang";
-            this.Text = "frmDSYCDatHang";
-            this.Load += new System.EventHandler(this.frmDSYCDatHang_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDSYC)).EndInit();
+            this.Name = "frmDSHangXuatKho";
+            this.Text = "frmDSHangXuatKho";
+            this.Load += new System.EventHandler(this.frmDSHangXuatKho_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHgXuatKho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,12 +150,10 @@
         private System.Windows.Forms.Button btnAll;
         private System.Windows.Forms.ComboBox cbLoaiTimKiem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvDSYC;
+        private System.Windows.Forms.DataGridView dgvHgXuatKho;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn DuyetYC;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn HuyYC;
         private System.Windows.Forms.DateTimePicker dtpSearch;
     }
 }

@@ -81,6 +81,12 @@
     <Compile Include="frmDonDatHang.Designer.cs">
       <DependentUpon>frmDonDatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDSHangXuatKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSHangXuatKho.Designer.cs">
+      <DependentUpon>frmDSHangXuatKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDSYCDatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDonDatHang.resx">
       <DependentUpon>frmDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSHangXuatKho.resx">
+      <DependentUpon>frmDSHangXuatKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDSYCDatHang.resx">
       <DependentUpon>frmDSYCDatHang.cs</DependentUpon>
