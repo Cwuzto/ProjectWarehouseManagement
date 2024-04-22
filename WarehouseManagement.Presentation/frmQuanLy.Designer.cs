@@ -39,6 +39,8 @@
             this.menuitemYCNhapHg = new System.Windows.Forms.ToolStripMenuItem();
             this.xemThốngKêNhậpxuấtCácMặtHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnDangXuat = new System.Windows.Forms.Button();
+            this.menuitemHgXuatKho = new System.Windows.Forms.ToolStripMenuItem();
+            this.danhSáchHàngTrongKhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +86,9 @@
             this.menuitemHang.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuitemDonDatHang,
             this.danhSáchYêuCầuToolStripMenuItem,
-            this.xemThốngKêNhậpxuấtCácMặtHàngToolStripMenuItem});
+            this.xemThốngKêNhậpxuấtCácMặtHàngToolStripMenuItem,
+            this.menuitemHgXuatKho,
+            this.danhSáchHàngTrongKhoToolStripMenuItem});
             this.menuitemHang.Name = "menuitemHang";
             this.menuitemHang.Size = new System.Drawing.Size(183, 39);
             this.menuitemHang.Text = "Quản lý hàng";
@@ -141,6 +145,19 @@
             this.btnDangXuat.UseVisualStyleBackColor = false;
             this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
+            // menuitemHgXuatKho
+            // 
+            this.menuitemHgXuatKho.Name = "menuitemHgXuatKho";
+            this.menuitemHgXuatKho.Size = new System.Drawing.Size(560, 40);
+            this.menuitemHgXuatKho.Text = "Danh sách hàng xuất kho";
+            this.menuitemHgXuatKho.Click += new System.EventHandler(this.menuitemHgXuatKho_Click);
+            // 
+            // danhSáchHàngTrongKhoToolStripMenuItem
+            // 
+            this.danhSáchHàngTrongKhoToolStripMenuItem.Name = "danhSáchHàngTrongKhoToolStripMenuItem";
+            this.danhSáchHàngTrongKhoToolStripMenuItem.Size = new System.Drawing.Size(560, 40);
+            this.danhSáchHàngTrongKhoToolStripMenuItem.Text = "Danh sách hàng trong kho";
+            // 
             // frmQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -175,5 +192,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuitemYCNhapHg;
         private System.Windows.Forms.ToolStripMenuItem xemThốngKêNhậpxuấtCácMặtHàngToolStripMenuItem;
         private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.ToolStripMenuItem menuitemHgXuatKho;
+        private System.Windows.Forms.ToolStripMenuItem danhSáchHàngTrongKhoToolStripMenuItem;
     }
 }
