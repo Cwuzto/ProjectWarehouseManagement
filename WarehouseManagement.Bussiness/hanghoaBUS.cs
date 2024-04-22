@@ -8,17 +8,29 @@ using WarehouseManagement.DataAccess;
 
 namespace WarehouseManagement.Bussiness
 {
-
-    public class hanghoaBUS
+    public class HangHoaBUS
     {
-        hanghoaDL HH = new hanghoaDL();
-        public DataTable Laydshanghoa()
+        HangHoaDL hang = new HangHoaDL();
+        public DataTable danhsachhh()
         {
-            return HH.Laydshanghoa();
+            return hang.dshh();
         }
-        public DataTable timhang(string data)
+        public bool adhang(string MaHH, string TenHH, string MoTa, string SoLuong, DateTime NgayCapNhat, string MaLoai)
         {
-            return HH.timhanghoa(data);
+            {
+                if (!hang.ktrtontai(MaHH))
+                {
+                    if (hang.themhang(MaHH, TenHH, MoTa, SoLuong, NgayCapNhat, MaLoai))
+                        return true;
+                }
+                return false;
+            }
         }
+        public bool deletehang(string mahh)
+        {
+            return hang.xoahanghoa(mahh);
+        }
+
+
     }
 }

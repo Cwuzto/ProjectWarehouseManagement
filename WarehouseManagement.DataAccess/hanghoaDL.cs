@@ -8,26 +8,52 @@ using WarehouseManagement.DataAccess.Data;
 
 namespace WarehouseManagement.DataAccess
 {
-
-    public class hanghoaDL
+    public class HangHoaDL
     {
-        DataTable hh;
-        public hanghoaDL()
+        DataTable w;
+        public HangHoaDL()
         {
-            var query = "SELECT * FROM [HangHoa]";
-            hh = DataProvider.Instance.ExecuteQuery(query);
+            string query = "SELECT * FROM [HangHoa] ";
+            w = DataProvider.Instance.ExecuteQuery(query);
 
         }
-        public DataTable timhanghoa(string MaHH)
-        { 
-                string query = "SELECT * FROM [HangHoa] WHERE MaHH LIKE @Keyword";
-                object[] parameter = {MaHH};
-                return DataProvider.Instance.ExecuteQuery(query, parameter);
-            }
-        
-        public DataTable Laydshanghoa()
+        public bool themhang(string MaHH ,string TenHH ,string MoTa,string SoLuong,DateTime NgayCapNhat, string MaLoai)
         {
-            return hh;
+            int count = 0;
+            var query = "INSERT INTO HangHoa( MaHH,TenHH, MoTa, SoLuong, NgayCapNhat, MaLoai) VALUES ( @mahh , @tenhh , @mota , @soluong , @ngaycapnhat , @maloai )";
+            object[] parameters = { MaHH, TenHH, MoTa, SoLuong, NgayCapNhat, MaLoai };
+            count = DataProvider.Instance.ExecuteNonQuery(query, parameters);
+            if (count != 0)
+            { return true; }
+            return false;
         }
+        public bool ktrtontai(string MaHH)
+        {
+            
+            string query = "SELECT  count(*) FROM HangHoa WHERE  MaHH = @mahh ";
+            object[] parameters = {MaHH };
+            int count = (int)DataProvider.Instance.ExecuteScalar(query, parameters);
+            if (count > 0)
+                return true;
+            return false;
+
+        }
+        public bool xoahanghoa(string mahh)
+        {
+            var query = $"DELETE [HangHoa] WHERE MaHH = '{mahh}' ";
+            var result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public bool deletehang(string mahh)
+        {
+            var query = $"DELETE [HangHoa] WHERE MaHH = '{mahh}' ";
+            var result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+        public DataTable dshh()
+        {
+            return w;
+        }
+
     }
 }

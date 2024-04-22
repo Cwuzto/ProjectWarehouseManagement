@@ -107,7 +107,7 @@
             // dgvxemyc
             // 
             this.dgvxemyc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvxemyc.Location = new System.Drawing.Point(23, 239);
+            this.dgvxemyc.Location = new System.Drawing.Point(45, 239);
             this.dgvxemyc.Name = "dgvxemyc";
             this.dgvxemyc.RowHeadersWidth = 51;
             this.dgvxemyc.RowTemplate.Height = 24;
@@ -117,10 +117,10 @@
             // btnxem
             // 
             this.btnxem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnxem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxem.Location = new System.Drawing.Point(23, 189);
+            this.btnxem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnxem.Location = new System.Drawing.Point(45, 182);
             this.btnxem.Name = "btnxem";
-            this.btnxem.Size = new System.Drawing.Size(226, 44);
+            this.btnxem.Size = new System.Drawing.Size(283, 51);
             this.btnxem.TabIndex = 10;
             this.btnxem.Text = "xem danh sách yêu cầu";
             this.btnxem.UseVisualStyleBackColor = false;
@@ -131,9 +131,9 @@
             this.btngui.BackColor = System.Drawing.Color.Blue;
             this.btngui.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngui.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btngui.Location = new System.Drawing.Point(944, 151);
+            this.btngui.Location = new System.Drawing.Point(924, 151);
             this.btngui.Name = "btngui";
-            this.btngui.Size = new System.Drawing.Size(146, 52);
+            this.btngui.Size = new System.Drawing.Size(166, 52);
             this.btngui.TabIndex = 11;
             this.btngui.Text = "Gửi yêu cầu";
             this.btngui.UseVisualStyleBackColor = false;
@@ -150,7 +150,7 @@
             // txttrangthai
             // 
             this.txttrangthai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txttrangthai.Location = new System.Drawing.Point(669, 93);
+            this.txttrangthai.Location = new System.Drawing.Point(669, 95);
             this.txttrangthai.Name = "txttrangthai";
             this.txttrangthai.Size = new System.Drawing.Size(421, 34);
             this.txttrangthai.TabIndex = 13;

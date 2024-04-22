@@ -19,7 +19,7 @@ namespace WarehouseManagement.Presentation
 
         private void btnxemdanhsach_Click(object sender, EventArgs e)
         {
-            frmhanghoa otherForm = new frmhanghoa();
+            frmxemhanghoa otherForm = new frmxemhanghoa();
             otherForm.Show(); 
         }
 

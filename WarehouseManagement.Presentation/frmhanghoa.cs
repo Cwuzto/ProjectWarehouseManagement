@@ -11,46 +11,65 @@ using WarehouseManagement.Bussiness;
 
 namespace WarehouseManagement.Presentation
 {
-    public partial class frmhanghoa : Form
-    {         
-        hanghoaBUS hhBUS = new hanghoaBUS();
+    public partial class frmHangHoa : Form
+    {
+        HangHoaBUS  HHBUS = new HangHoaBUS();
 
-        public frmhanghoa()
+        public frmHangHoa()
         {
             InitializeComponent();
         }
-    
-        
-            private void load_data()
-            {
-                hanghoaBUS HH= new hanghoaBUS();
-                dgvdshanghoa.DataSource = HH.Laydshanghoa();
-            }
-          
-        private void button1_Click(object sender, EventArgs e)
+        private void load_data()
         {
-            load_data();
+            HangHoaBUS hanghoa = new HangHoaBUS();
+            dgvhanghoa.DataSource = hanghoa.danhsachhh();
+        }
+       
 
+        private void btnalhh_Click(object sender, EventArgs e)
+        {
+            load_data();    
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnthemhh_Click(object sender, EventArgs e)
         {
-            frmNVbanhang otherForm = new frmNVbanhang();
-            
+           if (!string.IsNullOrEmpty(txtmahh.Text) && !string.IsNullOrEmpty(txtmaloai.Text))
+            {
+                DateTime ngaycn = dtpngaycn.Value;
 
-            otherForm.Show();this.Close();
+                if (HHBUS.adhang(txtmahh.Text, txttenhh.Text, txtmota.Text, txtsoluong.Text , ngaycn, txtmaloai.Text))
+
+
+                {
+                    load_data();
+                    txtmahh.Clear();
+                    txttenhh.Clear();
+                    txtmaloai.Clear();
+                    txtsoluong.Clear(); 
+                    txtmota.Clear();    
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+
+            {
+                MessageBox.Show("Không thể thêm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+
+            }
         }
-private void btnxemang_Click(object sender, EventArgs e)
+
+        private void btnxoahh_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtmaloai.Text))
+            if (HHBUS.deletehang(txtmahh.Text))
             {
-                dgvdshanghoa.DataSource = hhBUS.timhang(txtmaloai.Text);
+                MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                load_data();
+                return;
             }
-            else
-            {
-                MessageBox.Show("chua nhap ma loai.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+            MessageBox.Show("Không thể xóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
-    }
-
+}

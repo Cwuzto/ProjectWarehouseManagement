@@ -45,7 +45,8 @@
     <Compile Include="DataProvider.cs" />
     <Compile Include="DSYCDatHgDL.cs" />
     <Compile Include="DSYCNhapHangDL.cs" />
-    <Compile Include="hanghoaDL.cs" />
+    <Compile Include="HangHoaDL.cs" />
+    <Compile Include="xemhanghoaDL.cs" />
     <Compile Include="LoaiNVDL.cs" />
     <Compile Include="NhanVienDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
