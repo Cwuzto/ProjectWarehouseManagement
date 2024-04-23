@@ -31,8 +31,8 @@ namespace WarehouseManagement.Presentation
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             this.Hide();
-            frmLogin frmLogin = new frmLogin();
-            frmLogin.ShowDialog();
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
             this.Close();
         }
 
@@ -70,6 +70,24 @@ namespace WarehouseManagement.Presentation
             frmYCDat.MdiParent = this;
             frmYCDat.WindowState = FormWindowState.Maximized;
             frmYCDat.Show();
+        }
+
+        private void menuitemDonDatHang_Click(object sender, EventArgs e)
+        {
+            frmDonDatHang frmDonDat = new frmDonDatHang();
+
+            frmDonDat.MdiParent = this;
+            frmDonDat.WindowState = FormWindowState.Maximized;
+            frmDonDat.Show();
+        }
+
+        private void menuitemHgXuatKho_Click(object sender, EventArgs e)
+        {
+            frmDSHangXuatKho frmHgXuat = new frmDSHangXuatKho();
+
+            frmHgXuat.MdiParent = this;
+            frmHgXuat.WindowState = FormWindowState.Maximized;
+            frmHgXuat.Show();
         }
     }
 }

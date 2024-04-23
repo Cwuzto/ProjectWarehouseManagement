@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cbLoaiTimKiem = new System.Windows.Forms.ComboBox();
             this.btnAll = new System.Windows.Forms.Button();
+            this.dtpSearch = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSYC)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(594, 77);
+            this.btnSearch.Location = new System.Drawing.Point(599, 77);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(109, 38);
             this.btnSearch.TabIndex = 2;
@@ -101,11 +102,12 @@
             this.cbLoaiTimKiem.Name = "cbLoaiTimKiem";
             this.cbLoaiTimKiem.Size = new System.Drawing.Size(436, 30);
             this.cbLoaiTimKiem.TabIndex = 6;
+            this.cbLoaiTimKiem.SelectedIndexChanged += new System.EventHandler(this.cbLoaiTimKiem_SelectedIndexChanged);
             // 
             // btnAll
             // 
             this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAll.Location = new System.Drawing.Point(717, 147);
+            this.btnAll.Location = new System.Drawing.Point(721, 137);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(67, 177);
             this.btnAll.TabIndex = 7;
@@ -113,12 +115,21 @@
             this.btnAll.UseVisualStyleBackColor = true;
             this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
+            // dtpSearch
+            // 
+            this.dtpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpSearch.Location = new System.Drawing.Point(267, 81);
+            this.dtpSearch.Name = "dtpSearch";
+            this.dtpSearch.Size = new System.Drawing.Size(333, 30);
+            this.dtpSearch.TabIndex = 16;
+            // 
             // frmDSYCNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dtpSearch);
             this.Controls.Add(this.btnAll);
             this.Controls.Add(this.cbLoaiTimKiem);
             this.Controls.Add(this.label2);
@@ -144,5 +155,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbLoaiTimKiem;
         private System.Windows.Forms.Button btnAll;
+        private System.Windows.Forms.DateTimePicker dtpSearch;
     }
 }

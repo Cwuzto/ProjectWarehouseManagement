@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,17 +8,17 @@ using WarehouseManagement.DataAccess.Data;
 
 namespace WarehouseManagement.DataAccess
 {
-    public class DSYCNhapHangDL
+    public class DSHangXuatKhoDL
     {
-        DataTable dsYC;
-        public DSYCNhapHangDL()
+        DataTable dsHg;
+        public DSHangXuatKhoDL()
         {
-            var query = "SELECT * FROM [YeuCauNhapHang]";
-            dsYC = DataProvider.Instance.ExecuteQuery(query);
+            var query = "SELECT * FROM [HangXuatKho]";
+            dsHg = DataProvider.Instance.ExecuteQuery(query);
         }
-        public DataTable GetAllDSYeuCau()
+        public DataTable GetAllDSHgXuatKho()
         {
-            return dsYC;
+            return dsHg;
         }
         public DataTable SearchData(string loaiTimKiem, object keyword)
         {
@@ -29,13 +28,13 @@ namespace WarehouseManagement.DataAccess
             if (keyword is DateTime)
             {
                 DateTime date = (DateTime)keyword;
-                string ngayyc = date.ToString("yyyy/MM/dd");
-                query = $"SELECT * FROM YeuCauNhapHang WHERE {loaiTimKiem} = CONVERT(date, @Keyword )";
-                parameters = new object[] { ngayyc };
+                string ngayxuat = date.ToString("yyyy/MM/dd");
+                query = $"SELECT * FROM HangXuatKho WHERE CONVERT(date, {loaiTimKiem}) = CONVERT(date, @Keyword )";
+                parameters = new object[] { ngayxuat };
             }
             else
             {
-                query = $"SELECT * FROM YeuCauNhapHang WHERE {loaiTimKiem} LIKE @Keyword ";
+                query = $"SELECT * FROM HangXuatKho WHERE {loaiTimKiem} LIKE @Keyword ";
                 parameters = new object[] { "%" + keyword.ToString() + "%" };
             }
 
