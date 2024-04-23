@@ -18,9 +18,9 @@ namespace WarehouseManagement.Presentation
         public frmLogin()
         {
             InitializeComponent();
-            txtUsername.Clear();
-            txtPassword.Clear();
-            txtUsername.Focus();
+            //txtUsername.Clear();
+            //txtPassword.Clear();
+            //txtUsername.Focus();
         }
 
         private bool validateData()
@@ -47,8 +47,10 @@ namespace WarehouseManagement.Presentation
             if (modify.TaiKhoans(query).Count != 0)
             {
                 MessageBox.Show("Login Successful!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
                 frmQuanLy frmQuanLy = new frmQuanLy();
                 frmQuanLy.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -60,6 +62,22 @@ namespace WarehouseManagement.Presentation
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtUsername_Enter(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "Username")
+            {
+                txtUsername.Text = "";
+            }
+        }
+
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Password")
+            {
+                txtPassword.Text = "";
+            }
         }
     }
 }

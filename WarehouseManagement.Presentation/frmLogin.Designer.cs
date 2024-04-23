@@ -76,6 +76,7 @@
             this.txtUsername.Size = new System.Drawing.Size(358, 39);
             this.txtUsername.TabIndex = 6;
             this.txtUsername.Text = "Username";
+            this.txtUsername.Enter += new System.EventHandler(this.txtUsername_Enter);
             // 
             // panel1
             // 
@@ -107,6 +108,7 @@
             this.txtPassword.Size = new System.Drawing.Size(358, 39);
             this.txtPassword.TabIndex = 9;
             this.txtPassword.Text = "Password";
+            this.txtPassword.Enter += new System.EventHandler(this.txtPassword_Enter);
             // 
             // label2
             // 
@@ -130,9 +132,9 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panel3.Location = new System.Drawing.Point(1, 1);
+            this.panel3.Location = new System.Drawing.Point(0, -1);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(457, 166);
+            this.panel3.Size = new System.Drawing.Size(458, 168);
             this.panel3.TabIndex = 14;
             // 
             // btnExit

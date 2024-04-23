@@ -30,6 +30,9 @@ namespace WarehouseManagement.Presentation
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            frmLogin frmLogin = new frmLogin();
+            frmLogin.ShowDialog();
             this.Close();
         }
 
