@@ -18,7 +18,6 @@ namespace WarehouseManagement.Presentation
         public frmhanghoa()
         {
             InitializeComponent();
-            IsMdiContainer = true; 
 
         }
 

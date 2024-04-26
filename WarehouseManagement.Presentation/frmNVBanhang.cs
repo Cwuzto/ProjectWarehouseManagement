@@ -20,20 +20,14 @@ namespace WarehouseManagement.Presentation
         }
 
         
-        private void xdmhangToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmhanghoa frmhanghoa = new frmhanghoa();
-            this.Show();
-        }
-
         private void xemHàngHóaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmhanghoa frmhh = new frmhanghoa();
-            frmhh.FormBorderStyle = FormBorderStyle.None;
-            frmhh.WindowState = FormWindowState.Normal;
+            
 
-            frmhh.MdiParent = this.MdiParent;
-            frmhh.ShowDialog();
+            frmhh.MdiParent = this;
+            frmhh.WindowState = FormWindowState.Maximized;
+            frmhh.Show();
         }
 
         private void yêuCầuNhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
