@@ -18,6 +18,8 @@ namespace WarehouseManagement.Presentation
         public frmhanghoa()
         {
             InitializeComponent();
+            IsMdiContainer = true; 
+
         }
 
 
@@ -58,6 +60,10 @@ namespace WarehouseManagement.Presentation
             }
         }
 
+        private void btntrove_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
 

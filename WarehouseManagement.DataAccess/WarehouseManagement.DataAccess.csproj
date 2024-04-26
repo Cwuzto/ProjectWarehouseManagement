@@ -50,6 +50,8 @@
     <Compile Include="LoaiNVDL.cs" />
     <Compile Include="NhanVienDL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLHangDL.cs" />
+    <Compile Include="YCnhaphangDL.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -45,13 +45,24 @@
             // maLMTLabel
             // 
             maLMTLabel.AutoSize = true;
-            maLMTLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            maLMTLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            maLMTLabel.Location = new System.Drawing.Point(101, 83);
+            maLMTLabel.Font = new System.Drawing.Font("Palatino Linotype", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            maLMTLabel.ForeColor = System.Drawing.Color.LemonChiffon;
+            maLMTLabel.Location = new System.Drawing.Point(94, 86);
             maLMTLabel.Name = "maLMTLabel";
-            maLMTLabel.Size = new System.Drawing.Size(134, 39);
+            maLMTLabel.Size = new System.Drawing.Size(138, 46);
             maLMTLabel.TabIndex = 1;
             maLMTLabel.Text = "Mã loại";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("UVN Bach Tuyet Nang", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.ForeColor = System.Drawing.Color.LightPink;
+            label1.Location = new System.Drawing.Point(496, 19);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(344, 51);
+            label1.TabIndex = 40;
+            label1.Text = "Xem Hàng Hóa";
             // 
             // dgvdshanghoa
             // 
@@ -67,11 +78,11 @@
             // 
             this.btnxemang.BackColor = System.Drawing.Color.LightCoral;
             this.btnxemang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnxemang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxemang.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnxemang.Location = new System.Drawing.Point(899, 131);
+            this.btnxemang.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnxemang.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.btnxemang.Location = new System.Drawing.Point(877, 125);
             this.btnxemang.Name = "btnxemang";
-            this.btnxemang.Size = new System.Drawing.Size(151, 42);
+            this.btnxemang.Size = new System.Drawing.Size(214, 50);
             this.btnxemang.TabIndex = 35;
             this.btnxemang.Text = "Xem hàng";
             this.btnxemang.UseVisualStyleBackColor = false;
@@ -79,10 +90,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.MediumTurquoise;
             this.groupBox1.Controls.Add(this.dgvdshanghoa);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(102, 175);
+            this.groupBox1.ForeColor = System.Drawing.Color.Firebrick;
+            this.groupBox1.Location = new System.Drawing.Point(102, 190);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(973, 360);
             this.groupBox1.TabIndex = 34;
@@ -93,9 +105,9 @@
             // 
             this.btnxemtatcahang.BackColor = System.Drawing.Color.LightCoral;
             this.btnxemtatcahang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnxemtatcahang.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnxemtatcahang.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnxemtatcahang.Location = new System.Drawing.Point(102, 541);
+            this.btnxemtatcahang.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnxemtatcahang.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.btnxemtatcahang.Location = new System.Drawing.Point(102, 556);
             this.btnxemtatcahang.Name = "btnxemtatcahang";
             this.btnxemtatcahang.Size = new System.Drawing.Size(263, 50);
             this.btnxemtatcahang.TabIndex = 38;
@@ -105,7 +117,10 @@
             // 
             // txtmaloai
             // 
+            this.txtmaloai.BackColor = System.Drawing.SystemColors.Info;
+            this.txtmaloai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtmaloai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtmaloai.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtmaloai.Location = new System.Drawing.Point(102, 135);
             this.txtmaloai.Name = "txtmaloai";
             this.txtmaloai.Size = new System.Drawing.Size(769, 34);
@@ -116,31 +131,21 @@
             this.btntrove.BackColor = System.Drawing.Color.LightCoral;
             this.btntrove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btntrove.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btntrove.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btntrove.ForeColor = System.Drawing.Color.LemonChiffon;
             this.btntrove.Location = new System.Drawing.Point(-2, 0);
             this.btntrove.Name = "btntrove";
             this.btntrove.Size = new System.Drawing.Size(63, 67);
             this.btntrove.TabIndex = 39;
             this.btntrove.Text = "↩️";
             this.btntrove.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            label1.Location = new System.Drawing.Point(496, 19);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(262, 39);
-            label1.TabIndex = 40;
-            label1.Text = "Xem Hàng Hóa";
+            this.btntrove.Click += new System.EventHandler(this.btntrove_Click);
             // 
             // frmhanghoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.ForestGreen;
-            this.ClientSize = new System.Drawing.Size(1144, 585);
+            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.ClientSize = new System.Drawing.Size(1144, 612);
             this.Controls.Add(this.btnxemtatcahang);
             this.Controls.Add(label1);
             this.Controls.Add(this.btntrove);
@@ -150,7 +155,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmhanghoa";
             this.Text = "frmhanghoa";
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             ((System.ComponentModel.ISupportInitialize)(this.dgvdshanghoa)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
