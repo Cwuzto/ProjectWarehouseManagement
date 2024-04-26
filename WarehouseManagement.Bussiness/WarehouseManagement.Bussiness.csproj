@@ -46,12 +46,14 @@
     <Compile Include="DSHangXuatKhoBUS.cs" />
     <Compile Include="DSYCDatHagBUS.cs" />
     <Compile Include="DSYCNhapHgBUS.cs" />
+    <Compile Include="QLHangBUS.cs" />
     <Compile Include="hanghoaBUS.cs" />
     <Compile Include="LoaiNVBUS.cs" />
     <Compile Include="Modify.cs" />
     <Compile Include="NhanVienBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoan.cs" />
+    <Compile Include="YCnhaphangBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WarehouseManagement.DataAccess\WarehouseManagement.DataAccess.csproj">
