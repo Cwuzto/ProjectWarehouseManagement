@@ -76,6 +76,7 @@ namespace WarehouseManagement.Presentation
                 if (selectedItem == "Ngày xuất")
                 {
                     txtSearch.Visible = false;
+                    txtSearch.Clear();
                     dtpSearch.Visible = true;
                 }
                 else
