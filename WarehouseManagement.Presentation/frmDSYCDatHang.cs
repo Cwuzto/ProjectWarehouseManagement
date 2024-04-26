@@ -100,6 +100,7 @@ namespace WarehouseManagement.Presentation
                 if (selectedItem == "Ngày yêu cầu")
                 {
                     txtSearch.Visible = false;
+                    txtSearch.Clear();
                     dtpSearch.Visible = true;
                 }
                 else
