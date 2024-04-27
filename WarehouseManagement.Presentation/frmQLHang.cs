@@ -90,18 +90,19 @@ namespace WarehouseManagement.Presentation
             if (!string.IsNullOrEmpty(txtmahh.Text))
             {                   
 
-               if (!string.IsNullOrEmpty(txttenhang.Text) && (!string.IsNullOrEmpty(txtmota.Text) ))
+               if (!string.IsNullOrEmpty(txttenhang.Text) && (!string.IsNullOrEmpty(txtmota.Text) && (!string.IsNullOrEmpty(txtsoluong.Text))))
                 {
 
                     {
 
                         {
-                            if (qlhanghoa.CtTenHangHoa(txtmahh.Text, txttenhang.Text) && qlhanghoa.CtMoTa(txtmahh.Text, txtmota.Text) )
+                            if (qlhanghoa.CtTenHangHoa(txtmahh.Text, txttenhang.Text) && qlhanghoa.CtMoTa(txtmahh.Text, txtmota.Text)&& qlhanghoa.CtSoLuong(txtmahh.Text, txtsoluong.Text))
                             {
                                 load_data();
                                 txtmahh.Clear();
                                 txttenhang.Clear();
                                  txtmota.Clear();
+                                txtsoluong.Clear();
 
                                 MessageBox.Show("Cập nhật hàng hóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -128,8 +129,9 @@ namespace WarehouseManagement.Presentation
                     txtmota.Text = row.Cells["MoTa"].Value.ToString();
                     txtsoluong.Text = row.Cells["MaLoai"].Value.ToString();
                 txttenhang.Text = row.Cells["TenHH"].Value.ToString();
-                    txtmaloai.Text = row.Cells["MaLoai"].Value.ToString();
-                    txtsoluong.Text = row.Cells["SoLuong"].Value.ToString();
+                    txtsoluong.Text = row.Cells["SoLuong"].Value.ToString();          
+                txtmaloai.Text = row.Cells["MaLoai"].Value.ToString();
+
                 }
             }
         }
