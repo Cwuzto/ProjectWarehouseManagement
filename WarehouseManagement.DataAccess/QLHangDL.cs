@@ -38,7 +38,7 @@ namespace WarehouseManagement.DataAccess
         public bool quanlyhanghoa(string MaHH)
         {
 
-            string query = "SELECT  COUNT(*) FROM YeuCauDatHang WHERE  MaHH = @mahh ";
+            string query = "SELECT  COUNT(*) FROM HangHoa WHERE  MaHH = @mahh ";
             
             object[] parameters = {MaHH };
             int count = (int)DataProvider.Instance.ExecuteScalar(query, parameters);
@@ -73,7 +73,7 @@ namespace WarehouseManagement.DataAccess
         public bool CapNhatSoLuong(string maHH, string soluongmoi)
         {
             var query = "UPDATE [HangHoa] SET SoLuong = @soluongmoi WHERE MaHH = @MaHH";
-            object[] parameters = { maHH, soluongmoi };
+            object[] parameters = { soluongmoi,maHH  };
             var result = DataProvider.Instance.ExecuteNonQuery(query, parameters);
             return result > 0;
         }
