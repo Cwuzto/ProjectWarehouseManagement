@@ -57,7 +57,7 @@
     <Compile Include="ThongKeXuatHangDL.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages\packages.config" />
     <Compile Include="QLHangDL.cs" />
     <Compile Include="YCnhaphangDL.cs" />
   </ItemGroup>

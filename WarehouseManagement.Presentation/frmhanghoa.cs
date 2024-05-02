@@ -26,6 +26,7 @@ namespace WarehouseManagement.Presentation
         {
             hanghoaBUS HH = new hanghoaBUS();
             dgvdshanghoa.DataSource = HH.Laydshanghoa();
+            dgvdshanghoa.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 
