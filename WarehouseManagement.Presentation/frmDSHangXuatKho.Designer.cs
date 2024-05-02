@@ -35,8 +35,8 @@
             this.dgvHgXuatKho = new System.Windows.Forms.DataGridView();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.dtpSearch = new System.Windows.Forms.DateTimePicker();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHgXuatKho)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,6 +103,14 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Tìm kiếm:";
             // 
+            // dtpSearch
+            // 
+            this.dtpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpSearch.Location = new System.Drawing.Point(212, 78);
+            this.dtpSearch.Name = "dtpSearch";
+            this.dtpSearch.Size = new System.Drawing.Size(333, 30);
+            this.dtpSearch.TabIndex = 15;
+            // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,14 +121,6 @@
             this.btnSearch.TabIndex = 10;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // dtpSearch
-            // 
-            this.dtpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpSearch.Location = new System.Drawing.Point(212, 78);
-            this.dtpSearch.Name = "dtpSearch";
-            this.dtpSearch.Size = new System.Drawing.Size(333, 30);
-            this.dtpSearch.TabIndex = 15;
             // 
             // frmDSHangXuatKho
             // 

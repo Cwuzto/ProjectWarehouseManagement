@@ -10,12 +10,7 @@ namespace WarehouseManagement.DataAccess.Data
 {
     public class DataProvider
     {
-        private static string connectionString = "Data Source=CuBo\\SQLEXPRESS;Initial Catalog=QLKHOQUANCF;Integrated Security=True";
-
-        public static SqlConnection GetSqlConnection()
-        {
-            return new SqlConnection(connectionString);
-        }
+        private string connectionString = "Data Source=CuBo\\SQLEXPRESS;Initial Catalog=QLKHOQUANCF;Integrated Security=True";
 
         private DataProvider()
         {
