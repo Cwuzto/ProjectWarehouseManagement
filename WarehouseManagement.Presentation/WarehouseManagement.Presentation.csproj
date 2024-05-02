@@ -150,8 +150,9 @@
     <Compile Include="frmThongKeXuatHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmThongKeXuatHang.Designer.cs">
-      <DependentUpon>frmThongKeXuatHang.cs</DependentUpon>
+	<Compile Include="frmThongKeXuatHang.Designer.cs">
+	  <DependentUpon>frmThongKeXuatHang.cs</DependentUpon>
+	</Compile>
     <Compile Include="frmYCnhaphang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +199,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKeXuatHang.resx">
       <DependentUpon>frmThongKeXuatHang.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="frmYCnhaphang.resx">
       <DependentUpon>frmYCnhaphang.cs</DependentUpon>
     </EmbeddedResource>
