@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using WarehouseManagement.Business;
 using WarehouseManagement.Bussiness;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace WarehouseManagement.Presentation
 {
@@ -49,9 +51,9 @@ namespace WarehouseManagement.Presentation
                         this.Close();
                         break;
                     case "L03":
-                        frmNhanVien frmNhanVien = new frmNhanVien();
+                        frmNVBanhang frmNVBanhang = new frmNVBanhang();
                         this.Hide();
-                        frmNhanVien.ShowDialog();
+                        frmNVBanhang.ShowDialog();
                         this.Close();
                         break;
                     default:

@@ -52,11 +52,11 @@
             // dgvHangXuatKho
             // 
             this.dgvHangXuatKho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHangXuatKho.Location = new System.Drawing.Point(139, 291);
+            this.dgvHangXuatKho.Location = new System.Drawing.Point(104, 291);
             this.dgvHangXuatKho.Name = "dgvHangXuatKho";
             this.dgvHangXuatKho.RowHeadersWidth = 51;
             this.dgvHangXuatKho.RowTemplate.Height = 24;
-            this.dgvHangXuatKho.Size = new System.Drawing.Size(887, 524);
+            this.dgvHangXuatKho.Size = new System.Drawing.Size(956, 524);
             this.dgvHangXuatKho.TabIndex = 6;
             // 
             // dtpNgayBatDau

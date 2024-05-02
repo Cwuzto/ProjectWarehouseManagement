@@ -28,10 +28,6 @@ namespace WarehouseManagement.Presentation
 
             dgvHangXuatKho.DataSource = thongKeBUS.ThongKeHangXuatTheoNgay(ngayBatDau, ngayKetThuc);
 
-            //DataTable result = thongKeBUS.ThongKeHangXuatTheoNgay(ngayBatDau, ngayKetThuc);
-
-            // Hiển thị kết quả thống kê (ví dụ: trong DataGridView)
-            //dgvHangXuatKho.DataSource = result;
         }
 
         private void frmThongKeXuatHang_Load(object sender, EventArgs e)
