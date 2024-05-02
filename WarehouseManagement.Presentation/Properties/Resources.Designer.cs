@@ -63,6 +63,16 @@ namespace WarehouseManagement.Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cap_nhat3 {
+            get {
+                object obj = ResourceManager.GetObject("cap nhat3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Exit {
             get {
                 object obj = ResourceManager.GetObject("Exit", resourceCulture);
@@ -73,7 +83,16 @@ namespace WarehouseManagement.Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
+        internal static System.Drawing.Bitmap hinh_nen_mau_tim_dep_nhat_10 {
+            get {
+                object obj = ResourceManager.GetObject("hinh-nen-mau-tim-dep-nhat-10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kisspng_portable_network_graphics_clip_art_transparency_in_5d1ef3ec8bc1f2_8220833315623096125725 {
             get {
                 object obj = ResourceManager.GetObject("kisspng-portable-network-graphics-clip-art-transparency-in-5d1ef3ec8bc1f2.8220833" +
@@ -85,7 +104,6 @@ namespace WarehouseManagement.Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-
         internal static System.Drawing.Bitmap locked {
             get {
                 object obj = ResourceManager.GetObject("locked", resourceCulture);
@@ -116,9 +134,29 @@ namespace WarehouseManagement.Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tải_xuống__2_up {
+            get {
+                object obj = ResourceManager.GetObject("tải xuống (2)up", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user {
             get {
                 object obj = ResourceManager.GetObject("user", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap xóa2 {
+            get {
+                object obj = ResourceManager.GetObject("xóa2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

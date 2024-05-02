@@ -117,6 +117,18 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNVBanhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNVBanhang.Designer.cs">
+      <DependentUpon>frmNVBanhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHang.Designer.cs">
+      <DependentUpon>frmQLHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLLoaiNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +152,11 @@
     </Compile>
     <Compile Include="frmThongKeXuatHang.Designer.cs">
       <DependentUpon>frmThongKeXuatHang.cs</DependentUpon>
+    <Compile Include="frmYCnhaphang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYCnhaphang.Designer.cs">
+      <DependentUpon>frmYCnhaphang.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -167,6 +184,12 @@
     <EmbeddedResource Include="frmNhanVienKho.resx">
       <DependentUpon>frmNhanVienKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNVBanhang.resx">
+      <DependentUpon>frmNVBanhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLHang.resx">
+      <DependentUpon>frmQLHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQLLoaiNV.resx">
       <DependentUpon>frmQLLoaiNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +198,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKeXuatHang.resx">
       <DependentUpon>frmThongKeXuatHang.cs</DependentUpon>
+    <EmbeddedResource Include="frmYCnhaphang.resx">
+      <DependentUpon>frmYCnhaphang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -220,6 +245,10 @@
   <ItemGroup>
     <Content Include="Lib\ABTestCS.exe" />
     <Content Include="Lib\AlphaBlendTextBox.dll" />
+    <None Include="Resources\hinh-nen-mau-tim-dep-nhat-10.jpg" />
+    <None Include="Resources\cap nhat3.jpg" />
+    <None Include="Resources\xóa2.png" />
+    <None Include="Resources\tải xuống %282%29up.png" />
     <None Include="Resources\Exit.png" />
   </ItemGroup>
   <ItemGroup>
