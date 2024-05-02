@@ -79,7 +79,7 @@ CREATE TABLE ChiTietDH (
 CREATE TABLE HangXuatKho 
 (
     ID int identity(1,1) NOT NULL,
-    NgayXuat datetime DEFAULT GETDATE() NULL,
+    NgayXuat datetime NOT NULL,
     MaNV varchar(10) foreign key(MaNV) references NhanVien(MaNV) NOT NULL,
     MaHH varchar(10) foreign key(MaHH) references HangHoa(MaHH) NOT NULL,
     SoLuong int NOT NULL,
@@ -182,21 +182,27 @@ VALUES
 VALUES
   (GETDATE(), 'NV002', 'HH001', 5), 
   (DATEADD(day, -2, GETDATE()), 'NV001', 'HH006', 1), 
-  (DATEADD(day, -3, GETDATE()), 'NV002', 'HH005', 3); 
+  (DATEADD(day, -3, GETDATE()), 'NV002', 'HH005', 3),
+  ('2024-01-30', 'NV001', 'HH004', 5),
+  ('2023-12-25', 'NV002', 'HH012', 1),
+  ('2022-03-16', 'NV002', 'HH008', 10),
+  ('2023-02-20', 'NV001', 'HH019', 1),
+  ('2022-04-02', 'NV001', 'HH001', 20),
+  ('2024-02-07', 'NV001', 'HH015', 10),
+  ('2023-06-13', 'NV002', 'HH003', 7),
+  ('2022-01-30', 'NV001', 'HH010', 3),
+  ('2024-03-24', 'NV001', 'HH018', 6),
+  ('2023-09-18', 'NV002', 'HH005', 8),
+  ('2022-07-30', 'NV002', 'HH002', 10),
+  ('2023-05-04', 'NV002', 'HH007', 15),
+  ('2022-08-10', 'NV001', 'HH014', 4),
+  ('2023-10-27', 'NV001', 'HH016', 6),
+  ('2022-11-18', 'NV002', 'HH001', 15);
 
-
-
-
-
-
-
-
-
-
-
-
-
-       
-
-
-
+  CREATE PROC USP_Login
+  @userName nvarchar(100), @passWord nvarchar(100)
+  AS
+  BEGIN
+		SELECT * FROM dbo.NhanVien WHERE UserName = @userName AND Password = @passWord
+  END
+  GO

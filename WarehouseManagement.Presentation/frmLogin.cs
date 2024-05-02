@@ -1,14 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-using static System.Net.Mime.MediaTypeNames;
 using WarehouseManagement.Bussiness;
 
 namespace WarehouseManagement.Presentation
@@ -18,9 +9,6 @@ namespace WarehouseManagement.Presentation
         public frmLogin()
         {
             InitializeComponent();
-            //txtUsername.Clear();
-            //txtPassword.Clear();
-            //txtUsername.Focus();
         }
 
         private bool validateData()
@@ -32,25 +20,45 @@ namespace WarehouseManagement.Presentation
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string tenDangNhap = txtUsername.Text;
-            string matKhau = txtPassword.Text;
+            string userName = txtUsername.Text;
+            string passWord = txtPassword.Text;
 
             if (!validateData())
             {
                 return;
             }
 
-            string query = "Select * from NhanVien where UserName = '" + tenDangNhap + "' and Password = '" + matKhau + "'";
+            LoginBUS loginBUS = new LoginBUS();
 
-            Modify modify = new Modify();
-
-            if (modify.TaiKhoans(query).Count != 0)
+            if (loginBUS.Login(userName, passWord))
             {
-                MessageBox.Show("Login Successful!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                frmQuanLy frmQuanLy = new frmQuanLy();
-                frmQuanLy.ShowDialog();
-                this.Close();
+                string maLoai = loginBUS.GetMaLoai(userName);
+
+                switch (maLoai)
+                {
+                    case "L01":
+                        frmQuanLy frmQuanLy = new frmQuanLy();
+                        this.Hide();
+                        frmQuanLy.ShowDialog();
+                        this.Close();
+                        break;
+                    case "L02":
+                        Nhân_Viên_Kho frmNhanVienKho = new Nhân_Viên_Kho();
+                        this.Hide();
+                        frmNhanVienKho.ShowDialog();
+                        this.Close();
+                        break;
+                    case "L03":
+                        frmNhanVien frmNhanVien = new frmNhanVien();
+                        this.Hide();
+                        frmNhanVien.ShowDialog();
+                        this.Close();
+                        break;
+                    default:
+                        MessageBox.Show("Loại tài khoản không được hỗ trợ!",
+                                        "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        break;
+                }
             }
             else
             {
@@ -77,6 +85,24 @@ namespace WarehouseManagement.Presentation
             if (txtPassword.Text == "Password")
             {
                 txtPassword.Text = "";
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Gọi phương thức xử lý đăng nhập
+                btnLogin_Click(sender, e);// Gọi phương thức xử lý đăng nhập khi nhấn Enter
+            }
+        }
+
+        private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                // Gọi phương thức xử lý đăng nhập
+                btnLogin_Click(sender, e); // Gọi phương thức xử lý đăng nhập khi nhấn Enter
             }
         }
     }
