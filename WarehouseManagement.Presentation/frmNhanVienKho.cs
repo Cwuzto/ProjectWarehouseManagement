@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WarehouseManagement.Business;
 
 namespace WarehouseManagement.Presentation
 {
@@ -68,5 +69,21 @@ namespace WarehouseManagement.Presentation
             this.Close();
         }
 
+        private void Nhân_Viên_Kho_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenPresentation(new frmDSYCDatHang());
+            label1.Text = button6.Text;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenPresentation(new frmBaoCao());
+            label1.Text = frmNhanVienKho.Text;
+        }
     }
 }
