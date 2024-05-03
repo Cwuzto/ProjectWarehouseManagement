@@ -54,7 +54,7 @@ namespace WarehouseManagement.Presentation
             frmLoaiNV.Show();
         }
 
-        private void menuitemYCNHG_Click(object sender, EventArgs e)
+        private void menuitemYCNhapHG_Click(object sender, EventArgs e)
         {
             frmDSYCNhapHang frmYCNhap = new frmDSYCNhapHang();
 
@@ -63,7 +63,7 @@ namespace WarehouseManagement.Presentation
             frmYCNhap.Show();
         }
 
-        private void menuitemYCNhapHg_Click(object sender, EventArgs e)
+        private void menuitemYCDatHg_Click(object sender, EventArgs e)
         {
             frmDSYCDatHang frmYCDat = new frmDSYCDatHang();
 
@@ -97,6 +97,14 @@ namespace WarehouseManagement.Presentation
             frmThongKeXuatHang.MdiParent = this;
             frmThongKeXuatHang.WindowState = FormWindowState.Maximized;
             frmThongKeXuatHang.Show();
+        }
+
+        private void menuitemDSHangTrongKho_Click(object sender, EventArgs e)
+        {
+            frmQLHang frmHang = new frmQLHang();
+            frmHang.MdiParent = this;
+            frmHang.WindowState= FormWindowState.Maximized;
+            frmHang.Show();
         }
     }
 }

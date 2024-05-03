@@ -30,9 +30,9 @@ namespace WarehouseManagement.Business
 
             return dsYCDat.SearchData(loaiTimKiem, searchData);
         }
-        public bool CapNhatTrangThaiYeuCau(string maYC, string trangThai)
+        public bool CapNhatTrangThaiYeuCau(DateTime ngayYC, string manv, string mahh, string trangThai)
         {
-            if(dsYCDat.UpdateTrangThai(maYC,trangThai))
+            if(dsYCDat.UpdateTrangThai(ngayYC, manv, mahh,trangThai))
                 return true;
             return false;
         }

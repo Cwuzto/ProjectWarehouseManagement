@@ -40,10 +40,10 @@ namespace WarehouseManagement.DataAccess
 
             return DataProvider.Instance.ExecuteQuery(query, parameters);
         }
-        public bool UpdateTrangThai(string maYC, string trangThaiMoi)
+        public bool UpdateTrangThai(DateTime ngayYC, string manv, string mahh, string trangThaiMoi)
         {
-            string query = "UPDATE YeuCauDatHang SET TrangThai = @TrangThai WHERE MaYC = @MaYeuCau";
-            object[] parameters = { trangThaiMoi, maYC };
+            string query = "UPDATE YeuCauDatHang SET TrangThai = @TrangThai WHERE NgayYC = CONVERT(date, @ngayyc ) AND MaNV = @manv AND MaHH= @mahh ";
+            object[] parameters = {"Đã "+ trangThaiMoi, ngayYC, manv, mahh };
             int rowsAffected = DataProvider.Instance.ExecuteNonQuery(query, parameters);
             if (rowsAffected > 0)
                 return true;
