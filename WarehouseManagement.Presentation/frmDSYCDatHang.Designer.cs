@@ -28,24 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDSYCDatHang));
             this.btnAll = new System.Windows.Forms.Button();
             this.cbLoaiTimKiem = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDSYC = new System.Windows.Forms.DataGridView();
-            this.DuyetYC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.HuyYC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpSearch = new System.Windows.Forms.DateTimePicker();
+            this.DuyetYC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.HuyYC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSYC)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAll
             // 
             this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAll.Location = new System.Drawing.Point(807, 134);
+            this.btnAll.Location = new System.Drawing.Point(942, 134);
             this.btnAll.Name = "btnAll";
             this.btnAll.Size = new System.Drawing.Size(67, 177);
             this.btnAll.TabIndex = 14;
@@ -62,9 +65,9 @@
             "Mã nhân viên",
             "Mã hàng hóa",
             "Trạng thái"});
-            this.cbLoaiTimKiem.Location = new System.Drawing.Point(212, 31);
+            this.cbLoaiTimKiem.Location = new System.Drawing.Point(212, 30);
             this.cbLoaiTimKiem.Name = "cbLoaiTimKiem";
-            this.cbLoaiTimKiem.Size = new System.Drawing.Size(571, 30);
+            this.cbLoaiTimKiem.Size = new System.Drawing.Size(712, 30);
             this.cbLoaiTimKiem.TabIndex = 13;
             this.cbLoaiTimKiem.SelectedIndexChanged += new System.EventHandler(this.cbLoaiTimKiem_SelectedIndexChanged);
             // 
@@ -80,37 +83,48 @@
             // 
             // dgvDSYC
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSYC.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDSYC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSYC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DuyetYC,
             this.HuyYC});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSYC.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDSYC.Location = new System.Drawing.Point(77, 134);
             this.dgvDSYC.Name = "dgvDSYC";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSYC.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDSYC.RowHeadersWidth = 51;
             this.dgvDSYC.RowTemplate.Height = 24;
-            this.dgvDSYC.Size = new System.Drawing.Size(706, 286);
+            this.dgvDSYC.Size = new System.Drawing.Size(847, 293);
             this.dgvDSYC.TabIndex = 11;
-            this.dgvDSYC.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSYC_CellContentClick);
-            // 
-            // DuyetYC
-            // 
-            this.DuyetYC.HeaderText = "Duyệt Yêu Cầu";
-            this.DuyetYC.MinimumWidth = 6;
-            this.DuyetYC.Name = "DuyetYC";
-            this.DuyetYC.Width = 110;
-            // 
-            // HuyYC
-            // 
-            this.HuyYC.HeaderText = "Hủy Yêu Cầu";
-            this.HuyYC.MinimumWidth = 6;
-            this.HuyYC.Name = "HuyYC";
-            this.HuyYC.Width = 110;
+            this.dgvDSYC.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSYC_CellValueChanged);
+            this.dgvDSYC.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvDSYC_CurrentCellDirtyStateChanged);
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(679, 74);
+            this.btnSearch.Location = new System.Drawing.Point(815, 76);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(109, 38);
             this.btnSearch.TabIndex = 10;
@@ -122,7 +136,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(212, 78);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(468, 30);
+            this.txtSearch.Size = new System.Drawing.Size(604, 30);
             this.txtSearch.TabIndex = 9;
             // 
             // label1
@@ -140,8 +154,22 @@
             this.dtpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpSearch.Location = new System.Drawing.Point(212, 78);
             this.dtpSearch.Name = "dtpSearch";
-            this.dtpSearch.Size = new System.Drawing.Size(468, 30);
+            this.dtpSearch.Size = new System.Drawing.Size(604, 30);
             this.dtpSearch.TabIndex = 16;
+            // 
+            // DuyetYC
+            // 
+            this.DuyetYC.HeaderText = "Phê Duyệt";
+            this.DuyetYC.MinimumWidth = 6;
+            this.DuyetYC.Name = "DuyetYC";
+            this.DuyetYC.Width = 80;
+            // 
+            // HuyYC
+            // 
+            this.HuyYC.HeaderText = "Hủy";
+            this.HuyYC.MinimumWidth = 6;
+            this.HuyYC.Name = "HuyYC";
+            this.HuyYC.Width = 50;
             // 
             // frmDSYCDatHang
             // 
@@ -175,8 +203,8 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpSearch;
         private System.Windows.Forms.DataGridViewCheckBoxColumn DuyetYC;
         private System.Windows.Forms.DataGridViewCheckBoxColumn HuyYC;
-        private System.Windows.Forms.DateTimePicker dtpSearch;
     }
 }
