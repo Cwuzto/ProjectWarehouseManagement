@@ -59,6 +59,7 @@
   <ItemGroup>
     <None Include="packages\packages.config" />
     <Compile Include="QLHangDL.cs" />
+    <Compile Include="XemDSHangtonDL.cs" />
     <Compile Include="YCnhaphangDL.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
