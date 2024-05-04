@@ -14,7 +14,7 @@ namespace WarehouseManagement.DataAccess.Data
 
         private DataProvider()
         {
-
+//todo
         }
         private static DataProvider instance; // Ctrl + R + E
 
