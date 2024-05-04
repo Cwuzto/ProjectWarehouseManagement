@@ -25,6 +25,8 @@ namespace WarehouseManagement.Presentation
         private void frmDSYCDatHang_Load(object sender, EventArgs e)
         {
             dgvDSYC.DataSource= dsYCDat.LayDSYCDat();
+            txtSearch.Visible = true;
+            dtpSearch.Visible = false;
         }
         private void load_data()
         {
@@ -37,27 +39,25 @@ namespace WarehouseManagement.Presentation
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (cbLoaiTimKiem.SelectedItem != null && !string.IsNullOrEmpty(txtSearch.Text))
+            if (cbLoaiTimKiem.SelectedItem != null)
             {
                 string loaiTimKiem = cbLoaiTimKiem.SelectedItem.ToString();
-                string keyword = txtSearch.Text;
-
-                if (loaiTimKiem == "Ngày yêu cầu")
-                    loaiTimKiem = "NgayYC";
-                else if (loaiTimKiem == "Mã nhân viên")
-                    loaiTimKiem = "MaNV";
-                else if (loaiTimKiem == "Mã hàng hóa")
-                    loaiTimKiem = "MaHH";
-                else if (loaiTimKiem == "Trạng thái")
-                    loaiTimKiem = "TrangThai";
-
-                DataTable tb = dsYCDat.Search(loaiTimKiem, keyword);
+                DataTable tb;
+                if (!string.IsNullOrEmpty(txtSearch.Text))
+                {
+                    string keyword = txtSearch.Text;
+                    tb = dsYCDat.Search(loaiTimKiem, keyword);
+                }
+                else
+                {
+                    DateTime key = dtpSearch.Value;
+                    tb = dsYCDat.Search(loaiTimKiem, key);
+                }
                 if (tb == null || tb.Rows.Count == 0)
                 {
                     MessageBox.Show("Không tìm thấy dữ liệu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                Console.WriteLine(tb);
                 dgvDSYC.DataSource = tb;
             }
             else
@@ -65,29 +65,63 @@ namespace WarehouseManagement.Presentation
 
         }
 
-        private void dgvDSYC_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void cbLoaiTimKiem_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            if (e.ColumnIndex == checkboxColumnIndex1|| e.ColumnIndex == checkboxColumnIndex2) 
+
+            if (cbLoaiTimKiem.SelectedItem != null)
             {
-                string trangThaiHienTai = dgvDSYC.Rows[e.RowIndex].Cells["TrangThai"].Value.ToString();
-                if (trangThaiHienTai == "Chờ xử lý")
+                string selectedItem = cbLoaiTimKiem.SelectedItem.ToString();
+
+                if (selectedItem == "Ngày yêu cầu")
                 {
-                    string maYC = dgvDSYC.Rows[e.RowIndex].Cells["MaYC"].Value.ToString();
-                    string trangThaiMoi = dgvDSYC.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-                    if (dsYCDat.CapNhatTrangThaiYeuCau(maYC, trangThaiMoi))
-                    {
-                        load_data();
-                        MessageBox.Show("Cập nhật trạng thái thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
+                    txtSearch.Visible = false;
+                    txtSearch.Clear();
+                    dtpSearch.Visible = true;
                 }
                 else
                 {
-                    MessageBox.Show("Không thể cập nhật trạng thái vì yêu cầu đã được xử lý.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtSearch.Visible = true;
+                    dtpSearch.Visible = false;
                 }
             }
-            
+        }
+
+        private void dgvDSYC_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                if (e.ColumnIndex == checkboxColumnIndex1 || e.ColumnIndex == checkboxColumnIndex2)
+                {
+                    bool isChecked = (bool)dgvDSYC.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+                    string trangThaiHienTai = dgvDSYC.Rows[e.RowIndex].Cells["TrangThai"].Value.ToString();
+                    if (trangThaiHienTai == "Chờ xử lý")
+                    {
+                        DateTime NgayYC = Convert.ToDateTime(dgvDSYC.Rows[e.RowIndex].Cells["NgayYC"].Value);
+                        string maNV = dgvDSYC.Rows[e.RowIndex].Cells["MaNV"].Value.ToString();
+                        string maHH = dgvDSYC.Rows[e.RowIndex].Cells["MaHH"].Value.ToString();
+                        string trangThaiMoi = dgvDSYC.Columns[e.ColumnIndex].HeaderText;
+                        if (dsYCDat.CapNhatTrangThaiYeuCau(NgayYC, maNV, maHH, trangThaiMoi))
+                        {
+                            load_data();
+                            MessageBox.Show("Cập nhật trạng thái thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return;
+                        }
+                    }
+                    else if (isChecked)
+                    {
+                        dgvDSYC.EndEdit();
+                        MessageBox.Show("Không thể cập nhật trạng thái vì yêu cầu đã được xử lý.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        dgvDSYC.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = false;
+                    }
+                }
+            }
+        }
+        private void dgvDSYC_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dgvDSYC.IsCurrentCellDirty)
+            {
+                dgvDSYC.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
         }
     }
 }

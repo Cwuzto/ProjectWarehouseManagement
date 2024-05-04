@@ -30,6 +30,9 @@ namespace WarehouseManagement.Presentation
 
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
             this.Close();
         }
 
@@ -51,7 +54,7 @@ namespace WarehouseManagement.Presentation
             frmLoaiNV.Show();
         }
 
-        private void menuitemYCNHG_Click(object sender, EventArgs e)
+        private void menuitemYCNhapHG_Click(object sender, EventArgs e)
         {
             frmDSYCNhapHang frmYCNhap = new frmDSYCNhapHang();
 
@@ -60,13 +63,48 @@ namespace WarehouseManagement.Presentation
             frmYCNhap.Show();
         }
 
-        private void menuitemYCNhapHg_Click(object sender, EventArgs e)
+        private void menuitemYCDatHg_Click(object sender, EventArgs e)
         {
             frmDSYCDatHang frmYCDat = new frmDSYCDatHang();
 
             frmYCDat.MdiParent = this;
             frmYCDat.WindowState = FormWindowState.Maximized;
             frmYCDat.Show();
+        }
+
+        private void menuitemDonDatHang_Click(object sender, EventArgs e)
+        {
+            frmDonDatHang frmDonDat = new frmDonDatHang();
+
+            frmDonDat.MdiParent = this;
+            frmDonDat.WindowState = FormWindowState.Maximized;
+            frmDonDat.Show();
+        }
+
+        private void menuitemHgXuatKho_Click(object sender, EventArgs e)
+        {
+            frmDSHangXuatKho frmHgXuat = new frmDSHangXuatKho();
+
+            frmHgXuat.MdiParent = this;
+            frmHgXuat.WindowState = FormWindowState.Maximized;
+            frmHgXuat.Show();
+        }
+
+        private void menuitemXemThongKeXuatHang_Click(object sender, EventArgs e)
+        {
+            frmThongKeXuatHang frmThongKeXuatHang = new frmThongKeXuatHang();
+
+            frmThongKeXuatHang.MdiParent = this;
+            frmThongKeXuatHang.WindowState = FormWindowState.Maximized;
+            frmThongKeXuatHang.Show();
+        }
+
+        private void menuitemDSHangTrongKho_Click(object sender, EventArgs e)
+        {
+            frmQLHang frmHang = new frmQLHang();
+            frmHang.MdiParent = this;
+            frmHang.WindowState= FormWindowState.Maximized;
+            frmHang.Show();
         }
     }
 }

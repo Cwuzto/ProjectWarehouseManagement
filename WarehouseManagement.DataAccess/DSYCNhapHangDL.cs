@@ -21,12 +21,25 @@ namespace WarehouseManagement.DataAccess
         {
             return dsYC;
         }
-        public DataTable SearchData(string loaiTimKiem, string keyword)
+        public DataTable SearchData(string loaiTimKiem, object keyword)
         {
-            
-            string query = $"SELECT * FROM YeuCauNhapHang WHERE {loaiTimKiem} LIKE @Keyword ";
-            object[] parameter = { "%" + keyword + "%" };
-            return DataProvider.Instance.ExecuteQuery(query, parameter);
+            string query;
+            object[] parameters;
+
+            if (keyword is DateTime)
+            {
+                DateTime date = (DateTime)keyword;
+                string ngayyc = date.ToString("yyyy/MM/dd");
+                query = $"SELECT * FROM YeuCauNhapHang WHERE {loaiTimKiem} = CONVERT(date, @Keyword )";
+                parameters = new object[] { ngayyc };
+            }
+            else
+            {
+                query = $"SELECT * FROM YeuCauNhapHang WHERE {loaiTimKiem} LIKE @Keyword ";
+                parameters = new object[] { "%" + keyword.ToString() + "%" };
+            }
+
+            return DataProvider.Instance.ExecuteQuery(query, parameters);
         }
     }
 }

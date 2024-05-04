@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -141,6 +156,12 @@
     <Compile Include="frmDonDatHang.Designer.cs">
       <DependentUpon>frmDonDatHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDSHangXuatKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSHangXuatKho.Designer.cs">
+      <DependentUpon>frmDSHangXuatKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDSYCDatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +192,18 @@
     <Compile Include="frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNVBanhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNVBanhang.Designer.cs">
+      <DependentUpon>frmNVBanhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQLHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQLHang.Designer.cs">
+      <DependentUpon>frmQLHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLLoaiNV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,15 +229,37 @@
       <DependentUpon>frmXemDSHTK.cs</DependentUpon>
     </Compile>
     <Compile Include="HangHoa.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QLKHOQUANCFDataSet.Designer.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmBaoCao.resx">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
     </EmbeddedResource>
+    <Compile Include="frmThongKeXuatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeXuatHang.Designer.cs">
+      <DependentUpon>frmThongKeXuatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXemDSHangton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXemDSHangton.Designer.cs">
+      <DependentUpon>frmXemDSHangton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmYCnhaphang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYCnhaphang.Designer.cs">
+      <DependentUpon>frmYCnhaphang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmDonDatHang.resx">
       <DependentUpon>frmDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSHangXuatKho.resx">
+      <DependentUpon>frmDSHangXuatKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDSYCDatHang.resx">
       <DependentUpon>frmDSYCDatHang.cs</DependentUpon>
@@ -224,6 +279,12 @@
     <EmbeddedResource Include="frmNhanVienKho.resx">
       <DependentUpon>frmNhanVienKho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNVBanhang.resx">
+      <DependentUpon>frmNVBanhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQLHang.resx">
+      <DependentUpon>frmQLHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQLLoaiNV.resx">
       <DependentUpon>frmQLLoaiNV.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +295,15 @@
       <DependentUpon>frmXemDSHTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="frmThongKeXuatHang.resx">
+      <DependentUpon>frmThongKeXuatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXemDSHangton.resx">
+      <DependentUpon>frmXemDSHangton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYCnhaphang.resx">
+      <DependentUpon>frmYCnhaphang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -277,13 +347,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="QLKHOQUANCFDataSet.xsc">
-      <DependentUpon>QLKHOQUANCFDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLKHOQUANCFDataSet.xsd" />
-    <None Include="QLKHOQUANCFDataSet.xss">
-      <DependentUpon>QLKHOQUANCFDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Resources\mountains.png" />
   </ItemGroup>
   <ItemGroup>
@@ -317,5 +380,23 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup />
+    <None Include="Resources\hinh-nen-mau-tim-dep-nhat-10.jpg" />
+    <None Include="Resources\cap nhat3.jpg" />
+    <None Include="Resources\xóa2.png" />
+    <None Include="Resources\tải xuống %282%29up.png" />
+    <None Include="Resources\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
