@@ -8,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using Microsoft.Reporting.WinForms;
 
 
@@ -16,7 +15,7 @@ namespace WarehouseManagement.Presentation
 {
     public partial class FrmBaocao : Form
     {
-        string strCon = @"Data Source=LAPTOP-F40SAHCS\MSSSERVER;Initial Catalog=QLKHOQUANCF;Integrated Security=True";
+        string strCon = @"Data Source=CUBO\SQLEXPRESS;Initial Catalog=QLKHOQUANCF;Integrated Security=True";
         SqlConnection sqlCon = null;
         public FrmBaocao()
         {
