@@ -68,5 +68,22 @@ namespace WarehouseManagement.Presentation
             this.Close();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenPresentation(new frmXemDSHangton());
+            label1.Text = button4.Text;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenPresentation(new FrmBaocao());
+            label1.Text = button5.Text;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            OpenPresentation(new frmDSYCDatHang());
+            label1.Text = button6.Text;
+        }
     }
 }

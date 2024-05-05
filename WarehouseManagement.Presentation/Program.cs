@@ -16,7 +16,7 @@ namespace WarehouseManagement.Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmBaocao());
+            Application.Run(new Nhân_Viên_Kho());
         }
     }
 }
