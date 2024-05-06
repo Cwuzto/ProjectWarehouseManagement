@@ -56,6 +56,7 @@
             this.dgvdsyc.RowTemplate.Height = 24;
             this.dgvdsyc.Size = new System.Drawing.Size(907, 310);
             this.dgvdsyc.TabIndex = 17;
+            this.dgvdsyc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdsyc_CellClick);
             // 
             // btntrove
             // 

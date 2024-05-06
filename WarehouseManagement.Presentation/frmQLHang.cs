@@ -134,7 +134,7 @@ namespace WarehouseManagement.Presentation
 
                 }
             }
-        }
+    }
     }  
     
     

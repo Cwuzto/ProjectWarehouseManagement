@@ -17,11 +17,11 @@ namespace WarehouseManagement.Presentation
         {
             InitializeComponent();
         }
+        
         private void load_data()
         {
-            YCnhaphangBUS  ycnhaphangb = new YCnhaphangBUS ();
-
-            dgvdsyc.DataSource = ycnh.laydsyc();
+            YCnhaphangBUS ycnhb = new YCnhaphangBUS();  
+            dgvdsyc.DataSource=ycnhb.laydsyc();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -59,14 +59,33 @@ namespace WarehouseManagement.Presentation
 
         private void btnhuy_Click(object sender, EventArgs e)
         {
-            txtmanv.Clear();
-            txtmahh.Clear();
-            txttrangthai.Clear();
-        }
+            if (ycnh.Deleteycnhh(txtmahh.Text))
+            {
+                MessageBox.Show("Hủy thành công yêu cầu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                load_data();
+                txtmahh.Clear();
+                return;
+            }
 
+            MessageBox.Show("Không thể hủy yêu cầu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+    
         private void btntrove_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvdsyc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewRow row = dgvdsyc.Rows[e.RowIndex];
+                txtmahh.Text = row.Cells["MaHH"].Value.ToString();
+                txtmanv.Text = row.Cells["MaNV"].Value.ToString();
+                txttrangthai.Text = row.Cells["TrangThai"].Value.ToString();
+               
+
+            }
         }
     }
 }
