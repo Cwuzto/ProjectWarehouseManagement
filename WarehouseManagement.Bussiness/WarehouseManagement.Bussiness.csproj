@@ -58,6 +58,7 @@
     <Compile Include="ThongKeXuatHangBUS.cs" />
     <Compile Include="XemDSHangtonBUS.cs" />
     <Compile Include="YCnhaphangBUS.cs" />
+    <Compile Include="YeuCauDatHangBUS.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WarehouseManagement.DataAccess\WarehouseManagement.DataAccess.csproj">

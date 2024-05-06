@@ -210,6 +210,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Nhân_Viên_Kho";
             this.Text = "Nhân Viên Kho";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_Left.ResumeLayout(false);

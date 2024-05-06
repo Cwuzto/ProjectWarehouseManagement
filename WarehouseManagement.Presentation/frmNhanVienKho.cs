@@ -65,6 +65,9 @@ namespace WarehouseManagement.Presentation
 
         private void button7_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
             this.Close();
         }
 
@@ -82,7 +85,7 @@ namespace WarehouseManagement.Presentation
 
         private void button6_Click(object sender, EventArgs e)
         {
-            OpenPresentation(new frmDSYCDatHang());
+            OpenPresentation(new frmYeuCauDatHang());
             label1.Text = button6.Text;
         }
     }
