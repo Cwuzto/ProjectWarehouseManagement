@@ -234,6 +234,12 @@
     <Compile Include="frmYCnhaphang.Designer.cs">
       <DependentUpon>frmYCnhaphang.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmYeuCauDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmYeuCauDatHang.Designer.cs">
+      <DependentUpon>frmYeuCauDatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmYCnhaphang.resx">
       <DependentUpon>frmYCnhaphang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmYeuCauDatHang.resx">
+      <DependentUpon>frmYeuCauDatHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
