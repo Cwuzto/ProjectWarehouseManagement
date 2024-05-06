@@ -49,6 +49,12 @@ namespace WarehouseManagement.DataAccess
             return false;
 
         }
+        public bool Deleteyeucaunhaphang(string mahh)
+        {
+            var query = $"DELETE [YeuCauNhapHang] WHERE MaHH = '{mahh}' ";
+            var result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
 
     }
 }

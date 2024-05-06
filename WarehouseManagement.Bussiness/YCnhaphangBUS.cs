@@ -27,6 +27,10 @@ namespace WarehouseManagement.Bussiness
             }
             return false;
         }
+        public bool Deleteycnhh(string mahh)
+        {
+            return ycnhDL.Deleteyeucaunhaphang(mahh);
+        }
     }
 
 }

@@ -48,5 +48,25 @@ namespace WarehouseManagement.Presentation
             frmnh.WindowState = FormWindowState.Maximized;
             frmnh.Show();
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            
+                this.Hide();
+                frmLogin login = new frmLogin();
+                login.ShowDialog();
+                this.Close();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+                this.Hide();
+                frmLogin login = new frmLogin();
+                login.ShowDialog();
+                this.Close();
+           
+        }
     }
     }
