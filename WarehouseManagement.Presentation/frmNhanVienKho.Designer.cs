@@ -54,8 +54,9 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(149, 450);
+            this.panel1.Size = new System.Drawing.Size(132, 383);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -64,8 +65,9 @@
             this.panel2.Controls.Add(this.panel_Left);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(149, 450);
+            this.panel2.Size = new System.Drawing.Size(132, 383);
             this.panel2.TabIndex = 1;
             // 
             // panel_Left
@@ -80,17 +82,19 @@
             this.panel_Left.Controls.Add(this.pictureBox1);
             this.panel_Left.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_Left.Location = new System.Drawing.Point(0, 0);
+            this.panel_Left.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_Left.Name = "panel_Left";
-            this.panel_Left.Size = new System.Drawing.Size(149, 450);
+            this.panel_Left.Size = new System.Drawing.Size(132, 383);
             this.panel_Left.TabIndex = 1;
             // 
             // button7
             // 
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(0, 335);
+            this.button7.Location = new System.Drawing.Point(0, 270);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(149, 42);
+            this.button7.Size = new System.Drawing.Size(132, 34);
             this.button7.TabIndex = 6;
             this.button7.Text = "Thoát";
             this.button7.UseVisualStyleBackColor = true;
@@ -100,9 +104,10 @@
             // 
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(0, 293);
+            this.button6.Location = new System.Drawing.Point(0, 236);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(149, 42);
+            this.button6.Size = new System.Drawing.Size(132, 34);
             this.button6.TabIndex = 5;
             this.button6.Text = "YCDH";
             this.button6.UseVisualStyleBackColor = true;
@@ -112,9 +117,10 @@
             // 
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 251);
+            this.button5.Location = new System.Drawing.Point(0, 202);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(149, 42);
+            this.button5.Size = new System.Drawing.Size(132, 34);
             this.button5.TabIndex = 4;
             this.button5.Text = "Tạo bảng";
             this.button5.UseVisualStyleBackColor = true;
@@ -122,23 +128,26 @@
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.SystemColors.Window;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(0, 209);
+            this.button4.Location = new System.Drawing.Point(0, 168);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(149, 42);
+            this.button4.Size = new System.Drawing.Size(132, 34);
             this.button4.TabIndex = 3;
             this.button4.Text = "Xem DSHTK";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 167);
+            this.button2.Location = new System.Drawing.Point(0, 134);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 42);
+            this.button2.Size = new System.Drawing.Size(132, 34);
             this.button2.TabIndex = 1;
             this.button2.Text = "Xem DSYCNH";
             this.button2.UseVisualStyleBackColor = true;
@@ -148,9 +157,10 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 125);
+            this.button1.Location = new System.Drawing.Point(0, 100);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 42);
+            this.button1.Size = new System.Drawing.Size(132, 34);
             this.button1.TabIndex = 0;
             this.button1.Text = "Cập nhật \r\n";
             this.button1.UseVisualStyleBackColor = true;
@@ -161,8 +171,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = global::WarehouseManagement.Presentation.Properties.Resources.user;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(149, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(132, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -173,9 +184,10 @@
             this.panel_Top.BackColor = System.Drawing.Color.Navy;
             this.panel_Top.Controls.Add(this.label1);
             this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Top.Location = new System.Drawing.Point(149, 0);
+            this.panel_Top.Location = new System.Drawing.Point(132, 0);
+            this.panel_Top.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_Top.Name = "panel_Top";
-            this.panel_Top.Size = new System.Drawing.Size(651, 100);
+            this.panel_Top.Size = new System.Drawing.Size(840, 80);
             this.panel_Top.TabIndex = 1;
             // 
             // label1
@@ -183,9 +195,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(52, 34);
+            this.label1.Location = new System.Drawing.Point(46, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 20);
+            this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "HOME";
             // 
@@ -193,24 +205,26 @@
             // 
             this.panel_Body.BackColor = System.Drawing.SystemColors.Highlight;
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Body.Location = new System.Drawing.Point(149, 100);
+            this.panel_Body.Location = new System.Drawing.Point(132, 80);
+            this.panel_Body.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_Body.Name = "panel_Body";
-            this.panel_Body.Size = new System.Drawing.Size(651, 350);
+            this.panel_Body.Size = new System.Drawing.Size(840, 303);
             this.panel_Body.TabIndex = 2;
-            this.panel_Body.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_Body_Paint);
             // 
             // Nhân_Viên_Kho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(972, 383);
             this.Controls.Add(this.panel_Body);
             this.Controls.Add(this.panel_Top);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Nhân_Viên_Kho";
             this.Text = "Nhân Viên Kho";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Nhân_Viên_Kho_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_Left.ResumeLayout(false);

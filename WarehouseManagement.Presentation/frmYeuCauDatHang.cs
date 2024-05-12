@@ -17,6 +17,7 @@ namespace WarehouseManagement.Presentation
     {
 
         YeuCauDatHangBUS ycdhBUS = new YeuCauDatHangBUS();
+        private string maNV=frmLogin.UserID;
 
         public frmYeuCauDatHang()
         {
@@ -30,27 +31,22 @@ namespace WarehouseManagement.Presentation
             YeuCauDatHangBUS ycdhBUS = new YeuCauDatHangBUS();
             dgvYCDH.DataSource = ycdhBUS.LayDSYeuCauDatHang();
         }
-       
+
 
         private void frmYeuCauDatHang_Load(object sender, EventArgs e)
         {
 
         }
-
         
-        String TrangThai = "Chờ xử lý ";
-        
-        DateTime ngayhientai = DateTime.Now;
         private void btnThem_Click_1(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtMaHH.Text) && !string.IsNullOrEmpty(txtMaNV.Text))
+            if (!string.IsNullOrEmpty(txtMaHH.Text))
             {
-                
+                DateTime ngayhientai = DateTime.Now;
 
-                if (ycdhBUS.JKYCDH(ngayhientai, txtMaNV.Text, txtMaHH.Text, TrangThai))
+                if (ycdhBUS.JKYCDH(ngayhientai, maNV, txtMaHH.Text))
                 {
                     load_data();
-                    txtMaNV.Clear();
                     txtMaHH.Clear();
                    
                     MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -64,7 +60,7 @@ namespace WarehouseManagement.Presentation
 
         private void btnXoa_Click_1(object sender, EventArgs e)
         {
-            if (ycdhBUS.DeleteYeuCauDatHang(txtMaHH.Text))
+            if (ycdhBUS.DeleteYeuCauDatHang(txtMaHH.Text, ngayyc,maNV))
             {
                 MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load_data();
@@ -79,7 +75,7 @@ namespace WarehouseManagement.Presentation
         {
             if (!string.IsNullOrEmpty(txtMaHH.Text))
             {
-                if (ycdhBUS.UpdateYeuCauDatHang(txtMaHH.Text, txtMaNV.Text, MaHHCu, ngayhientai))
+                if (ycdhBUS.UpdateYeuCauDatHang(txtMaHH.Text, maNV, MaHHCu, ngayyc))
                 {
 
                     load_data();
@@ -98,17 +94,16 @@ namespace WarehouseManagement.Presentation
         {
             this.Close();
         }
-        string MaHHCu;
-        string TinhTrangCu;
+        private string MaHHCu;
+        private DateTime ngayyc;
         private void dgvYCDH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 DataGridViewRow row = dgvYCDH.Rows[e.RowIndex];
                 txtMaHH.Text = row.Cells["MaHH"].Value.ToString();
-                txtMaNV.Text = row.Cells["MaNV"].Value.ToString();
                 MaHHCu = txtMaHH.Text;
-
+                ngayyc = DateTime.Parse(row.Cells["NgayYC"].Value.ToString());
                
             }
         }
@@ -119,10 +114,6 @@ namespace WarehouseManagement.Presentation
             load_data();
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 
 

@@ -12,7 +12,9 @@ using WarehouseManagement.Bussiness;
 namespace WarehouseManagement.Presentation
 {
     public partial class frmYCnhaphang : Form
-    { YCnhaphangBUS ycnh = new YCnhaphangBUS(); 
+    { 
+        YCnhaphangBUS ycnh = new YCnhaphangBUS(); 
+        private String maNV=frmLogin.UserID;
         public frmYCnhaphang()
         {
             InitializeComponent();
@@ -25,26 +27,22 @@ namespace WarehouseManagement.Presentation
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtmahh.Text) && !string.IsNullOrEmpty(txtmanv.Text))
+            if (!string.IsNullOrEmpty(txtmahh.Text))
             {
                 DateTime ngayycdh = ngayyc.Value;
 
-                if (ycnh.ycdhhoa(txtmanv.Text, txtmahh.Text, ngayycdh,txttrangthai.Text))
-
-
+                if (ycnh.ycdhhoa(maNV, txtmahh.Text, ngayycdh))
                 {
-                    load_data();
-                    txtmanv.Clear();    
+                    load_data();    
                     txtmahh.Clear();
-                    txttrangthai.Clear();
 
-                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Gửi thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
             }
-
+             else
             {
-                MessageBox.Show("Không thể thêm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không thể gửi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 
 
@@ -59,7 +57,7 @@ namespace WarehouseManagement.Presentation
 
         private void btnhuy_Click(object sender, EventArgs e)
         {
-            if (ycnh.Deleteycnhh(txtmahh.Text))
+            if (ycnh.Deleteycnhh(txtmahh.Text, ngayyc.Value, maNV))
             {
                 MessageBox.Show("Hủy thành công yêu cầu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 load_data();
@@ -81,9 +79,7 @@ namespace WarehouseManagement.Presentation
             {
                 DataGridViewRow row = dgvdsyc.Rows[e.RowIndex];
                 txtmahh.Text = row.Cells["MaHH"].Value.ToString();
-                txtmanv.Text = row.Cells["MaNV"].Value.ToString();
-                txttrangthai.Text = row.Cells["TrangThai"].Value.ToString();
-               
+                ngayyc.Value = DateTime.Parse(row.Cells["NgayYC"].Value.ToString());
 
             }
         }

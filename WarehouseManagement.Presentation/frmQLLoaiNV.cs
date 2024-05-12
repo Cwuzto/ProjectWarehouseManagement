@@ -70,7 +70,7 @@ namespace WarehouseManagement.Presentation
                 return;
             }
         }
-        string oldMaLoai;
+       private string oldMaLoai;
         private void dgvDSLoaiNV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)

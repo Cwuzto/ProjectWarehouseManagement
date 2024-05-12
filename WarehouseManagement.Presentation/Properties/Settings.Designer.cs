@@ -26,7 +26,8 @@ namespace WarehouseManagement.Presentation.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=CUBO\\SQLEXPRESS;Initial Catalog=QLKHOQUANCF;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-C5FN1M76\\\\NP;Initial Catalog=QLKHOQUANCF;Integrated Security=T" +
+            "rue")]
         public string QLKHOQUANCFConnectionString {
             get {
                 return ((string)(this["QLKHOQUANCFConnectionString"]));

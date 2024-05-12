@@ -18,18 +18,26 @@ namespace WarehouseManagement.Bussiness
         }
 
 
-        public bool ycdhhoa(string manv,string mahh,DateTime ngayyc , string trangthai)
+        public bool ycdhhoa(string manv,string mahh,DateTime ngayyc)
         {
             if (!ycnhDL.ycnhaphang( manv,mahh,ngayyc ))
             {
-                if (ycnhDL.ycdh( manv,mahh ,ngayyc, trangthai))
+                if (ycnhDL.ycdh( manv,mahh ,ngayyc))
                     return true;
             }
             return false;
         }
-        public bool Deleteycnhh(string mahh)
+        public bool Deleteycnhh(string mahh, DateTime ngayyc, string manv)
         {
-            return ycnhDL.Deleteyeucaunhaphang(mahh);
+            return ycnhDL.Deleteyeucaunhaphang(mahh, ngayyc, manv);
+        }
+        public bool KTCoYCMoi()
+        {
+            return ycnhDL.KiemTraCoYCMoi();
+        }
+        public void CapNhatTrangThaiKhiDaXem()
+        {
+            ycnhDL.CapNhatTrangThaiKhiDaXem();
         }
     }
 

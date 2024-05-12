@@ -18,14 +18,11 @@ namespace WarehouseManagement.DataAccess
             yc = DataProvider.Instance.ExecuteQuery(query);
 
         }
-        public bool ycdh( string MaNV, string MaHH,DateTime NgayYC ,string TrangThai)
+        public bool ycdh( string MaNV, string MaHH,DateTime NgayYC)
         {
-
-
             int count = 0;
-            var query = "INSERT INTO YeuCauNhapHang( MaNV,MaHH,NgayYC ,TrangThai) VALUES ( @manv , @ngayyc , @mahh , @trangthai" +
-                " )";
-            object[] parameters = { MaNV, MaHH, NgayYC,TrangThai };
+            var query = "INSERT INTO YeuCauNhapHang( MaNV,MaHH,NgayYC ,TrangThai) VALUES ( @manv , @mahh , @ngayyc , N'Đã gửi yêu cầu' )";
+            object[] parameters = { MaNV, MaHH, NgayYC};
             count = DataProvider.Instance.ExecuteNonQuery(query, parameters);
             if (count != 0)
             { return true; }
@@ -41,7 +38,6 @@ namespace WarehouseManagement.DataAccess
         {
 
             string query = "SELECT  COUNT(*) FROM YeuCauDatHang WHERE MaNV = @manv AND MaHH = @mahh AND NgayYc = @ngayyc ";
-            ;
             object[] parameters = {  MaNV, MaHH,NgayYC };
             int count = (int)DataProvider.Instance.ExecuteScalar(query, parameters);
             if (count > 0)
@@ -49,13 +45,24 @@ namespace WarehouseManagement.DataAccess
             return false;
 
         }
-        public bool Deleteyeucaunhaphang(string mahh)
+        public bool Deleteyeucaunhaphang(string mahh, DateTime ngayyc, string manv)
         {
-            var query = $"DELETE [YeuCauNhapHang] WHERE MaHH = '{mahh}' ";
-            var result = DataProvider.Instance.ExecuteNonQuery(query);
+            var query = $"DELETE [YeuCauNhapHang] WHERE MaHH = '{mahh}' and NgayYC = CONVERT(date, @ngayyc ) and MaNV= '{manv}'";
+            object[] parameters = { ngayyc };
+            var result = DataProvider.Instance.ExecuteNonQuery(query, parameters);
             return result > 0;
         }
-
+        public bool KiemTraCoYCMoi()
+        {
+            DataTable dt = DataProvider.Instance.ExecuteQuery("SELECT * FROM YeuCauNhapHang WHERE TrangThai = N'Đã gửi yêu cầu'");
+            if (dt.Rows.Count > 0)
+                return true;
+            return false;
+        }
+        public void CapNhatTrangThaiKhiDaXem()
+        {
+            DataProvider.Instance.ExecuteNonQuery("UPDATE YeuCauNhapHang SET TrangThai = N'Đã xem' WHERE TrangThai = N'Đã gửi yêu cầu'");
+        }
     }
 }
 

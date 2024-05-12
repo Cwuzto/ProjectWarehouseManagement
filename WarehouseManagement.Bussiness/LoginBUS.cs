@@ -24,5 +24,9 @@ namespace WarehouseManagement.Bussiness
         {
             return loginDL.GetMaLoai(userName);
         }
+        public string GetMaNV(string userName, string pass)
+        {
+            return loginDL.GetMaNV(userName, pass);
+        }
     }
 }

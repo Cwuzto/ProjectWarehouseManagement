@@ -7,20 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WarehouseManagement.Bussiness;
 
 namespace WarehouseManagement.Presentation
 {
     public partial class Nhân_Viên_Kho : Form
     {
+        YCnhaphangBUS ycnhaphang=new YCnhaphangBUS();
         public Nhân_Viên_Kho()
         {
             InitializeComponent();
         }
 
-        private void panel_Body_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private Form currentPresentation;
         private void OpenPresentation(Form Presentation)
         {
@@ -45,13 +43,13 @@ namespace WarehouseManagement.Presentation
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (ycnhaphang.KTCoYCMoi())
+            {
+                button2.BackColor=SystemColors.Window;
+                ycnhaphang.CapNhatTrangThaiKhiDaXem();
+            }
             OpenPresentation(new frmDSYCNhapHang());
             label1.Text = button2.Text;
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-          
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -87,6 +85,15 @@ namespace WarehouseManagement.Presentation
         {
             OpenPresentation(new frmYeuCauDatHang());
             label1.Text = button6.Text;
+        }
+
+        private void Nhân_Viên_Kho_Load(object sender, EventArgs e)
+        {
+            if (ycnhaphang.KTCoYCMoi())
+            {
+                MessageBox.Show("Bạn có yêu cầu nhập hàng mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                button2.BackColor = Color.Tomato;
+            }
         }
     }
 }

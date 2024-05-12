@@ -16,18 +16,18 @@ namespace WarehouseManagement.Bussiness
         {
             return dh.GetAllYeuCauDatHang();
         }
-        public bool JKYCDH(DateTime ngayyeucau, string manv, string mahh, string trangthai)
+        public bool JKYCDH(DateTime ngayyeucau, string manv, string mahh)
         {
             if (!dh.KiemTraTonTai(mahh, manv, ngayyeucau))
             {
-                if (dh.THYCDH(ngayyeucau, manv, mahh, trangthai))
+                if (dh.THYCDH(ngayyeucau, manv, mahh))
                     return true;
             }
             return false;
         }
-        public bool DeleteYeuCauDatHang(String mahh)
+        public bool DeleteYeuCauDatHang(String mahh, DateTime ngayyc, String manv)
         {
-            return dh.DeleteYeuCauDatHang(mahh);
+            return dh.DeleteYeuCauDatHang(mahh,ngayyc,manv);
         }
         public bool UpdateYeuCauDatHang(string mahh, string maNV, string mahhcu, DateTime ngayyc)
         {
@@ -40,8 +40,11 @@ namespace WarehouseManagement.Bussiness
             return false;
 
         }
+        public bool KTCoYCMoi()
+        {
+            return dh.KiemTraCoYCMoi();
+        }
 
-        
     }
 
 

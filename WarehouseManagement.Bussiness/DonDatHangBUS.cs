@@ -15,19 +15,15 @@ namespace WarehouseManagement.Business
         {
             return dh.GetAllDonDatHang();
         }
-        public bool JKDDH(string madh, DateTime ngaydat, string trangthai, string manv)
+        public bool JKDDH(string madh, DateTime ngaydat, string manv)
         {
 
             if (!dh.MaDonHangTonTai(madh))
             {
-                if (dh.THDDH(madh, ngaydat, trangthai, manv))
+                if (dh.THDDH(madh, ngaydat, manv))
                     return true;
             }
             return false;
-        }
-        public bool DeleteDonDatHang(string madh)
-        {
-            return dh.DeleteDonDatHang(madh);
         }
         public bool UpdateDonDatHang(string madh, string tinhtrang, string madoncu, string tinhtrangcu)
         {

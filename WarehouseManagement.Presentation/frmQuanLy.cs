@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WarehouseManagement.Bussiness;
 
 namespace WarehouseManagement.Presentation
 {
     public partial class frmQuanLy : Form
     {
+        YeuCauDatHangBUS ycdh=new YeuCauDatHangBUS();
         public frmQuanLy()
         {
             InitializeComponent();
@@ -25,6 +27,11 @@ namespace WarehouseManagement.Presentation
                 {
                     ctl.BackColor = this.BackColor;
                 }
+            }
+            if (ycdh.KTCoYCMoi())
+            {
+                MessageBox.Show("Bạn có yêu cầu đặt hàng đang chờ được xử lý!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                menuitemYCDatHg.BackColor = Color.Tomato;
             }
         }
 
@@ -65,6 +72,7 @@ namespace WarehouseManagement.Presentation
 
         private void menuitemYCDatHg_Click(object sender, EventArgs e)
         {
+            menuitemYCDatHg.BackColor = SystemColors.Control;
             frmDSYCDatHang frmYCDat = new frmDSYCDatHang();
 
             frmYCDat.MdiParent = this;

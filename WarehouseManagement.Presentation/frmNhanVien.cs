@@ -97,7 +97,7 @@ namespace WarehouseManagement.Presentation
             }
 
         }
-        string tenCot;
+        private string tenCot;
         private void dgvDSNV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
