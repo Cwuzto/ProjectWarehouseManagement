@@ -42,5 +42,18 @@ namespace WarehouseManagement.DataAccess
                 return null;
             }
         }
+        public string GetMaNV(string userName, string pass)
+        {
+            string query = "SELECT MaNV FROM NhanVien WHERE UserName = @userName and Password= @pass";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, pass });
+            if (result.Rows.Count > 0)
+            {
+                return result.Rows[0]["MaNV"].ToString();
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

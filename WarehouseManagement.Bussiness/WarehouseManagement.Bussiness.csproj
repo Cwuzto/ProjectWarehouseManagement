@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CTDonHangBUS.cs" />
     <Compile Include="DonDatHangBUS.cs" />
     <Compile Include="DSHangXuatKhoBUS.cs" />
     <Compile Include="DSYCDatHagBUS.cs" />

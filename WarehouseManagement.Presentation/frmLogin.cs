@@ -8,6 +8,7 @@ namespace WarehouseManagement.Presentation
 {
     public partial class frmLogin : Form
     {
+        public static string UserID { get; private set; }
         public frmLogin()
         {
             InitializeComponent();
@@ -35,6 +36,8 @@ namespace WarehouseManagement.Presentation
             if (loginBUS.Login(userName, passWord))
             {
                 string maLoai = loginBUS.GetMaLoai(userName);
+                string maNV=loginBUS.GetMaNV(userName, passWord);
+                UserID = maNV;
 
                 switch (maLoai)
                 {

@@ -57,7 +57,7 @@ namespace WarehouseManagement.Presentation
                     return;
                 }
             }
-
+            else
             {
                 MessageBox.Show("Không thể thêm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -91,35 +91,29 @@ namespace WarehouseManagement.Presentation
             {                   
 
                if (!string.IsNullOrEmpty(txttenhang.Text) && (!string.IsNullOrEmpty(txtmota.Text) && (!string.IsNullOrEmpty(txtsoluong.Text))))
-                {
-
+               {
+                    if (qlhanghoa.CtTenHangHoa(txtmahh.Text, txttenhang.Text) && qlhanghoa.CtMoTa(txtmahh.Text, txtmota.Text)&& qlhanghoa.CtSoLuong(txtmahh.Text, txtsoluong.Text))
                     {
+                        load_data();
+                        txtmahh.Clear();
+                        txttenhang.Clear();
+                        txtmota.Clear();
+                        txtsoluong.Clear();
 
-                        {
-                            if (qlhanghoa.CtTenHangHoa(txtmahh.Text, txttenhang.Text) && qlhanghoa.CtMoTa(txtmahh.Text, txtmota.Text)&& qlhanghoa.CtSoLuong(txtmahh.Text, txtsoluong.Text))
-                            {
-                                load_data();
-                                txtmahh.Clear();
-                                txttenhang.Clear();
-                                 txtmota.Clear();
-                                txtsoluong.Clear();
+                        MessageBox.Show("Cập nhật hàng hóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                MessageBox.Show("Cập nhật hàng hóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                            }
-                            else
-                            {
-                                MessageBox.Show("Không thể cập nhật hàng hóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
-                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không thể cập nhật hàng hóa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
         }
           
 
-            string mahangcu;
-            string tenhangcu;
+            private string mahangcu;
+            private string tenhangcu;
             private void dgvdshang_CellClick(object sender, DataGridViewCellEventArgs e)
             {
                 if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
@@ -135,6 +129,6 @@ namespace WarehouseManagement.Presentation
                 }
             }
     }
-    }  
+}  
     
     

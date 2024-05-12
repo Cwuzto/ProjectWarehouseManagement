@@ -144,6 +144,12 @@
     <Compile Include="frmBaocao.Designer.cs">
       <DependentUpon>frmBaocao.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCTDonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCTDonHang.Designer.cs">
+      <DependentUpon>frmCTDonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDonDatHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +251,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmBaocao.resx">
       <DependentUpon>frmBaocao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCTDonHang.resx">
+      <DependentUpon>frmCTDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDonDatHang.resx">
       <DependentUpon>frmDonDatHang.cs</DependentUpon>
