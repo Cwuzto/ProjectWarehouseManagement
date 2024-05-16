@@ -41,24 +41,9 @@ namespace WarehouseManagement.Presentation
             
         }
 
-        private void chứcNăngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmQLHang  frmnh = new frmQLHang ();
-            frmnh.MdiParent = this;
-            frmnh.WindowState = FormWindowState.Maximized;
-            frmnh.Show();
-        }
+        
 
-        private void btnDangXuat_Click(object sender, EventArgs e)
-        {
-            
-                this.Hide();
-                frmLogin login = new frmLogin();
-                login.ShowDialog();
-                this.Close();
-            
-        }
-
+        
         private void button1_Click(object sender, EventArgs e)
         {
             

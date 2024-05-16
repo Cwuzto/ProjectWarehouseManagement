@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênBánHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xemHàngHóaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yêuCầuNhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,14 +35,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // chứcNăngToolStripMenuItem
-            // 
-            this.chứcNăngToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
-            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(179, 39);
-            this.chứcNăngToolStripMenuItem.Text = "Hàng Hóa";
-            this.chứcNăngToolStripMenuItem.Click += new System.EventHandler(this.chứcNăngToolStripMenuItem_Click);
             // 
             // nhânViênBánHàngToolStripMenuItem
             // 
@@ -80,7 +71,6 @@
             this.menuStrip1.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.chứcNăngToolStripMenuItem,
             this.nhânViênBánHàngToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -116,7 +106,6 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmNVBanhang";
-            this.Text = "frmNVBanhang";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -126,8 +115,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStripMenuItem chứcNăngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhânViênBánHàngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xemHàngHóaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yêuCầuNhậpHàngToolStripMenuItem;

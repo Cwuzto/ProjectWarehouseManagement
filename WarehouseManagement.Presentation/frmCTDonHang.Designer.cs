@@ -44,13 +44,24 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Font = new System.Drawing.Font("UVN Bach Tuyet Nang", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.Color.LightPink;
-            label1.Location = new System.Drawing.Point(459, 9);
+            label1.Location = new System.Drawing.Point(432, 21);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(410, 42);
+            label1.Size = new System.Drawing.Size(508, 51);
             label1.TabIndex = 46;
             label1.Text = "Xem Chi Tiết Hóa Đơn";
+            // 
+            // maLMTLabel
+            // 
+            maLMTLabel.AutoSize = true;
+            maLMTLabel.Font = new System.Drawing.Font("Palatino Linotype", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            maLMTLabel.ForeColor = System.Drawing.Color.LemonChiffon;
+            maLMTLabel.Location = new System.Drawing.Point(197, 93);
+            maLMTLabel.Name = "maLMTLabel";
+            maLMTLabel.Size = new System.Drawing.Size(133, 45);
+            maLMTLabel.TabIndex = 41;
+            maLMTLabel.Text = "Mã loại";
             // 
             // btntrove
             // 
@@ -66,24 +77,13 @@
             this.btntrove.UseVisualStyleBackColor = false;
             this.btntrove.Click += new System.EventHandler(this.btntrove_Click);
             // 
-            // maLMTLabel
-            // 
-            maLMTLabel.AutoSize = true;
-            maLMTLabel.Font = new System.Drawing.Font("Palatino Linotype", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            maLMTLabel.ForeColor = System.Drawing.Color.LemonChiffon;
-            maLMTLabel.Location = new System.Drawing.Point(193, 56);
-            maLMTLabel.Name = "maLMTLabel";
-            maLMTLabel.Size = new System.Drawing.Size(133, 45);
-            maLMTLabel.TabIndex = 41;
-            maLMTLabel.Text = "Mã loại";
-            // 
             // txtmaloai
             // 
             this.txtmaloai.BackColor = System.Drawing.SystemColors.Info;
             this.txtmaloai.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtmaloai.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txtmaloai.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtmaloai.Location = new System.Drawing.Point(201, 104);
+            this.txtmaloai.Location = new System.Drawing.Point(205, 141);
             this.txtmaloai.Name = "txtmaloai";
             this.txtmaloai.Size = new System.Drawing.Size(769, 34);
             this.txtmaloai.TabIndex = 42;
@@ -94,7 +94,7 @@
             this.btnxemang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnxemang.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnxemang.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.btnxemang.Location = new System.Drawing.Point(976, 97);
+            this.btnxemang.Location = new System.Drawing.Point(980, 134);
             this.btnxemang.Name = "btnxemang";
             this.btnxemang.Size = new System.Drawing.Size(214, 50);
             this.btnxemang.TabIndex = 44;
@@ -108,7 +108,7 @@
             this.groupBox1.Controls.Add(this.dgvdschitiet);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.ForeColor = System.Drawing.Color.Firebrick;
-            this.groupBox1.Location = new System.Drawing.Point(201, 160);
+            this.groupBox1.Location = new System.Drawing.Point(205, 197);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(973, 360);
             this.groupBox1.TabIndex = 43;
@@ -130,7 +130,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.ClientSize = new System.Drawing.Size(1286, 528);
             this.Controls.Add(label1);
             this.Controls.Add(this.btntrove);

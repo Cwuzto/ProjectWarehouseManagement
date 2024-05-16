@@ -37,34 +37,36 @@
             this.cbLoaiTimKiem = new System.Windows.Forms.ComboBox();
             this.btnAll = new System.Windows.Forms.Button();
             this.dtpSearch = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSYC)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(127, 86);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Bisque;
+            this.label1.Location = new System.Drawing.Point(157, 239);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 25);
+            this.label1.Size = new System.Drawing.Size(149, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tìm kiếm:";
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(267, 81);
+            this.txtSearch.Location = new System.Drawing.Point(325, 242);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(333, 30);
+            this.txtSearch.Size = new System.Drawing.Size(494, 30);
             this.txtSearch.TabIndex = 1;
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(599, 77);
+            this.btnSearch.Location = new System.Drawing.Point(825, 238);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(109, 38);
+            this.btnSearch.Size = new System.Drawing.Size(97, 38);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -72,20 +74,21 @@
             // dgvDSYC
             // 
             this.dgvDSYC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSYC.Location = new System.Drawing.Point(132, 137);
+            this.dgvDSYC.Location = new System.Drawing.Point(162, 314);
             this.dgvDSYC.Name = "dgvDSYC";
             this.dgvDSYC.RowHeadersWidth = 51;
             this.dgvDSYC.RowTemplate.Height = 24;
-            this.dgvDSYC.Size = new System.Drawing.Size(571, 286);
+            this.dgvDSYC.Size = new System.Drawing.Size(760, 286);
             this.dgvDSYC.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(127, 33);
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Bisque;
+            this.label2.Location = new System.Drawing.Point(157, 188);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 25);
+            this.label2.Size = new System.Drawing.Size(140, 38);
             this.label2.TabIndex = 5;
             this.label2.Text = "Tìm theo:";
             // 
@@ -98,37 +101,50 @@
             "Mã nhân viên",
             "Mã hàng hóa",
             "Trạng thái"});
-            this.cbLoaiTimKiem.Location = new System.Drawing.Point(267, 34);
+            this.cbLoaiTimKiem.Location = new System.Drawing.Point(325, 195);
             this.cbLoaiTimKiem.Name = "cbLoaiTimKiem";
-            this.cbLoaiTimKiem.Size = new System.Drawing.Size(436, 30);
+            this.cbLoaiTimKiem.Size = new System.Drawing.Size(597, 30);
             this.cbLoaiTimKiem.TabIndex = 6;
             this.cbLoaiTimKiem.SelectedIndexChanged += new System.EventHandler(this.cbLoaiTimKiem_SelectedIndexChanged);
             // 
             // btnAll
             // 
-            this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAll.Location = new System.Drawing.Point(721, 137);
+            this.btnAll.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnAll.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAll.Location = new System.Drawing.Point(928, 388);
             this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(67, 177);
+            this.btnAll.Size = new System.Drawing.Size(119, 93);
             this.btnAll.TabIndex = 7;
             this.btnAll.Text = "Xem Tất Cả";
-            this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.UseVisualStyleBackColor = false;
             this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // dtpSearch
             // 
             this.dtpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpSearch.Location = new System.Drawing.Point(267, 81);
+            this.dtpSearch.Location = new System.Drawing.Point(325, 242);
             this.dtpSearch.Name = "dtpSearch";
-            this.dtpSearch.Size = new System.Drawing.Size(333, 30);
+            this.dtpSearch.Size = new System.Drawing.Size(494, 30);
             this.dtpSearch.TabIndex = 16;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("UVN Bach Tuyet Nang", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Bisque;
+            this.label3.Location = new System.Drawing.Point(209, 79);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(668, 51);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Danh Sách Yêu Cầu Nhập Hàng";
             // 
             // frmDSYCNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.ClientSize = new System.Drawing.Size(1263, 665);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dtpSearch);
             this.Controls.Add(this.btnAll);
             this.Controls.Add(this.cbLoaiTimKiem);
@@ -156,5 +172,6 @@
         private System.Windows.Forms.ComboBox cbLoaiTimKiem;
         private System.Windows.Forms.Button btnAll;
         private System.Windows.Forms.DateTimePicker dtpSearch;
+        private System.Windows.Forms.Label label3;
     }
 }
