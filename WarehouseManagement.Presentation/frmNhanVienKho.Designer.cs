@@ -72,7 +72,7 @@
             // 
             // panel_Left
             // 
-            this.panel_Left.BackColor = System.Drawing.Color.Navy;
+            this.panel_Left.BackColor = System.Drawing.Color.SeaGreen;
             this.panel_Left.Controls.Add(this.button7);
             this.panel_Left.Controls.Add(this.button6);
             this.panel_Left.Controls.Add(this.button5);
@@ -81,6 +81,7 @@
             this.panel_Left.Controls.Add(this.button1);
             this.panel_Left.Controls.Add(this.pictureBox1);
             this.panel_Left.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_Left.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_Left.Location = new System.Drawing.Point(0, 0);
             this.panel_Left.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel_Left.Name = "panel_Left";
@@ -89,48 +90,55 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.button7.Location = new System.Drawing.Point(0, 270);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(132, 34);
             this.button7.TabIndex = 6;
             this.button7.Text = "Thoát";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.button6.Location = new System.Drawing.Point(0, 236);
             this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(132, 34);
             this.button6.TabIndex = 5;
             this.button6.Text = "YCDH";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.button5.Location = new System.Drawing.Point(0, 202);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(132, 34);
             this.button5.TabIndex = 4;
             this.button5.Text = "Tạo bảng";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Window;
+            this.button4.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.button4.Location = new System.Drawing.Point(0, 168);
             this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
@@ -142,28 +150,32 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.button2.Location = new System.Drawing.Point(0, 134);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(132, 34);
             this.button2.TabIndex = 1;
             this.button2.Text = "Xem DSYCNH";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DarkOliveGreen;
             this.button1.Location = new System.Drawing.Point(0, 100);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(132, 34);
             this.button1.TabIndex = 0;
             this.button1.Text = "Cập nhật \r\n";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
@@ -181,7 +193,7 @@
             // 
             // panel_Top
             // 
-            this.panel_Top.BackColor = System.Drawing.Color.Navy;
+            this.panel_Top.BackColor = System.Drawing.Color.SeaGreen;
             this.panel_Top.Controls.Add(this.label1);
             this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Top.Location = new System.Drawing.Point(132, 0);
@@ -193,17 +205,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("UVN Bach Tuyet Nang", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(46, 27);
+            this.label1.Location = new System.Drawing.Point(47, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 17);
+            this.label1.Size = new System.Drawing.Size(121, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "HOME";
             // 
             // panel_Body
             // 
-            this.panel_Body.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panel_Body.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.panel_Body.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Body.Location = new System.Drawing.Point(132, 80);
             this.panel_Body.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

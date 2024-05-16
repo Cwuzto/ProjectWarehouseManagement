@@ -56,7 +56,7 @@
             this.menuitemHang});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1073, 43);
+            this.menuStrip1.Size = new System.Drawing.Size(1073, 39);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,21 +65,27 @@
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuitemQLNV,
             this.menuitemQLLNV});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(292, 39);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(326, 35);
             this.toolStripMenuItem1.Text = "Phân Quyền Hệ Thống";
             // 
             // menuitemQLNV
             // 
+            this.menuitemQLNV.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuitemQLNV.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuitemQLNV.Name = "menuitemQLNV";
-            this.menuitemQLNV.Size = new System.Drawing.Size(364, 40);
+            this.menuitemQLNV.Size = new System.Drawing.Size(413, 36);
             this.menuitemQLNV.Text = "Quản lý nhân viên";
             this.menuitemQLNV.Click += new System.EventHandler(this.menuitemQLNV_Click);
             // 
             // menuitemQLLNV
             // 
+            this.menuitemQLLNV.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuitemQLLNV.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuitemQLLNV.Name = "menuitemQLLNV";
-            this.menuitemQLLNV.Size = new System.Drawing.Size(364, 40);
+            this.menuitemQLLNV.Size = new System.Drawing.Size(413, 36);
             this.menuitemQLLNV.Text = "Quản lý loại nhân viên";
             this.menuitemQLLNV.Click += new System.EventHandler(this.menuitemQLLNV_Click);
             // 
@@ -91,73 +97,89 @@
             this.menuitemXemThongKe,
             this.menuitemHgXuatKho,
             this.menuitemDSHangTrongKho});
+            this.menuitemHang.Font = new System.Drawing.Font("Showcard Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuitemHang.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuitemHang.Name = "menuitemHang";
-            this.menuitemHang.Size = new System.Drawing.Size(183, 39);
+            this.menuitemHang.Size = new System.Drawing.Size(213, 35);
             this.menuitemHang.Text = "Quản lý hàng";
             // 
             // menuitemDonDatHang
             // 
+            this.menuitemDonDatHang.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuitemDonDatHang.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuitemDonDatHang.Name = "menuitemDonDatHang";
-            this.menuitemDonDatHang.Size = new System.Drawing.Size(560, 40);
+            this.menuitemDonDatHang.Size = new System.Drawing.Size(637, 36);
             this.menuitemDonDatHang.Text = "Đơn đặt hàng";
             this.menuitemDonDatHang.Click += new System.EventHandler(this.menuitemDonDatHang_Click);
             // 
             // danhSáchYêuCầuToolStripMenuItem
             // 
+            this.danhSáchYêuCầuToolStripMenuItem.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.danhSáchYêuCầuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuitemYCNhapHG,
             this.menuitemYCDatHg});
+            this.danhSáchYêuCầuToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Highlight;
             this.danhSáchYêuCầuToolStripMenuItem.Name = "danhSáchYêuCầuToolStripMenuItem";
-            this.danhSáchYêuCầuToolStripMenuItem.Size = new System.Drawing.Size(560, 40);
+            this.danhSáchYêuCầuToolStripMenuItem.Size = new System.Drawing.Size(637, 36);
             this.danhSáchYêuCầuToolStripMenuItem.Text = "Danh sách yêu cầu";
             // 
             // menuitemYCNhapHG
             // 
+            this.menuitemYCNhapHG.BackColor = System.Drawing.Color.CornflowerBlue;
             this.menuitemYCNhapHG.Name = "menuitemYCNhapHG";
-            this.menuitemYCNhapHG.Size = new System.Drawing.Size(324, 40);
+            this.menuitemYCNhapHG.Size = new System.Drawing.Size(363, 36);
             this.menuitemYCNhapHG.Text = "Yêu cầu nhập hàng";
             this.menuitemYCNhapHG.Click += new System.EventHandler(this.menuitemYCNhapHG_Click);
             // 
             // menuitemYCDatHg
             // 
+            this.menuitemYCDatHg.BackColor = System.Drawing.Color.CornflowerBlue;
             this.menuitemYCDatHg.Name = "menuitemYCDatHg";
-            this.menuitemYCDatHg.Size = new System.Drawing.Size(324, 40);
+            this.menuitemYCDatHg.Size = new System.Drawing.Size(363, 36);
             this.menuitemYCDatHg.Text = "Yêu cầu đặt hàng";
             this.menuitemYCDatHg.Click += new System.EventHandler(this.menuitemYCDatHg_Click);
             // 
             // menuitemXemThongKe
             // 
+            this.menuitemXemThongKe.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuitemXemThongKe.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nhậpHàngToolStripMenuItem,
             this.menuitemXemThongKeXuatHang});
+            this.menuitemXemThongKe.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuitemXemThongKe.Name = "menuitemXemThongKe";
-            this.menuitemXemThongKe.Size = new System.Drawing.Size(560, 40);
+            this.menuitemXemThongKe.Size = new System.Drawing.Size(637, 36);
             this.menuitemXemThongKe.Text = "Xem thống kê nhập/xuất các mặt hàng";
             // 
             // nhậpHàngToolStripMenuItem
             // 
+            this.nhậpHàngToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
             this.nhậpHàngToolStripMenuItem.Name = "nhậpHàngToolStripMenuItem";
-            this.nhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(233, 40);
+            this.nhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
             this.nhậpHàngToolStripMenuItem.Text = "Nhập hàng";
             // 
             // menuitemXemThongKeXuatHang
             // 
+            this.menuitemXemThongKeXuatHang.BackColor = System.Drawing.Color.DodgerBlue;
             this.menuitemXemThongKeXuatHang.Name = "menuitemXemThongKeXuatHang";
-            this.menuitemXemThongKeXuatHang.Size = new System.Drawing.Size(233, 40);
+            this.menuitemXemThongKeXuatHang.Size = new System.Drawing.Size(248, 36);
             this.menuitemXemThongKeXuatHang.Text = "Xuất hàng";
             this.menuitemXemThongKeXuatHang.Click += new System.EventHandler(this.menuitemXemThongKeXuatHang_Click);
             // 
             // menuitemHgXuatKho
             // 
+            this.menuitemHgXuatKho.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuitemHgXuatKho.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuitemHgXuatKho.Name = "menuitemHgXuatKho";
-            this.menuitemHgXuatKho.Size = new System.Drawing.Size(560, 40);
+            this.menuitemHgXuatKho.Size = new System.Drawing.Size(637, 36);
             this.menuitemHgXuatKho.Text = "Danh sách hàng xuất kho";
             this.menuitemHgXuatKho.Click += new System.EventHandler(this.menuitemHgXuatKho_Click);
             // 
             // menuitemDSHangTrongKho
             // 
+            this.menuitemDSHangTrongKho.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menuitemDSHangTrongKho.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuitemDSHangTrongKho.Name = "menuitemDSHangTrongKho";
-            this.menuitemDSHangTrongKho.Size = new System.Drawing.Size(560, 40);
+            this.menuitemDSHangTrongKho.Size = new System.Drawing.Size(637, 36);
             this.menuitemDSHangTrongKho.Text = "Danh sách hàng trong kho";
             this.menuitemDSHangTrongKho.Click += new System.EventHandler(this.menuitemDSHangTrongKho_Click);
             // 
