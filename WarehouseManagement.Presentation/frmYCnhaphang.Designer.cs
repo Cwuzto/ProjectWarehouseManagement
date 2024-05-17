@@ -190,7 +190,7 @@
             this.Controls.Add(this.btntrove);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmYCnhaphang";
-            this.Text = "frmYCnhaphang";
+            this.Text = "Yêu cầu nhập hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvdsyc)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

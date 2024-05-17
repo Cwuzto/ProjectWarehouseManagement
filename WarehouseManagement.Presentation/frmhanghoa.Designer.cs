@@ -49,18 +49,18 @@
             maLMTLabel.ForeColor = System.Drawing.Color.LemonChiffon;
             maLMTLabel.Location = new System.Drawing.Point(94, 86);
             maLMTLabel.Name = "maLMTLabel";
-            maLMTLabel.Size = new System.Drawing.Size(138, 46);
+            maLMTLabel.Size = new System.Drawing.Size(133, 45);
             maLMTLabel.TabIndex = 1;
             maLMTLabel.Text = "Mã loại";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("UVN Bach Tuyet Nang", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.Color.LightPink;
             label1.Location = new System.Drawing.Point(496, 19);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(344, 51);
+            label1.Size = new System.Drawing.Size(285, 42);
             label1.TabIndex = 40;
             label1.Text = "Xem Hàng Hóa";
             // 
@@ -154,7 +154,7 @@
             this.Controls.Add(this.btnxemang);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmhanghoa";
-            this.Text = "frmhanghoa";
+            this.Text = "Hàng hóa";
             ((System.ComponentModel.ISupportInitialize)(this.dgvdshanghoa)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

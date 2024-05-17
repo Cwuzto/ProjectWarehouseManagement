@@ -154,7 +154,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Name = "frmDSYCNhapHang";
-            this.Text = "frmDSYCNhapHang";
+            this.Text = "Danh sách yêu cầu nhập hàng";
             this.Load += new System.EventHandler(this.frmDSYCNhapHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSYC)).EndInit();
             this.ResumeLayout(false);

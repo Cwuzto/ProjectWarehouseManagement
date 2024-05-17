@@ -41,11 +41,11 @@
             // btnThongKe
             // 
             this.btnThongKe.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.btnThongKe.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.Font = new System.Drawing.Font("Montserrat", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThongKe.ForeColor = System.Drawing.Color.DarkOliveGreen;
-            this.btnThongKe.Location = new System.Drawing.Point(839, 161);
+            this.btnThongKe.Location = new System.Drawing.Point(884, 165);
             this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(145, 73);
+            this.btnThongKe.Size = new System.Drawing.Size(150, 71);
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = false;
@@ -63,29 +63,29 @@
             // 
             // dtpNgayBatDau
             // 
-            this.dtpNgayBatDau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayBatDau.Location = new System.Drawing.Point(425, 153);
+            this.dtpNgayBatDau.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayBatDau.Location = new System.Drawing.Point(365, 153);
             this.dtpNgayBatDau.Name = "dtpNgayBatDau";
-            this.dtpNgayBatDau.Size = new System.Drawing.Size(342, 30);
+            this.dtpNgayBatDau.Size = new System.Drawing.Size(474, 40);
             this.dtpNgayBatDau.TabIndex = 7;
             // 
             // dtpNgayKetThuc
             // 
-            this.dtpNgayKetThuc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNgayKetThuc.Location = new System.Drawing.Point(425, 214);
+            this.dtpNgayKetThuc.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpNgayKetThuc.Location = new System.Drawing.Point(365, 214);
             this.dtpNgayKetThuc.Name = "dtpNgayKetThuc";
-            this.dtpNgayKetThuc.Size = new System.Drawing.Size(342, 30);
+            this.dtpNgayKetThuc.Size = new System.Drawing.Size(474, 40);
             this.dtpNgayKetThuc.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.PapayaWhip;
-            this.label1.Location = new System.Drawing.Point(216, 153);
+            this.label1.Location = new System.Drawing.Point(127, 153);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 32);
+            this.label1.Size = new System.Drawing.Size(207, 39);
             this.label1.TabIndex = 9;
             this.label1.Text = "Ngày bắt đầu";
             // 
@@ -93,30 +93,30 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Montserrat", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.PapayaWhip;
-            this.label2.Location = new System.Drawing.Point(216, 214);
+            this.label2.Location = new System.Drawing.Point(127, 214);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 32);
+            this.label2.Size = new System.Drawing.Size(214, 39);
             this.label2.TabIndex = 9;
             this.label2.Text = "Ngày kết thúc";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("UVN Bach Tuyet Nang", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Montserrat", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.PapayaWhip;
-            this.label3.Location = new System.Drawing.Point(482, 35);
+            this.label3.Location = new System.Drawing.Point(320, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(258, 61);
+            this.label3.Size = new System.Drawing.Size(504, 65);
             this.label3.TabIndex = 10;
-            this.label3.Text = "Thống kê";
+            this.label3.Text = "Thống kê Xuất hàng";
             // 
             // frmThongKeXuatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.ClientSize = new System.Drawing.Size(1164, 827);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -129,7 +129,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThongKeXuatHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThongKeXuatHang";
+            this.Text = "Thống kê xuất hàng";
             this.Load += new System.EventHandler(this.frmThongKeXuatHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangXuatKho)).EndInit();
             this.ResumeLayout(false);

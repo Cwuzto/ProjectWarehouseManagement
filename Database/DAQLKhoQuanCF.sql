@@ -85,6 +85,16 @@ CREATE TABLE HangXuatKho
     SoLuong int NOT NULL,
     PRIMARY KEY (ID)
 )
+
+CREATE TABLE HangNhapKho
+(
+	IDs int identity(1,1) NOT NULL,
+    NgayNhap datetime NOT NULL,
+    MaNV varchar(10) foreign key(MaNV) references NhanVien(MaNV) NOT NULL,
+    MaHH varchar(10) foreign key(MaHH) references HangHoa(MaHH) NOT NULL,
+    SoLuong int NOT NULL,
+    PRIMARY KEY (IDs)
+)
 --------------bảng loại nhân viên----------------------
 INSERT INTO LoaiNV (MaLoaiNV, TenLoaiNV)
 VALUES ('L01', N'Quản lý'),
@@ -105,7 +115,8 @@ INSERT INTO LoaiHH (MaLoaiHH, TenLoaiHH)
 VALUES ('LH002', N'Dụng cụ pha chế');
 INSERT INTO LoaiHH (MaLoaiHH, TenLoaiHH)
 VALUES ('LH003', N'Vật dụng khác');
---------------bảng hàng hóa------------------------------------------------------
+--------------bảng hàng hóa------------------------------------------------
+------------------LH001---------------------------------------------------
 INSERT INTO HangHoa (MaHH, TenHH, MoTa, SoLuong, NgayCapNhat, MaLoai)
 VALUES ('HH001', N'Cà phê rang xay', N'Cà phê Arabica nguyên chất, rang mộc', 10,GETDATE(), 'LH001');
 INSERT INTO HangHoa (MaHH, TenHH, MoTa, SoLuong, NgayCapNhat, MaLoai)
@@ -198,6 +209,32 @@ VALUES
   ('2022-08-10', 'NV001', 'HH014', 4),
   ('2023-10-27', 'NV001', 'HH016', 6),
   ('2022-11-18', 'NV002', 'HH001', 15);
+  --------bang hang nhap kho-----------
+  INSERT INTO HangNhapKho (NgayNhap, MaNV, MaHH, SoLuong)
+VALUES
+	('2024-01-10', 'NV001', 'HH001', 15),
+	('2024-02-15', 'NV002', 'HH002', 20),
+	('2024-03-20', 'NV001', 'HH003', 35),
+	('2024-04-25', 'NV002', 'HH004', 16),
+	('2023-05-30', 'NV001', 'HH005', 20),
+	('2023-06-05', 'NV002', 'HH006', 32),
+	('2023-07-10', 'NV001', 'HH007', 47),
+	('2023-08-15', 'NV002', 'HH008', 24),
+	('2023-09-20', 'NV001', 'HH006', 5),
+	('2023-10-25', 'NV002', 'HH010', 13),
+	('2023-11-30', 'NV001', 'HH011', 25),
+	('2023-12-05', 'NV002', 'HH012', 31),
+	('2022-01-15', 'NV001', 'HH013', 45),
+	('2022-02-20', 'NV002', 'HH014', 17),
+	('2022-03-25', 'NV001', 'HH015', 26),
+	('2022-04-30', 'NV002', 'HH016', 31),
+	('2022-05-05', 'NV001', 'HH017', 45),
+	('2022-06-10', 'NV002', 'HH018', 59),
+	('2022-07-15', 'NV001', 'HH019', 5),
+	('2022-08-20', 'NV002', 'HH001', 15);
+GO
+---------------Procedure----------------
+----------------DangNhap----------------
 
   CREATE PROC USP_Login
   @userName nvarchar(100), @passWord nvarchar(100)

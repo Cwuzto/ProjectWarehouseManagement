@@ -464,7 +464,7 @@
             this.Controls.Add(this.txtTen);
             this.Controls.Add(this.label1);
             this.Name = "frmNhanVien";
-            this.Text = "frmNhanVien";
+            this.Text = "Nhân viên";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.loaiNVBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSNV)).EndInit();

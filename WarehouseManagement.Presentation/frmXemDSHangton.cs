@@ -26,6 +26,7 @@ namespace WarehouseManagement.Presentation
             {
                 XemDSHangtonBUS danhsachhangton = new XemDSHangtonBUS();
                 dgvdshangton.DataSource = danhsachhangton.Laydsht();
+                dgvdshangton.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
          
 

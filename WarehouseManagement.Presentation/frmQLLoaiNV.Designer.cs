@@ -166,7 +166,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmQLLoaiNV";
-            this.Text = "frmQLLoaiNV";
+            this.Text = "Quản lý loại nhân viên";
             this.Load += new System.EventHandler(this.frmQLLoaiNV_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSLoaiNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();

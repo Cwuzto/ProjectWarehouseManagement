@@ -25,6 +25,7 @@ namespace WarehouseManagement.Presentation
             QLHangBUS qlhb = new QLHangBUS();
 
             dgvdshang.DataSource = qlhb.laydshh();
+            dgvdshang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 

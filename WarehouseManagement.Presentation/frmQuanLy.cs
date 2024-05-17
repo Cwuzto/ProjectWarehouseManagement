@@ -101,7 +101,6 @@ namespace WarehouseManagement.Presentation
         private void menuitemXemThongKeXuatHang_Click(object sender, EventArgs e)
         {
             frmThongKeXuatHang frmThongKeXuatHang = new frmThongKeXuatHang();
-
             frmThongKeXuatHang.MdiParent = this;
             frmThongKeXuatHang.WindowState = FormWindowState.Maximized;
             frmThongKeXuatHang.Show();
@@ -113,6 +112,14 @@ namespace WarehouseManagement.Presentation
             frmHang.MdiParent = this;
             frmHang.WindowState= FormWindowState.Maximized;
             frmHang.Show();
+        }
+
+        private void menuitemXemThongKeNhapHang_Click(object sender, EventArgs e)
+        {
+            frmThongKeNhapHang frmThongKeNhapHang = new frmThongKeNhapHang();
+            frmThongKeNhapHang.MdiParent = this;
+            frmThongKeNhapHang.WindowState = FormWindowState.Maximized;
+            frmThongKeNhapHang.Show();
         }
     }
 }

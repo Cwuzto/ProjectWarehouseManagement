@@ -22,6 +22,7 @@ namespace WarehouseManagement.Presentation
         private void frmDSYCNhapHang_Load(object sender, EventArgs e)
         {
             dgvDSYC.DataSource = dsYC.LayDSYCNhap();
+            dgvDSYC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             txtSearch.Visible = true;
             dtpSearch.Visible = false;
         }
