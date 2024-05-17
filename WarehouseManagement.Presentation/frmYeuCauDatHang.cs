@@ -30,6 +30,7 @@ namespace WarehouseManagement.Presentation
         {
             YeuCauDatHangBUS ycdhBUS = new YeuCauDatHangBUS();
             dgvYCDH.DataSource = ycdhBUS.LayDSYeuCauDatHang();
+            dgvYCDH.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 

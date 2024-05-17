@@ -24,6 +24,7 @@ namespace WarehouseManagement.Presentation
         {
             YCnhaphangBUS ycnhb = new YCnhaphangBUS();  
             dgvdsyc.DataSource=ycnhb.laydsyc();
+            dgvdsyc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void button1_Click(object sender, EventArgs e)
         {

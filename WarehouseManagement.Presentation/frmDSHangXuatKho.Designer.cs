@@ -141,7 +141,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Name = "frmDSHangXuatKho";
-            this.Text = "frmDSHangXuatKho";
+            this.Text = "Danh sách hàng xuất kho";
             this.Load += new System.EventHandler(this.frmDSHangXuatKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvHgXuatKho)).EndInit();
             this.ResumeLayout(false);

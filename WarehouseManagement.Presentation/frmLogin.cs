@@ -69,6 +69,8 @@ namespace WarehouseManagement.Presentation
             {
                 MessageBox.Show("Sai Username hoặc Password!",
                                 "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsername.Clear();
+                txtUsername.Focus();
             }
         }
 
@@ -97,8 +99,11 @@ namespace WarehouseManagement.Presentation
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
+                e.Handled = true; // Ngăn chặn kí tự Enter được hiển thị trong ô mật khẩu
                 // Gọi phương thức xử lý đăng nhập
                 btnLogin_Click(sender, e);// Gọi phương thức xử lý đăng nhập khi nhấn Enter
+                // Xóa kí tự xuống dòng (\n) từ chuỗi mật khẩu
+                txtPassword.Text = txtPassword.Text.Replace("\n", "");
             }
         }
 
@@ -106,8 +111,11 @@ namespace WarehouseManagement.Presentation
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
+                e.Handled = true; // Ngăn chặn kí tự Enter được hiển thị trong ô mật khẩu
                 // Gọi phương thức xử lý đăng nhập
                 btnLogin_Click(sender, e); // Gọi phương thức xử lý đăng nhập khi nhấn Enter
+                // Xóa kí tự xuống dòng (\n) từ chuỗi mật khẩu
+                txtUsername.Text = txtUsername.Text.Replace("\n", "");
             }
         }
     }

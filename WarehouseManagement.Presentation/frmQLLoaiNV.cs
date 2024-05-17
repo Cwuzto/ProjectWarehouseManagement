@@ -22,6 +22,7 @@ namespace WarehouseManagement.Presentation
         private void frmQLLoaiNV_Load(object sender, EventArgs e)
         {
             dgvDSLoaiNV.DataSource = loaiNVBUS.LayDSLoaiNV();
+            dgvDSLoaiNV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void load_data()
         {

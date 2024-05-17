@@ -44,11 +44,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("UVN Bach Tuyet Nang", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Plum;
             this.label5.Location = new System.Drawing.Point(348, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(643, 56);
+            this.label5.Size = new System.Drawing.Size(520, 46);
             this.label5.TabIndex = 94;
             this.label5.Text = " Danh Sách Hàng Tồn Kho";
             // 
@@ -149,7 +149,7 @@
             this.Controls.Add(this.btntrove);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmXemDSHangton";
-            this.Text = "frmXemDSHangton";
+            this.Text = "Xem danh sách hàng tồn";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvdshangton)).EndInit();
             this.ResumeLayout(false);

@@ -192,7 +192,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Name = "frmDSYCDatHang";
-            this.Text = "frmDSYCDatHang";
+            this.Text = "Danh sách yêu cầu đặt hàng";
             this.Load += new System.EventHandler(this.frmDSYCDatHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSYC)).EndInit();
             this.ResumeLayout(false);

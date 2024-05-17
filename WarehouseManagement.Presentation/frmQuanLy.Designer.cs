@@ -38,7 +38,7 @@
             this.menuitemYCNhapHG = new System.Windows.Forms.ToolStripMenuItem();
             this.menuitemYCDatHg = new System.Windows.Forms.ToolStripMenuItem();
             this.menuitemXemThongKe = new System.Windows.Forms.ToolStripMenuItem();
-            this.nhậpHàngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuitemXemThongKeNhapHang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuitemXemThongKeXuatHang = new System.Windows.Forms.ToolStripMenuItem();
             this.menuitemHgXuatKho = new System.Windows.Forms.ToolStripMenuItem();
             this.menuitemDSHangTrongKho = new System.Windows.Forms.ToolStripMenuItem();
@@ -143,19 +143,20 @@
             // 
             this.menuitemXemThongKe.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuitemXemThongKe.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nhậpHàngToolStripMenuItem,
+            this.menuitemXemThongKeNhapHang,
             this.menuitemXemThongKeXuatHang});
             this.menuitemXemThongKe.ForeColor = System.Drawing.SystemColors.Highlight;
             this.menuitemXemThongKe.Name = "menuitemXemThongKe";
             this.menuitemXemThongKe.Size = new System.Drawing.Size(637, 36);
             this.menuitemXemThongKe.Text = "Xem thống kê nhập/xuất các mặt hàng";
             // 
-            // nhậpHàngToolStripMenuItem
+            // menuitemXemThongKeNhapHang
             // 
-            this.nhậpHàngToolStripMenuItem.BackColor = System.Drawing.Color.DodgerBlue;
-            this.nhậpHàngToolStripMenuItem.Name = "nhậpHàngToolStripMenuItem";
-            this.nhậpHàngToolStripMenuItem.Size = new System.Drawing.Size(248, 36);
-            this.nhậpHàngToolStripMenuItem.Text = "Nhập hàng";
+            this.menuitemXemThongKeNhapHang.BackColor = System.Drawing.Color.DodgerBlue;
+            this.menuitemXemThongKeNhapHang.Name = "menuitemXemThongKeNhapHang";
+            this.menuitemXemThongKeNhapHang.Size = new System.Drawing.Size(248, 36);
+            this.menuitemXemThongKeNhapHang.Text = "Nhập hàng";
+            this.menuitemXemThongKeNhapHang.Click += new System.EventHandler(this.menuitemXemThongKeNhapHang_Click);
             // 
             // menuitemXemThongKeXuatHang
             // 
@@ -210,7 +211,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmQuanLy";
-            this.Text = "frmQuanLy";
+            this.Text = "Quản lý";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmQuanLy_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -235,7 +236,7 @@
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.ToolStripMenuItem menuitemHgXuatKho;
         private System.Windows.Forms.ToolStripMenuItem menuitemDSHangTrongKho;
-        private System.Windows.Forms.ToolStripMenuItem nhậpHàngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuitemXemThongKeNhapHang;
         private System.Windows.Forms.ToolStripMenuItem menuitemXemThongKeXuatHang;
     }
 }

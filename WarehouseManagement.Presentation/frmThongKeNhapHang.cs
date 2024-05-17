@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,33 +11,30 @@ using WarehouseManagement.Bussiness;
 
 namespace WarehouseManagement.Presentation
 {
-    public partial class frmThongKeXuatHang : Form
+    public partial class frmThongKeNhapHang : Form
     {
-        ThongKeXuatHangBUS thongKeXuatBUS;
-        public frmThongKeXuatHang()
+        ThongKeNhapHangBUS thongKeNhapBUS;
+        public frmThongKeNhapHang()
         {
             InitializeComponent();
-            this.thongKeXuatBUS = new ThongKeXuatHangBUS();
+            this.thongKeNhapBUS = new ThongKeNhapHangBUS();
         }
-
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             DateTime ngayBatDau = dtpNgayBatDau.Value.Date;
             DateTime ngayKetThuc = dtpNgayKetThuc.Value.Date.AddDays(1).AddSeconds(-1); // Đảm bảo ngày kết thúc bao gồm cả ngày cuối cùng
 
-            dgvHangXuatKho.DataSource = thongKeXuatBUS.ThongKeHangXuatTheoNgay(ngayBatDau, ngayKetThuc);
-
+            dgvHangNhapKho.DataSource = thongKeNhapBUS.ThongKeHangNhapTheoNgay(ngayBatDau, ngayKetThuc);
         }
-
-        private void frmThongKeXuatHang_Load(object sender, EventArgs e)
+        private void frmThongKeNhapHang_Load(object sender, EventArgs e)
         {
-            DataTable data = thongKeXuatBUS.ThongKeHangXuatTheoNgay(DateTime.Parse("1753-01-01"), DateTime.Parse("9999-12-31"));
+            DataTable data = thongKeNhapBUS.ThongKeHangNhapTheoNgay(DateTime.Parse("1753-01-01"), DateTime.Parse("9999-12-31"));
 
             // Thiết lập nguồn dữ liệu cho DataGridView
-            dgvHangXuatKho.DataSource = data;
+            dgvHangNhapKho.DataSource = data;
 
             // Thiết lập kích thước DataGridView để hiển thị tất cả dữ liệu mà không cần cuộn
-            dgvHangXuatKho.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvHangNhapKho.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }
