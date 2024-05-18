@@ -26,6 +26,14 @@ namespace WarehouseManagement.DataAccess
             object[] parameter = { MaHH };
             return DataProvider.Instance.ExecuteQuery(query, parameter);
         }
+        public void CapNhapSL(List<Tuple<string, int>> data, DateTime ngaycapnhat)
+        {
 
+            string query = "Update HangHoa Set SoLuong = @sl , NgayCapNhat = CONVERT(date, @ngaycapnhat ) Where MaHH= @Mahh";
+            foreach (var item in data)
+            {
+                DataProvider.Instance.ExecuteNonQuery(query, new object[] { item.Item2, ngaycapnhat ,item.Item1});
+            }
+        }
     }
 }

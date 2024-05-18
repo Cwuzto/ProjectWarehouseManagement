@@ -26,6 +26,7 @@ namespace WarehouseManagement.Presentation
             {
                 XemDSHangtonBUS danhsachhangton = new XemDSHangtonBUS();
                 dgvdshangton.DataSource = danhsachhangton.Laydsht();
+                dgvdshangton.ReadOnly = true;
                 dgvdshangton.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
          
@@ -55,7 +56,43 @@ namespace WarehouseManagement.Presentation
         {
             this.Close();
         }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            dgvdshangton.ReadOnly = false;
+            dgvdshangton.Columns["MaHH"].ReadOnly = true;
+            dgvdshangton.Columns["TenHH"].ReadOnly = true;
+            dgvdshangton.Columns["MoTa"].ReadOnly = true;
+            dgvdshangton.Columns["NgayCapNhat"].ReadOnly = true;
+            dgvdshangton.Columns["MaLoai"].ReadOnly = true;
+            dgvdshangton.Columns["SoLuong"].ReadOnly = false;
+        }
+
+        private void frmXemDSHangton_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            List<Tuple<string, int>> data = new List<Tuple<string, int>>();
+            foreach (DataGridViewRow row in dgvdshangton.Rows)
+            {
+                if (row.IsNewRow) continue;
+                string mahh = row.Cells["MaHH"].Value?.ToString();
+                int sl = int.Parse(row.Cells["SoLuong"].Value?.ToString());
+                data.Add(new Tuple<string, int>(mahh, sl));
+            }
+            DateTime ngaycapnhat= DateTime.Now;
+            if(danhsachhangton.CapNhapSLHH(data, ngaycapnhat))
+            {
+                load_data();
+                MessageBox.Show("Cập nhật số lượng thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Không thể cập nhật số lượng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
-    }
+}
      
        

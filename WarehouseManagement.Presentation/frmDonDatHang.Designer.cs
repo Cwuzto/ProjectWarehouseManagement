@@ -40,7 +40,17 @@
             this.dateTimeNgayDat = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.btnXemChiTiet = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dgvChiTietDH = new System.Windows.Forms.DataGridView();
+            this.MaHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDDH)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietDH)).BeginInit();
             this.SuspendLayout();
             // 
             // btnThoat
@@ -48,7 +58,7 @@
             this.btnThoat.BackColor = System.Drawing.Color.GreenYellow;
             this.btnThoat.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnThoat.Location = new System.Drawing.Point(1240, 160);
+            this.btnThoat.Location = new System.Drawing.Point(1249, 108);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(174, 42);
@@ -62,7 +72,7 @@
             this.btnCapnhat.BackColor = System.Drawing.Color.GreenYellow;
             this.btnCapnhat.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapnhat.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnCapnhat.Location = new System.Drawing.Point(1036, 160);
+            this.btnCapnhat.Location = new System.Drawing.Point(1045, 108);
             this.btnCapnhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCapnhat.Name = "btnCapnhat";
             this.btnCapnhat.Size = new System.Drawing.Size(174, 42);
@@ -76,7 +86,7 @@
             this.btnThem.BackColor = System.Drawing.Color.GreenYellow;
             this.btnThem.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnThem.Location = new System.Drawing.Point(835, 160);
+            this.btnThem.Location = new System.Drawing.Point(844, 108);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(174, 42);
@@ -88,7 +98,7 @@
             // txtTinhTrang
             // 
             this.txtTinhTrang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTinhTrang.Location = new System.Drawing.Point(395, 144);
+            this.txtTinhTrang.Location = new System.Drawing.Point(401, 80);
             this.txtTinhTrang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTinhTrang.Name = "txtTinhTrang";
             this.txtTinhTrang.Size = new System.Drawing.Size(406, 30);
@@ -98,7 +108,7 @@
             // txtMaDon
             // 
             this.txtMaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaDon.Location = new System.Drawing.Point(395, 97);
+            this.txtMaDon.Location = new System.Drawing.Point(401, 33);
             this.txtMaDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaDon.Name = "txtMaDon";
             this.txtMaDon.Size = new System.Drawing.Size(406, 30);
@@ -110,7 +120,7 @@
             this.label3.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(244, 182);
+            this.label3.Location = new System.Drawing.Point(250, 118);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 31);
             this.label3.TabIndex = 14;
@@ -122,7 +132,7 @@
             this.label2.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(244, 144);
+            this.label2.Location = new System.Drawing.Point(250, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 31);
             this.label2.TabIndex = 13;
@@ -134,7 +144,7 @@
             this.label1.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(244, 99);
+            this.label1.Location = new System.Drawing.Point(250, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 31);
             this.label1.TabIndex = 12;
@@ -143,12 +153,12 @@
             // dgvDDH
             // 
             this.dgvDDH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDDH.Location = new System.Drawing.Point(249, 242);
+            this.dgvDDH.Location = new System.Drawing.Point(6, 32);
             this.dgvDDH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvDDH.Name = "dgvDDH";
             this.dgvDDH.RowHeadersWidth = 62;
             this.dgvDDH.RowTemplate.Height = 28;
-            this.dgvDDH.Size = new System.Drawing.Size(1165, 301);
+            this.dgvDDH.Size = new System.Drawing.Size(579, 364);
             this.dgvDDH.TabIndex = 21;
             this.dgvDDH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDDH_CellClick);
             // 
@@ -156,7 +166,7 @@
             // 
             this.dateTimeNgayDat.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeNgayDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeNgayDat.Location = new System.Drawing.Point(395, 186);
+            this.dateTimeNgayDat.Location = new System.Drawing.Point(401, 122);
             this.dateTimeNgayDat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimeNgayDat.Name = "dateTimeNgayDat";
             this.dateTimeNgayDat.Size = new System.Drawing.Size(406, 30);
@@ -167,7 +177,7 @@
             this.button1.BackColor = System.Drawing.Color.GreenYellow;
             this.button1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(906, 99);
+            this.button1.Location = new System.Drawing.Point(915, 47);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(174, 42);
@@ -181,7 +191,7 @@
             this.btnXemChiTiet.BackColor = System.Drawing.Color.GreenYellow;
             this.btnXemChiTiet.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemChiTiet.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnXemChiTiet.Location = new System.Drawing.Point(1134, 99);
+            this.btnXemChiTiet.Location = new System.Drawing.Point(1143, 47);
             this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXemChiTiet.Name = "btnXemChiTiet";
             this.btnXemChiTiet.Size = new System.Drawing.Size(174, 42);
@@ -190,12 +200,75 @@
             this.btnXemChiTiet.UseVisualStyleBackColor = false;
             this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvChiTietDH);
+            this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(897, 188);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(526, 396);
+            this.groupBox1.TabIndex = 31;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Chi tiết đơn hàng";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgvDDH);
+            this.groupBox2.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(256, 188);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(593, 403);
+            this.groupBox2.TabIndex = 32;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Đơn đặt hàng";
+            // 
+            // dgvChiTietDH
+            // 
+            this.dgvChiTietDH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChiTietDH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHH,
+            this.SoLuong,
+            this.GiaNhap});
+            this.dgvChiTietDH.Location = new System.Drawing.Point(6, 32);
+            this.dgvChiTietDH.Name = "dgvChiTietDH";
+            this.dgvChiTietDH.RowHeadersWidth = 51;
+            this.dgvChiTietDH.RowTemplate.Height = 24;
+            this.dgvChiTietDH.Size = new System.Drawing.Size(514, 358);
+            this.dgvChiTietDH.TabIndex = 0;
+            // 
+            // MaHH
+            // 
+            this.MaHH.DataPropertyName = "MaHH";
+            this.MaHH.HeaderText = "Mã hàng hóa";
+            this.MaHH.MinimumWidth = 6;
+            this.MaHH.Name = "MaHH";
+            this.MaHH.Width = 200;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.Width = 140;
+            // 
+            // GiaNhap
+            // 
+            this.GiaNhap.DataPropertyName = "GiaNhap";
+            this.GiaNhap.HeaderText = "Giá nhập";
+            this.GiaNhap.MinimumWidth = 6;
+            this.GiaNhap.Name = "GiaNhap";
+            this.GiaNhap.Width = 140;
+            // 
             // frmDonDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1439, 586);
+            this.ClientSize = new System.Drawing.Size(1511, 618);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnXemChiTiet);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateTimeNgayDat);
@@ -207,13 +280,15 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvDDH);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDonDatHang";
-            this.Text = "frmDonDatHang";
+            this.Text = "Đơn đặt hàng";
             this.Load += new System.EventHandler(this.frmDonDatHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDDH)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietDH)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +308,12 @@
         private System.Windows.Forms.DateTimePicker dateTimeNgayDat;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnXemChiTiet;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dgvChiTietDH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiaNhap;
     }
 }

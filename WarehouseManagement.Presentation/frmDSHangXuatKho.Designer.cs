@@ -43,11 +43,11 @@
             // btnAll
             // 
             this.btnAll.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnAll.Font = new System.Drawing.Font("UVN Banh Mi", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAll.ForeColor = System.Drawing.Color.MistyRose;
-            this.btnAll.Location = new System.Drawing.Point(747, 520);
+            this.btnAll.Location = new System.Drawing.Point(715, 520);
             this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(149, 73);
+            this.btnAll.Size = new System.Drawing.Size(181, 55);
             this.btnAll.TabIndex = 14;
             this.btnAll.Text = "Xem Tất Cả";
             this.btnAll.UseVisualStyleBackColor = false;
@@ -70,11 +70,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("UVN Banh Mi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.MistyRose;
             this.label2.Location = new System.Drawing.Point(236, 108);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 41);
+            this.label2.Size = new System.Drawing.Size(146, 36);
             this.label2.TabIndex = 12;
             this.label2.Text = "Tìm theo:";
             // 
@@ -99,11 +99,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("UVN Banh Mi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.MistyRose;
             this.label1.Location = new System.Drawing.Point(236, 161);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 41);
+            this.label1.Size = new System.Drawing.Size(149, 36);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tìm kiếm:";
             // 

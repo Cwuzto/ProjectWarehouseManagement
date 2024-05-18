@@ -195,11 +195,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("UVN Bach Tuyet Nang", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
             this.label1.Location = new System.Drawing.Point(421, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(415, 51);
+            this.label1.Size = new System.Drawing.Size(348, 42);
             this.label1.TabIndex = 14;
             this.label1.Text = "Yêu Cầu Đặt Hàng";
             // 
@@ -215,7 +215,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmYeuCauDatHang";
-            this.Text = "frmYeuCauDatHang";
+            this.Text = "Yêu cầu đặt hàng";
             this.Load += new System.EventHandler(this.frmYeuCauDatHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvYCDH)).EndInit();
             this.groupBox1.ResumeLayout(false);
