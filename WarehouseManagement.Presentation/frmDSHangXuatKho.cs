@@ -26,6 +26,7 @@ namespace WarehouseManagement.Presentation
             dgvHgXuatKho.DataSource= dsHgBus.LayDSHgXuatKho();
             txtSearch.Visible = true;
             dtpSearch.Visible = false;
+            dgvHgXuatKho.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void load_data()
         {

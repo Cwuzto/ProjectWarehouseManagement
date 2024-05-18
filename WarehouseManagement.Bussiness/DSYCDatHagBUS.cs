@@ -12,6 +12,7 @@ namespace WarehouseManagement.Business
     public class DSYCDatHagBUS
     {
         DSYCDatHgDL dsYCDat = new DSYCDatHgDL();
+        QLHangDL qlh = new QLHangDL();
         public DataTable LayDSYCDat()
         {
             return dsYCDat.GetAllDSYeuCau();
@@ -32,8 +33,11 @@ namespace WarehouseManagement.Business
         }
         public bool CapNhatTrangThaiYeuCau(DateTime ngayYC, string manv, string mahh, string trangThai)
         {
-            if(dsYCDat.UpdateTrangThai(ngayYC, manv, mahh,trangThai))
-                return true;
+            if (qlh.quanlyhanghoa(mahh))
+            {
+                if (dsYCDat.UpdateTrangThai(ngayYC, manv, mahh, trangThai))
+                    return true;
+            }
             return false;
         }
     }

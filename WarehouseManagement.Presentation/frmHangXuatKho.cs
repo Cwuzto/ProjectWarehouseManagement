@@ -80,7 +80,7 @@ namespace WarehouseManagement.Presentation
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 DataGridViewRow row = dgvdshangxuatkho.Rows[e.RowIndex];
-                id = int.Parse(row.Cells["ID"].Value.ToString());
+                id = int.Parse(row.Cells["IDHg"].Value.ToString());
                 txtmahang.Text = row.Cells["MaHH"].Value.ToString();
                 dtpNgayXuat.Value = DateTime.Parse(row.Cells["NgayXuat"].Value.ToString());
                 nbrSL.Value= int.Parse(row.Cells["SoLuong"].Value.ToString());

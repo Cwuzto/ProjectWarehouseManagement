@@ -44,9 +44,9 @@ namespace WarehouseManagement.DataAccess
         {
             int count = 0;
 
-            string query = "INSERT INTO HangXuatKho (MaHH, MaNV, SoLuong, NgayXuat) VALUES ( @mahh , @manv , @sl , @ngayxuat )";
+            string query = "Proc_ThemHangXuatKho @mahh , @manv , @ngayxuat , @sl ";
 
-            object[] parameters = { mahh, manv, sl, ngay };
+            object[] parameters = { mahh, manv, ngay, sl };
 
             count = DataProvider.Instance.ExecuteNonQuery(query, parameters);
 
@@ -54,8 +54,8 @@ namespace WarehouseManagement.DataAccess
         }
         public bool Sua(int id, string mahh, DateTime ngay, int sl)
         {
-            var query = $"UPDATE [HangXuatKho] SET MaHH= @mahh , NgayXuat= Convert(date, @ngay ), SoLuong= @sl WHERE ID = @id ";
-            object[] parameters = { mahh, ngay, sl, id };
+            var query = "Proc_CapNhatSL @id , @mahh , @ngayxuat , @sl ";
+            object[] parameters = { id, mahh, ngay, sl };
             var result = DataProvider.Instance.ExecuteNonQuery(query, parameters);
             return result > 0;
         }

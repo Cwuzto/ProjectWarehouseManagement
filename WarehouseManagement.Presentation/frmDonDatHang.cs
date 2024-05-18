@@ -29,11 +29,11 @@ namespace WarehouseManagement.Presentation
         {
             DonDatHangBUS dhBUS = new DonDatHangBUS();
             dgvDDH.DataSource = dhBUS.LayDSDonDatHang();
-            dgvDDH.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void frmDonDatHang_Load(object sender, EventArgs e)
         {
             txtTinhTrang.Enabled = false;
+            dgvDDH.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void btnThem_Click_1(object sender, EventArgs e)
         {

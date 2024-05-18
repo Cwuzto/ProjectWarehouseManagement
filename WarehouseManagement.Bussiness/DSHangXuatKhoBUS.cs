@@ -11,6 +11,7 @@ namespace WarehouseManagement.Bussiness
     public class DSHangXuatKhoBUS
     {
         DSHangXuatKhoDL dsHang = new DSHangXuatKhoDL();
+        QLHangDL qlh = new QLHangDL();
         public DataTable LayDSHgXuatKho()
         {
             return dsHang.GetAllDSHgXuatKho();
@@ -29,14 +30,20 @@ namespace WarehouseManagement.Bussiness
         }
         public bool ThemHang(string mahh, string manv, DateTime ngay, int sl)
         {
-            if (dsHang.Them(mahh,manv,ngay,sl))
-                return true;
+            if (qlh.quanlyhanghoa(mahh))
+            {
+                if (dsHang.Them(mahh, manv, ngay, sl))
+                    return true;
+            }
             return false;
         }
         public bool SuaTT(int id, string mahh, DateTime ngay, int sl)
         {
-            if(dsHang.Sua(id,mahh,ngay,sl))
-                return true;
+            if (qlh.quanlyhanghoa(mahh))
+            {
+                if (dsHang.Sua(id, mahh, ngay, sl))
+                    return true;
+            }
             return false;
         }
     }
