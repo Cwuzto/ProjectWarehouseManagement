@@ -154,6 +154,16 @@ namespace WarehouseManagement.Presentation.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap vecteezy_coffee_shop_illustration_ {
+            get {
+                object obj = ResourceManager.GetObject("vecteezy_coffee-shop-illustration_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap xóa2 {
             get {
                 object obj = ResourceManager.GetObject("xóa2", resourceCulture);

@@ -38,6 +38,7 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -45,6 +46,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,7 +60,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(126, 188);
+            this.label1.Location = new System.Drawing.Point(135, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(186, 49);
             this.label1.TabIndex = 4;
@@ -133,17 +136,29 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panel3.BackColor = System.Drawing.Color.LightPink;
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Location = new System.Drawing.Point(0, -1);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(458, 168);
             this.panel3.TabIndex = 14;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.LavenderBlush;
+            this.pictureBox4.Image = global::WarehouseManagement.Presentation.Properties.Resources.vecteezy_coffee_shop_illustration_;
+            this.pictureBox4.Location = new System.Drawing.Point(449, -1);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(713, 665);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
             // btnExit
             // 
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Image = global::WarehouseManagement.Presentation.Properties.Resources.Exit;
-            this.btnExit.Location = new System.Drawing.Point(80, 536);
+            this.btnExit.Location = new System.Drawing.Point(89, 536);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(278, 99);
             this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -175,7 +190,7 @@
             // 
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogin.Image = global::WarehouseManagement.Presentation.Properties.Resources.LOGIN__3_;
-            this.btnLogin.Location = new System.Drawing.Point(80, 444);
+            this.btnLogin.Location = new System.Drawing.Point(89, 444);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(278, 99);
             this.btnLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -185,10 +200,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.pictureBox1.BackColor = System.Drawing.Color.LightPink;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::WarehouseManagement.Presentation.Properties.Resources.mountains;
-            this.pictureBox1.Location = new System.Drawing.Point(149, 59);
+            this.pictureBox1.Location = new System.Drawing.Point(159, 35);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(140, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -199,8 +214,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumSpringGreen;
-            this.ClientSize = new System.Drawing.Size(457, 663);
+            this.BackColor = System.Drawing.Color.PaleVioletRed;
+            this.ClientSize = new System.Drawing.Size(1160, 663);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
@@ -211,7 +227,6 @@
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogin";
@@ -219,6 +234,8 @@
             this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -245,6 +262,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox btnExit;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
