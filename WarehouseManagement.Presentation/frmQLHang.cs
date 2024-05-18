@@ -25,7 +25,6 @@ namespace WarehouseManagement.Presentation
             QLHangBUS qlhb = new QLHangBUS();
 
             dgvdshang.DataSource = qlhb.laydshh();
-            dgvdshang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 
@@ -129,6 +128,11 @@ namespace WarehouseManagement.Presentation
 
                 }
             }
+
+        private void frmQLHang_Load(object sender, EventArgs e)
+        {
+            dgvdshang.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
     }
 }  
     

@@ -26,6 +26,7 @@ namespace WarehouseManagement.Presentation
             cbLoaiNV.DataSource=nvBUS.GetDSLoaiNV();
             cbLoaiNV.DisplayMember = "TenLoaiNV";
             cbLoaiNV.ValueMember = "MaLoaiNV";
+            dgvDSNV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void load_data()
         {
@@ -85,7 +86,14 @@ namespace WarehouseManagement.Presentation
                 MessageBox.Show("Không thể sửa!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (nvBUS.UpdateNV(tenCot,txtOldValue.Text, txtNewValue.Text, txtMaNV_temp.Text))
+            string data;
+            if (txtNewValue.Text == "Nữ")
+                data = "false";
+            else if (txtNewValue.Text == "Nam")
+                data = "true";
+            else
+                data = txtNewValue.Text;
+            if (nvBUS.UpdateNV(tenCot,txtOldValue.Text, data, txtMaNV_temp.Text))
             {
                 
                 MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -105,7 +113,13 @@ namespace WarehouseManagement.Presentation
                 DataGridViewRow row = dgvDSNV.Rows[e.RowIndex];
                 txtMaNV_temp.Text = row.Cells["MaNV"].Value.ToString();
                 DataGridViewCell oDuocChon = dgvDSNV.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                txtOldValue.Text = oDuocChon.Value.ToString();
+                string data= oDuocChon.Value.ToString();
+                if (data == "True")
+                    txtOldValue.Text = "Nam";
+                else if (data == "False")
+                    txtOldValue.Text = "Nữ";
+                else
+                    txtOldValue.Text = data;
                 DataGridViewColumn cotDuocChon = dgvDSNV.Columns[e.ColumnIndex];
                 tenCot = cotDuocChon.HeaderText;
             }

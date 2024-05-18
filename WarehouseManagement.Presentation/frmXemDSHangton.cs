@@ -26,8 +26,6 @@ namespace WarehouseManagement.Presentation
             {
                 XemDSHangtonBUS danhsachhangton = new XemDSHangtonBUS();
                 dgvdshangton.DataSource = danhsachhangton.Laydsht();
-                dgvdshangton.ReadOnly = true;
-                dgvdshangton.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
          
 
@@ -68,11 +66,6 @@ namespace WarehouseManagement.Presentation
             dgvdshangton.Columns["SoLuong"].ReadOnly = false;
         }
 
-        private void frmXemDSHangton_Load(object sender, EventArgs e)
-        {
-           
-        }
-
         private void btnLuu_Click(object sender, EventArgs e)
         {
             List<Tuple<string, int>> data = new List<Tuple<string, int>>();
@@ -91,6 +84,11 @@ namespace WarehouseManagement.Presentation
                 return;
             }
             MessageBox.Show("Không thể cập nhật số lượng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void frmXemDSHangton_Load(object sender, EventArgs e)
+        {
+            dgvdshangton.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

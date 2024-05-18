@@ -79,13 +79,12 @@ CREATE TABLE ChiTietDH (
 CREATE TABLE HangXuatKho 
 (
     ID int identity(1,1) NOT NULL,
-    NgayXuat datetime NOT NULL,
+    NgayXuat datetime DEFAULT GETDATE() NULL,
     MaNV varchar(10) foreign key(MaNV) references NhanVien(MaNV) NOT NULL,
     MaHH varchar(10) foreign key(MaHH) references HangHoa(MaHH) NOT NULL,
     SoLuong int NOT NULL,
     PRIMARY KEY (ID)
 )
-
 CREATE TABLE HangNhapKho
 (
 	IDs int identity(1,1) NOT NULL,
@@ -103,11 +102,30 @@ VALUES ('L01', N'Quản lý'),
 
 ---------bang nhan vien--------------------------------
 INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
-VALUES ('NV001', N'Nguyễn ', N'Trâm', N'1A Nhị Binhg', '0798006706',1, 'NVql', '123', 'L01');
+VALUES ('NV001', N'Nguyễn ', N'Trâm', N'1A Nhị Binhg', '0798006706',0, 'NVql', '123', 'L01');
 INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
-VALUES ('NV002', N'Dương', N'Như', N'2B Cách Mạng Tháng 8', '0123999555', 1, 'NVkho', '456', 'L02');
+VALUES ('NV002', N'Dương', N'Như', N'2B Cách Mạng Tháng 8', '0123999555', 0, 'NVkho', '456', 'L02');
 INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
-VALUES ('NV003', N'Phạm', N'Oanh' ,N'Lê Hồng Phong', '0937444218', 1, 'NVbh', '789', 'L03');
+VALUES ('NV003', N'Phạm', N'Oanh' ,N'Lê Hồng Phong', '0937444218', 0, 'NVbh', '789', 'L03');
+
+INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
+VALUES ('NV004', N'Phạm', N'Hiếu' ,N'Lê Lợi', '09353541238', 1, 'NVql', '133', 'L01');
+INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
+VALUES ('NV005', N'Nguyễn', N'Oanh' ,N'Huỳnh Văn Lũy', '0919123456', 0, 'NVql', '134', 'L01');
+
+INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
+VALUES ('NV006', N'Đỗ', N'Hiếu' ,N'Lê Hồng Phong', '0935244593', 1, 'NVkho', '234', 'L02');
+INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
+VALUES ('NV007', N'Dương', N'Nghĩa' ,N'Thủ Dầu Môt', '0923324589', 1, 'NVkho', '235', 'L02');
+INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
+VALUES ('NV008', N'Phạm', N'Thư' ,N'Bình Thuận', '0936562334', 0, 'NVkho', '236', 'L02');
+
+INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
+VALUES ('NV009', N'Thùy', N'Dương' ,N'Q1', '0937789789', 0, 'NVbh', '345', 'L03');
+INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
+VALUES ('NV010', N'Nguyễn', N'Đức' ,N'Hóc Môn', '0989765565', 1, 'NVbh', '346', 'L03');
+INSERT INTO NhanVien (MaNV, HoNV, TenNV, DiaChi, SDT, GioiTinh, UserName, Password, MaLoai)
+VALUES ('NV011', N'Phan', N'Nam' ,N'Vũng Tàu', '0938907788', 1, 'NVbh', '347', 'L03');
 -----------------bang loại hàng hóa---------------------------------------
 INSERT INTO LoaiHH (MaLoaiHH, TenLoaiHH)
 VALUES ('LH001', N'Nguyên liệu pha chế ');
@@ -115,8 +133,7 @@ INSERT INTO LoaiHH (MaLoaiHH, TenLoaiHH)
 VALUES ('LH002', N'Dụng cụ pha chế');
 INSERT INTO LoaiHH (MaLoaiHH, TenLoaiHH)
 VALUES ('LH003', N'Vật dụng khác');
---------------bảng hàng hóa------------------------------------------------
-------------------LH001---------------------------------------------------
+--------------bảng hàng hóa------------------------------------------------------
 INSERT INTO HangHoa (MaHH, TenHH, MoTa, SoLuong, NgayCapNhat, MaLoai)
 VALUES ('HH001', N'Cà phê rang xay', N'Cà phê Arabica nguyên chất, rang mộc', 10,GETDATE(), 'LH001');
 INSERT INTO HangHoa (MaHH, TenHH, MoTa, SoLuong, NgayCapNhat, MaLoai)
@@ -166,9 +183,9 @@ VALUES
 INSERT INTO DonDatHang (MaDH, NgayDat, TrangThai, MaNV)
 VALUES
   ('DH001', GETDATE(), N'Chờ xác nhận', 'NV001'),  
-  ('DH002', DATEADD(day, -2, GETDATE()), N'Đang xử lý', 'NV001'),
+  ('DH002', DATEADD(day, -2, GETDATE()), N'Đã hủy', 'NV001'),
   ('DH003', DATEADD(day, -5, GETDATE()), N'Đã hoàn thành', 'NV001');  
-  ------bang yeu cau nhap hang--------
+  ------bang yeu cau dat hang--------
   INSERT INTO YeuCauDatHang (NgayYC, MaNV, MaHH, TrangThai)
 VALUES
   (GETDATE(), 'NV002', 'HH015', N'Chờ xử lý'),  
@@ -177,17 +194,33 @@ VALUES
   -------bang yeu cau nhap hang----------
   INSERT INTO YeuCauNhapHang (NgayYC, MaNV, MaHH, TrangThai)
 VALUES
-  (GETDATE(), 'NV003', 'HH015', N'Chờ xử lý'),
-  (DATEADD(day, -1, GETDATE()), 'NV003', 'HH001', N'Đã phê duyệt'),
-  (DATEADD(day, -2, GETDATE()), 'NV003', 'HH005', N'Đã hủy'),
-  (DATEADD(day, -3, GETDATE()), 'NV003', 'HH006', N'Chờ xử lý'),
-  (DATEADD(day, -4, GETDATE()), 'NV003', 'HH022', N'Đã phê duyệt');
+  (GETDATE(), 'NV003', 'HH015', N'Đã gửi yêu cầu'),
+  (DATEADD(day, -1, GETDATE()), 'NV003', 'HH001', N'Đã gửi yêu cầu'),
+  (DATEADD(day, -2, GETDATE()), 'NV003', 'HH005', N'Đã hủy yêu cầu'),
+  (DATEADD(day, -3, GETDATE()), 'NV003', 'HH006', N'Đã gửi yêu cầu'),
+  (DATEADD(day, -4, GETDATE()), 'NV003', 'HH022', N'Đã hủy yêu cầu');
   ----------bang chi tiet hd------
  INSERT INTO ChiTietDH (MaDH, MaHH, SoLuong, GiaNhap)
 VALUES
   ('DH001', 'HH001', 2, 10000.00),
   ('DH002', 'HH003', 1, 15000.00), 
-  ('DH002', 'HH005', 3, 5000.00);  
+  ('DH002', 'HH005', 3, 5000.00),
+  ('DH001', 'HH003', 3, 8000.00),
+  ('DH001', 'HH004', 7, 6000.00),
+  ('DH001', 'HH005', 2, 10000.00),
+  ('DH003', 'HH006', 1, 7000.00),
+  ('DH003', 'HH014', 5, 77000.00),
+  ('DH003', 'HH018', 4, 17000.00),
+  ('DH003', 'HH007', 4, 15000.00),
+  ('DH003', 'HH008', 6, 2000.00),
+  ('DH003', 'HH010', 5, 80000.00),
+  ('DH003', 'HH011', 2, 150000.00),
+  ('DH003', 'HH012', 3, 30000.00),
+  ('DH002', 'HH006', 1, 7000.00),
+  ('DH002', 'HH007', 4, 15000.00),
+  ('DH002', 'HH008', 6, 2000.00),
+  ('DH002', 'HH015', 8, 9000.00),
+  ('DH002', 'HH010', 5, 80000.00);
   --------bang hang xuat kho----------
   INSERT INTO HangXuatKho (NgayXuat, MaNV, MaHH, SoLuong)
 VALUES
@@ -232,9 +265,6 @@ VALUES
 	('2022-06-10', 'NV002', 'HH018', 59),
 	('2022-07-15', 'NV001', 'HH019', 5),
 	('2022-08-20', 'NV002', 'HH001', 15);
-GO
----------------Procedure----------------
-----------------DangNhap----------------
 
   CREATE PROC USP_Login
   @userName nvarchar(100), @passWord nvarchar(100)
@@ -243,3 +273,88 @@ GO
 		SELECT * FROM dbo.NhanVien WHERE UserName = @userName AND Password = @passWord
   END
   GO
+
+  CREATE PROC Proc_ThemHangXuatKho 
+  @mahh varchar(10), @manv varchar(10), @ngayxuat datetime, @sl int
+  AS
+  BEGIN
+	BEGIN TRANSACTION;
+    DECLARE @SLhientai INT;
+    SELECT @SLhientai = SoLuong FROM HangHoa WHERE MaHH = @mahh;
+
+    IF @SLhientai < @sl
+    BEGIN
+        ROLLBACK TRANSACTION;
+        RETURN;
+    END
+    INSERT INTO HangXuatKho (MaHH, MaNV, SoLuong, NgayXuat)
+	VALUES ( @mahh , @manv , @sl , @ngayxuat );
+
+    UPDATE HangHoa
+    SET SoLuong = SoLuong - @sl
+    WHERE MaHH = @mahh;
+
+    COMMIT TRANSACTION;
+END
+
+CREATE PROC Proc_CapNhatSL 
+ @id int, @mahh varchar(10), @ngayxuat datetime, @sl int
+  AS
+  BEGIN
+	BEGIN TRANSACTION;
+    DECLARE @SLhientai INT;
+	DECLARE @SLthaydoi INT;
+	DECLARE @SLtrongkho INT;
+    SELECT @SLhientai = SoLuong FROM HangXuatKho WHERE ID = @id;
+	SELECT @SLtrongkho = SoLuong FROM HangHoa WHERE MaHH = @mahh;
+
+	IF @SLhientai<@sl
+	BEGIN
+		SET @SLthaydoi=@sl-@SLhientai
+		IF @SLtrongkho < @SLthaydoi
+		BEGIN
+			ROLLBACK TRANSACTION;
+			RETURN;
+		END
+
+		UPDATE HangXuatKho 
+		SET MaHH= @mahh , NgayXuat= Convert(date, @ngayxuat ), SoLuong= @sl 
+		WHERE ID = @id 
+
+		UPDATE HangHoa
+		SET SoLuong = SoLuong - @SLthaydoi
+		WHERE MaHH = @mahh;
+	END
+
+	IF @SLhientai>@sl
+	BEGIN
+		SET @SLthaydoi=@SLhientai-@sl
+
+		UPDATE HangXuatKho 
+		SET MaHH= @mahh , NgayXuat= Convert(date, @ngayxuat ), SoLuong= @sl 
+		WHERE ID = @id
+
+		UPDATE HangHoa
+		SET SoLuong = SoLuong + @SLthaydoi
+		WHERE MaHH = @mahh;
+
+	END
+    COMMIT TRANSACTION;
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+

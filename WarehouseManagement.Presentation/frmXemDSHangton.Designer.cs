@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmXemDSHangton));
             this.label5 = new System.Windows.Forms.Label();
             this.btnxemallhh = new System.Windows.Forms.Button();
@@ -39,6 +42,12 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnCapNhat = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
+            this.MaHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgayCapNhat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdshangton)).BeginInit();
             this.SuspendLayout();
@@ -99,10 +108,41 @@
             // 
             this.dgvdshangton.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvdshangton.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdshangton.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvdshangton.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvdshangton.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.MaHH,
+            this.TenHH,
+            this.MoTa,
+            this.SoLuong,
+            this.NgayCapNhat,
+            this.MaLoai});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.InfoText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvdshangton.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvdshangton.GridColor = System.Drawing.SystemColors.ControlText;
             this.dgvdshangton.Location = new System.Drawing.Point(6, 43);
             this.dgvdshangton.Name = "dgvdshangton";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvdshangton.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvdshangton.RowHeadersWidth = 51;
             this.dgvdshangton.RowTemplate.Height = 24;
             this.dgvdshangton.Size = new System.Drawing.Size(1123, 310);
@@ -165,6 +205,60 @@
             this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // MaHH
+            // 
+            this.MaHH.DataPropertyName = "MaHH";
+            this.MaHH.HeaderText = "Mã hàng hóa";
+            this.MaHH.MinimumWidth = 6;
+            this.MaHH.Name = "MaHH";
+            this.MaHH.ReadOnly = true;
+            this.MaHH.Width = 125;
+            // 
+            // TenHH
+            // 
+            this.TenHH.DataPropertyName = "TenHH";
+            this.TenHH.HeaderText = "Tên hàng hóa";
+            this.TenHH.MinimumWidth = 6;
+            this.TenHH.Name = "TenHH";
+            this.TenHH.ReadOnly = true;
+            this.TenHH.Width = 125;
+            // 
+            // MoTa
+            // 
+            this.MoTa.DataPropertyName = "MoTa";
+            this.MoTa.HeaderText = "Mô tả";
+            this.MoTa.MinimumWidth = 6;
+            this.MoTa.Name = "MoTa";
+            this.MoTa.ReadOnly = true;
+            this.MoTa.Width = 125;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.MinimumWidth = 6;
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            this.SoLuong.Width = 125;
+            // 
+            // NgayCapNhat
+            // 
+            this.NgayCapNhat.DataPropertyName = "NgayCapNhat";
+            this.NgayCapNhat.HeaderText = "Ngày cập nhập";
+            this.NgayCapNhat.MinimumWidth = 6;
+            this.NgayCapNhat.Name = "NgayCapNhat";
+            this.NgayCapNhat.ReadOnly = true;
+            this.NgayCapNhat.Width = 125;
+            // 
+            // MaLoai
+            // 
+            this.MaLoai.DataPropertyName = "MaLoai";
+            this.MaLoai.HeaderText = "Mã loại hàng hóa";
+            this.MaLoai.MinimumWidth = 6;
+            this.MaLoai.Name = "MaLoai";
+            this.MaLoai.ReadOnly = true;
+            this.MaLoai.Width = 125;
+            // 
             // frmXemDSHangton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -201,5 +295,11 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnCapNhat;
         private System.Windows.Forms.Button btnLuu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenHH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MoTa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayCapNhat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoai;
     }
 }

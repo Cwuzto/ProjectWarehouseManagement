@@ -25,11 +25,13 @@ namespace WarehouseManagement.Presentation
             dgvDSYC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             txtSearch.Visible = true;
             dtpSearch.Visible = false;
+            dgvDSYC.ReadOnly = true;
         }
         private void load_data()
         {
             DSYCNhapHgBUS dsYC = new DSYCNhapHgBUS();
             dgvDSYC.DataSource = dsYC.LayDSYCNhap();
+            dgvDSYC.ReadOnly = true;
         }
 
         private void btnAll_Click(object sender, EventArgs e)

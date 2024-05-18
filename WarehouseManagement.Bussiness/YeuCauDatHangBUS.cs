@@ -12,13 +12,14 @@ namespace WarehouseManagement.Bussiness
     public class YeuCauDatHangBUS
     {
         YeuCauDatHangDL dh = new YeuCauDatHangDL();
+        QLHangDL qlh = new QLHangDL();
         public DataTable LayDSYeuCauDatHang()
         {
             return dh.GetAllYeuCauDatHang();
         }
         public bool JKYCDH(DateTime ngayyeucau, string manv, string mahh)
         {
-            if (!dh.KiemTraTonTai(mahh, manv, ngayyeucau))
+            if (!dh.KiemTraTonTai(mahh, manv, ngayyeucau)&& qlh.quanlyhanghoa(mahh))
             {
                 if (dh.THYCDH(ngayyeucau, manv, mahh))
                     return true;
@@ -31,7 +32,7 @@ namespace WarehouseManagement.Bussiness
         }
         public bool UpdateYeuCauDatHang(string mahh, string maNV, string mahhcu, DateTime ngayyc)
         {
-            if (!dh.KiemTraTonTai( mahh,  maNV, ngayyc))
+            if (!dh.KiemTraTonTai(mahh, maNV, ngayyc) && qlh.quanlyhanghoa(mahh))
             {
                 if (dh.UpdateYeuCauDatHang(mahh,  maNV, mahhcu, ngayyc))
 

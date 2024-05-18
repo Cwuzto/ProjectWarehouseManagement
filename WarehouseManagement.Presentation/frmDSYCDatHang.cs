@@ -27,6 +27,7 @@ namespace WarehouseManagement.Presentation
             dgvDSYC.DataSource= dsYCDat.LayDSYCDat();
             txtSearch.Visible = true;
             dtpSearch.Visible = false;
+            dgvDSYC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void load_data()
         {

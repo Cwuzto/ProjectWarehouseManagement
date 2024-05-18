@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLoaiNV = new System.Windows.Forms.TextBox();
@@ -40,6 +42,8 @@
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.TenLoaiNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaLoaiNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSLoaiNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
@@ -83,7 +87,26 @@
             // 
             // dgvDSLoaiNV
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSLoaiNV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDSLoaiNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSLoaiNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TenLoaiNV,
+            this.MaLoaiNV});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDSLoaiNV.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDSLoaiNV.Location = new System.Drawing.Point(178, 357);
             this.dgvDSLoaiNV.Name = "dgvDSLoaiNV";
             this.dgvDSLoaiNV.RowHeadersWidth = 51;
@@ -99,7 +122,7 @@
             this.btnThem.ForeColor = System.Drawing.Color.GreenYellow;
             this.btnThem.Location = new System.Drawing.Point(326, 281);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(109, 45);
+            this.btnThem.Size = new System.Drawing.Size(121, 45);
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -112,7 +135,7 @@
             this.btnSua.ForeColor = System.Drawing.Color.GreenYellow;
             this.btnSua.Location = new System.Drawing.Point(528, 281);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(109, 45);
+            this.btnSua.Size = new System.Drawing.Size(119, 45);
             this.btnSua.TabIndex = 6;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -125,7 +148,7 @@
             this.btnXoa.ForeColor = System.Drawing.Color.GreenYellow;
             this.btnXoa.Location = new System.Drawing.Point(738, 281);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(109, 45);
+            this.btnXoa.Size = new System.Drawing.Size(118, 45);
             this.btnXoa.TabIndex = 7;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -142,13 +165,31 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("UVN Bach Tuyet Nang", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.GreenYellow;
             this.label3.Location = new System.Drawing.Point(304, 49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(527, 51);
+            this.label3.Size = new System.Drawing.Size(426, 42);
             this.label3.TabIndex = 8;
             this.label3.Text = "Quản Lý Loại Nhân Viên";
+            // 
+            // TenLoaiNV
+            // 
+            this.TenLoaiNV.DataPropertyName = "TenLoaiNV";
+            this.TenLoaiNV.HeaderText = "Tên loại nhân viên";
+            this.TenLoaiNV.MinimumWidth = 6;
+            this.TenLoaiNV.Name = "TenLoaiNV";
+            this.TenLoaiNV.ReadOnly = true;
+            this.TenLoaiNV.Width = 125;
+            // 
+            // MaLoaiNV
+            // 
+            this.MaLoaiNV.DataPropertyName = "MaLoaiNV";
+            this.MaLoaiNV.HeaderText = "Mã loại nhân viên";
+            this.MaLoaiNV.MinimumWidth = 6;
+            this.MaLoaiNV.Name = "MaLoaiNV";
+            this.MaLoaiNV.ReadOnly = true;
+            this.MaLoaiNV.Width = 125;
             // 
             // frmQLLoaiNV
             // 
@@ -189,5 +230,7 @@
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenLoaiNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaLoaiNV;
     }
 }

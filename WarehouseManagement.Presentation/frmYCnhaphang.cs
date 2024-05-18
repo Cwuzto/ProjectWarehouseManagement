@@ -24,7 +24,6 @@ namespace WarehouseManagement.Presentation
         {
             YCnhaphangBUS ycnhb = new YCnhaphangBUS();  
             dgvdsyc.DataSource=ycnhb.laydsyc();
-            dgvdsyc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -41,14 +40,7 @@ namespace WarehouseManagement.Presentation
                     return;
                 }
             }
-             else
-            {
-                MessageBox.Show("Không thể gửi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
-
-            }
-
+             MessageBox.Show("Không thể gửi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnxemdsyc_Click(object sender, EventArgs e)
@@ -80,9 +72,14 @@ namespace WarehouseManagement.Presentation
             {
                 DataGridViewRow row = dgvdsyc.Rows[e.RowIndex];
                 txtmahh.Text = row.Cells["MaHH"].Value.ToString();
-                ngayyc.Value = DateTime.Parse(row.Cells["NgayYC"].Value.ToString());
+                ngayyc.Value = DateTime.Parse(row.Cells["Ngay"].Value.ToString());
 
             }
+        }
+
+        private void frmYCnhaphang_Load(object sender, EventArgs e)
+        {
+            dgvdsyc.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

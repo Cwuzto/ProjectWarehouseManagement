@@ -30,13 +30,12 @@ namespace WarehouseManagement.Presentation
         {
             YeuCauDatHangBUS ycdhBUS = new YeuCauDatHangBUS();
             dgvYCDH.DataSource = ycdhBUS.LayDSYeuCauDatHang();
-            dgvYCDH.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
 
         private void frmYeuCauDatHang_Load(object sender, EventArgs e)
         {
-
+            dgvYCDH.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         
         private void btnThem_Click_1(object sender, EventArgs e)
@@ -104,7 +103,7 @@ namespace WarehouseManagement.Presentation
                 DataGridViewRow row = dgvYCDH.Rows[e.RowIndex];
                 txtMaHH.Text = row.Cells["MaHH"].Value.ToString();
                 MaHHCu = txtMaHH.Text;
-                ngayyc = DateTime.Parse(row.Cells["NgayYC"].Value.ToString());
+                ngayyc = DateTime.Parse(row.Cells["Ngay"].Value.ToString());
                
             }
         }

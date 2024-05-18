@@ -36,23 +36,27 @@
             this.cbLoaiTimKiem = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDSYC = new System.Windows.Forms.DataGridView();
-            this.DuyetYC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.HuyYC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpSearch = new System.Windows.Forms.DateTimePicker();
+            this.DuyetYC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.HuyYC = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.NgayYC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSYC)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAll
             // 
             this.btnAll.BackColor = System.Drawing.Color.MistyRose;
-            this.btnAll.Font = new System.Drawing.Font("UVN Binh Duong", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAll.ForeColor = System.Drawing.Color.Olive;
             this.btnAll.Location = new System.Drawing.Point(1027, 215);
             this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(39, 293);
+            this.btnAll.Size = new System.Drawing.Size(75, 293);
             this.btnAll.TabIndex = 14;
             this.btnAll.Text = "Xem Tất Cả";
             this.btnAll.UseVisualStyleBackColor = false;
@@ -98,7 +102,11 @@
             this.dgvDSYC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDSYC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DuyetYC,
-            this.HuyYC});
+            this.HuyYC,
+            this.NgayYC,
+            this.MaNV,
+            this.MaHH,
+            this.TrangThai});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,20 +131,6 @@
             this.dgvDSYC.TabIndex = 11;
             this.dgvDSYC.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSYC_CellValueChanged);
             this.dgvDSYC.CurrentCellDirtyStateChanged += new System.EventHandler(this.dgvDSYC_CurrentCellDirtyStateChanged);
-            // 
-            // DuyetYC
-            // 
-            this.DuyetYC.HeaderText = "Phê Duyệt";
-            this.DuyetYC.MinimumWidth = 6;
-            this.DuyetYC.Name = "DuyetYC";
-            this.DuyetYC.Width = 80;
-            // 
-            // HuyYC
-            // 
-            this.HuyYC.HeaderText = "Hủy";
-            this.HuyYC.MinimumWidth = 6;
-            this.HuyYC.Name = "HuyYC";
-            this.HuyYC.Width = 50;
             // 
             // btnSearch
             // 
@@ -177,6 +171,56 @@
             this.dtpSearch.Size = new System.Drawing.Size(604, 30);
             this.dtpSearch.TabIndex = 16;
             // 
+            // DuyetYC
+            // 
+            this.DuyetYC.HeaderText = "Phê Duyệt";
+            this.DuyetYC.MinimumWidth = 6;
+            this.DuyetYC.Name = "DuyetYC";
+            this.DuyetYC.Width = 80;
+            // 
+            // HuyYC
+            // 
+            this.HuyYC.HeaderText = "Hủy";
+            this.HuyYC.MinimumWidth = 6;
+            this.HuyYC.Name = "HuyYC";
+            this.HuyYC.Width = 50;
+            // 
+            // NgayYC
+            // 
+            this.NgayYC.DataPropertyName = "NgayYC";
+            this.NgayYC.HeaderText = "Ngày yêu cầu";
+            this.NgayYC.MinimumWidth = 6;
+            this.NgayYC.Name = "NgayYC";
+            this.NgayYC.ReadOnly = true;
+            this.NgayYC.Width = 125;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã nhân viên";
+            this.MaNV.MinimumWidth = 6;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            this.MaNV.Width = 125;
+            // 
+            // MaHH
+            // 
+            this.MaHH.DataPropertyName = "MaHH";
+            this.MaHH.HeaderText = "Mã hàng hóa";
+            this.MaHH.MinimumWidth = 6;
+            this.MaHH.Name = "MaHH";
+            this.MaHH.ReadOnly = true;
+            this.MaHH.Width = 125;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "TrangThai";
+            this.TrangThai.MinimumWidth = 6;
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            this.TrangThai.Width = 125;
+            // 
             // frmDSYCDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -212,5 +256,9 @@
         private System.Windows.Forms.DateTimePicker dtpSearch;
         private System.Windows.Forms.DataGridViewCheckBoxColumn DuyetYC;
         private System.Windows.Forms.DataGridViewCheckBoxColumn HuyYC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgayYC;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TrangThai;
     }
 }

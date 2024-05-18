@@ -11,7 +11,7 @@ namespace WarehouseManagement.Bussiness
     public class YCnhaphangBUS
     {
         YCnhaphangDL ycnhDL = new YCnhaphangDL();
-
+        QLHangDL qlh = new QLHangDL();
         public DataTable laydsyc()
         {
             return ycnhDL.laydsyc();
@@ -20,7 +20,8 @@ namespace WarehouseManagement.Bussiness
 
         public bool ycdhhoa(string manv,string mahh,DateTime ngayyc)
         {
-            if (!ycnhDL.ycnhaphang( manv,mahh,ngayyc ))
+
+            if (!ycnhDL.ycnhaphang( manv,mahh,ngayyc )&&qlh.quanlyhanghoa(mahh))
             {
                 if (ycnhDL.ycdh( manv,mahh ,ngayyc))
                     return true;
