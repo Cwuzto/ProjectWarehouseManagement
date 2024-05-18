@@ -38,7 +38,8 @@ namespace WarehouseManagement.Presentation
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            OpenPresentation(new frmHangXuatKho());
+            label1.Text = button4.Text;
         }
 
         private void button2_Click(object sender, EventArgs e)

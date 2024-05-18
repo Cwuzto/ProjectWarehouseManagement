@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using WarehouseManagement.Business;
+using WarehouseManagement.Bussiness;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WarehouseManagement.Presentation
 {
     public partial class frmDonDatHang : Form
     {
-
+        CTDonHangBUS ctdh = new CTDonHangBUS();
         DonDatHangBUS dhBUS = new DonDatHangBUS();
         private string maNV=frmLogin.UserID;
         public static string maDH { get; private set; }
@@ -39,8 +40,23 @@ namespace WarehouseManagement.Presentation
             if (!string.IsNullOrEmpty(txtMaDon.Text))
             {
                 DateTime ngaydat = dateTimeNgayDat.Value;
-
-                if (dhBUS.JKDDH(txtMaDon.Text, ngaydat, maNV))
+                List <Tuple  <string, int,double>> data = new List<Tuple< string, int,double>> ();
+                bool hasData = false;
+                foreach (DataGridViewRow row in dgvChiTietDH.Rows)
+                {
+                    if (row.IsNewRow) continue;
+                    string mahh = row.Cells["MaHH"].Value?.ToString();
+                    int sl = int.Parse(row.Cells["SoLuong"].Value?.ToString());
+                    double gia = double.Parse(row.Cells["GiaNhap"].Value?.ToString());
+                    data.Add(new Tuple<string, int, double> (mahh, sl,gia));
+                    hasData = true;
+                }
+                if(!hasData)
+                {
+                    MessageBox.Show("Vui lòng nhập thông tin chi tiết đơn hàng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                if (dhBUS.JKDDH(txtMaDon.Text, ngaydat, maNV) && ctdh.ThemCTHoaDon(data, txtMaDon.Text))
                 {
 
                     load_data();
@@ -55,20 +71,29 @@ namespace WarehouseManagement.Presentation
 
         private void btnCapnhat_Click_1(object sender, EventArgs e)
         {
+            List<Tuple<string, int, double>> data = new List<Tuple<string, int, double>>();
+            foreach (DataGridViewRow row in dgvChiTietDH.Rows)
+            {
+                if (row.IsNewRow) continue;
+                string mahh = row.Cells["MaHH"].Value?.ToString();
+                int sl = int.Parse(row.Cells["SoLuong"].Value?.ToString());
+                double gia = double.Parse(row.Cells["GiaNhap"].Value?.ToString());
+                data.Add(new Tuple<string, int, double>(mahh, sl, gia));
+            }
             if (!string.IsNullOrEmpty(txtMaDon.Text) && !string.IsNullOrEmpty(txtTinhTrang.Text))
             {
-                if (dhBUS.UpdateDonDatHang(txtMaDon.Text, txtTinhTrang.Text, MaDonCu, TinhTrangCu))
+                if (dhBUS.UpdateDonDatHang(txtMaDon.Text, txtTinhTrang.Text, MaDonCu, TinhTrangCu)&& ctdh.ThemCTHoaDon(data, txtMaDon.Text))
                 {
 
                     load_data();
                     txtMaDon.Clear();
                     txtTinhTrang.Clear();
-                    MessageBox.Show("Cập nhật trạng thái thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
 
             }
-            MessageBox.Show("Không thể cập nhật tình trạng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Không thể cập nhật!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }
 
@@ -111,10 +136,7 @@ namespace WarehouseManagement.Presentation
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
             maDH=txtMaDon.Text;
-            frmCTDonHang frmCTDH = new frmCTDonHang();
-
-            frmCTDH.WindowState = FormWindowState.Maximized;
-            frmCTDH.ShowDialog();
+            dgvChiTietDH.DataSource = ctdh.DSCTDHTheoMaDH(maDH);
         }
     }
 }

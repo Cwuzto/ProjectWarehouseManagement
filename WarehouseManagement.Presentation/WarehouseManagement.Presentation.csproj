@@ -69,7 +69,9 @@
     <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
-    <Reference Include="DevExpress.Utils.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <HintPath>..\..\..\..\..\..\Program Files\DevExpress 23.2\Components\Bin\Framework\DevExpress.Utils.v23.2.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Xpo.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -114,6 +116,7 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -122,6 +125,7 @@
     <Reference Include="System.Data.OracleClient" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -131,6 +135,8 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataSet1.Designer.cs">
@@ -143,12 +149,6 @@
     </Compile>
     <Compile Include="frmBaocao.Designer.cs">
       <DependentUpon>frmBaocao.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCTDonHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCTDonHang.Designer.cs">
-      <DependentUpon>frmCTDonHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDonDatHang.cs">
       <SubType>Form</SubType>
@@ -179,6 +179,12 @@
     </Compile>
     <Compile Include="frmhanghoa.Designer.cs">
       <DependentUpon>frmhanghoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHangXuatKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHangXuatKho.Designer.cs">
+      <DependentUpon>frmHangXuatKho.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -258,9 +264,6 @@
     <EmbeddedResource Include="frmBaocao.resx">
       <DependentUpon>frmBaocao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCTDonHang.resx">
-      <DependentUpon>frmCTDonHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmDonDatHang.resx">
       <DependentUpon>frmDonDatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmhanghoa.resx">
       <DependentUpon>frmhanghoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHangXuatKho.resx">
+      <DependentUpon>frmHangXuatKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

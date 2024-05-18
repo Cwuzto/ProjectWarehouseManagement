@@ -40,5 +40,24 @@ namespace WarehouseManagement.DataAccess
 
             return DataProvider.Instance.ExecuteQuery(query, parameters);
         }
+        public bool Them(string mahh, string manv, DateTime ngay, int sl)
+        {
+            int count = 0;
+
+            string query = "INSERT INTO HangXuatKho (MaHH, MaNV, SoLuong, NgayXuat) VALUES ( @mahh , @manv , @sl , @ngayxuat )";
+
+            object[] parameters = { mahh, manv, sl, ngay };
+
+            count = DataProvider.Instance.ExecuteNonQuery(query, parameters);
+
+            return count>0;
+        }
+        public bool Sua(int id, string mahh, DateTime ngay, int sl)
+        {
+            var query = $"UPDATE [HangXuatKho] SET MaHH= @mahh , NgayXuat= Convert(date, @ngay ), SoLuong= @sl WHERE ID = @id ";
+            object[] parameters = { mahh, ngay, sl, id };
+            var result = DataProvider.Instance.ExecuteNonQuery(query, parameters);
+            return result > 0;
+        }
     }
 }

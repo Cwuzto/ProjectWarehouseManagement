@@ -27,5 +27,17 @@ namespace WarehouseManagement.Bussiness
 
             return dsHang.SearchData(loaiTimKiem, searchData);
         }
+        public bool ThemHang(string mahh, string manv, DateTime ngay, int sl)
+        {
+            if (dsHang.Them(mahh,manv,ngay,sl))
+                return true;
+            return false;
+        }
+        public bool SuaTT(int id, string mahh, DateTime ngay, int sl)
+        {
+            if(dsHang.Sua(id,mahh,ngay,sl))
+                return true;
+            return false;
+        }
     }
 }
