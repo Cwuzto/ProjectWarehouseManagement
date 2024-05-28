@@ -113,6 +113,12 @@ namespace WarehouseManagement.Presentation
                 txtTinhTrang.Enabled=true;
                 txtTinhTrang.Text = row.Cells["TrangThai"].Value.ToString();
                 TinhTrangCu = txtTinhTrang.Text;
+                DataTable dataTable = (DataTable)dgvChiTietDH.DataSource;
+                if (dataTable != null)
+                {
+                    dataTable.Rows.Clear();
+                    dgvChiTietDH.DataSource = dataTable;
+                }
             }
         }
 
